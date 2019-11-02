@@ -11,7 +11,7 @@ Research at 39Alpha is conducted by teams of five (four PhD's and one part-tim
 
 
 ### Independent Finance:
-Teams and team members neither solicit nor compete for their own individual grant money. Stability of funding is provided from the top down, with fundraising being carried out by dedicated professionals employed by 39Alpha for this express purpose. This differs from the modern research paradigm which requires individual researchers to spend their entire careers effectively operating as personal contractors, working relatively short, necessarily overlapping contracts, to which their 'employers' (universities, public/private research outfits) take more than 50% the value of. Researchers working for 39Alpha are employees of 39Alpha, with salary and benefits in the same manner as any private sector business. Their job is to conduct original research, not raise money.
+Teams and team members neither solicit nor compete for their own individual grant money. Stability of funding is provided from the top down, with fundraising being carried out by dedicated professionals employed by 39Alpha for this express purpose. This differs from the modern research paradigm which requires individual researchers to spend their entire careers effectively operating as personal contractors, working relatively short, necessarily overlapping contracts to which their 'employers' (universities, public/private research outfits) generally take more than 50% the value of. Researchers working for 39Alpha are employees of 39Alpha, with salary and benefits in the same manner as any private sector business. Their job is to conduct original research, not raise money.
 
 
 
