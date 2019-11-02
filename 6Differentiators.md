@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: 6 Differentiators
 permalink: /6Differentiators/
 ---
 ###Team Driven
