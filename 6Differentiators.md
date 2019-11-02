@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 6 Differentiators
-permalink: /6Differentiators/
+permalink: /6differentiators/
 ---
 
 
