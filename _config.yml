@@ -30,6 +30,8 @@ github_username:  jekyll
 
 logo: "/assets/images/39alpha.png"
 
+markdown: kramdown
+
 # Build settings
 plugins:
   - jekyll-feed
