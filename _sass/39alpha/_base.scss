@@ -1,18 +1,8 @@
-/**
- * Reset some basic elements
- */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
 }
 
-
-
-/**
- * Basic styling
- */
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
@@ -28,42 +18,19 @@ body {
   flex-direction: column;
 }
 
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
 
-
-
-/**
- * `main` element
- */
 main {
-  display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
+  display: block;
 }
 
-
-
-/**
- * Images
- */
 img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-
-
-/**
- * Figures
- */
 figure > img {
   display: block;
 }
@@ -72,11 +39,6 @@ figcaption {
   font-size: $small-font-size;
 }
 
-
-
-/**
- * Lists
- */
 ul, ol {
   margin-left: $spacing-unit;
 }
@@ -88,20 +50,10 @@ li {
   }
 }
 
-
-
-/**
- * Headings
- */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
 
-
-
-/**
- * Links
- */
 a {
   color: $brand-color;
   text-decoration: none;
@@ -124,10 +76,6 @@ a {
   }
 }
 
-
-/**
- * Blockquotes
- */
 blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
@@ -141,13 +89,7 @@ blockquote {
   }
 }
 
-
-
-/**
- * Code formatting
- */
-pre,
-code {
+pre, code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
@@ -169,11 +111,6 @@ pre {
   }
 }
 
-
-
-/**
- * Wrapper
- */
 .wrapper {
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -191,22 +128,11 @@ pre {
   }
 }
 
-
-
-/**
- * Clearfix
- */
 %clearfix:after {
   content: "";
   display: table;
   clear: both;
 }
-
-
-
-/**
- * Icons
- */
 
 .svg-icon {
     width: 16px;
@@ -223,11 +149,6 @@ pre {
   }
 }
 
-
-
-/**
- * Tables
- */
 table {
   margin-bottom: $spacing-unit;
   width: 100%;
