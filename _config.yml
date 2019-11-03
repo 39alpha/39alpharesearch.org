@@ -37,14 +37,14 @@ plugins:
     - jekyll-feed
     - jekyll-seo-tag
 
-# header_pages:
-#     - what-is-39alpha.md
-#     - six-differentiators.md
-#     - science-mission.md
-#     - giving-back.md
-#     - social-psych.md
-#     - contact-us.md
-#     - donate.md
+header_pages:
+    - what-is-39alpha.md
+    - six-differentiators.md
+    - science-mission.md
+    - giving-back.md
+    - social-psych.md
+    - contact-us.md
+    - donate.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
