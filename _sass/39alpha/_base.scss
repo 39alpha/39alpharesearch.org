@@ -51,7 +51,8 @@ li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  font-weight: 2 * $base-font-weight;
+  margin-top: $spacing-unit;
 }
 
 a {
