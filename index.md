@@ -5,6 +5,7 @@
 layout: home
 ---
 
-Team-driven, open research.
-
-Coming soon.
+<div class="home-announcement">
+    <p>Team-driven, open research.</p>
+    <p>Coming soon.</p>
+</div>

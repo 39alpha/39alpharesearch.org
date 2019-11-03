@@ -107,6 +107,13 @@
   }
 }
 
+.home-announcement {
+  text-align: center;
+  font-size: $large-font-size;
+  font-weight: bold;
+  margin-top: 3 * $base-font-size;
+}
+
 .site-footer {
   padding: $spacing-unit 0;
 }
