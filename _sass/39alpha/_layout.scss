@@ -1,5 +1,4 @@
 .site-header {
-  margin-top: $base-font-size;
   min-height: $spacing-unit * 1.865;
 
   display: flex;
@@ -14,7 +13,7 @@
   font-weight: 300;
   line-height: $base-line-height * $base-font-size * 2.25;
   letter-spacing: -1px;
-  margin-bottom: 0;
+  margin: $spacing-unit 0;
   text-align: center;
 
   &, &:visited {
