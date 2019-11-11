@@ -1,0 +1,15 @@
+language: julia
+
+os: linux
+
+julia: 1.2
+
+jobs:
+    include:
+        - state: "Website"
+          julia: 1.2
+          os: linux
+          script:
+              - julia --version
+              - python --version
+              - ruby --version
