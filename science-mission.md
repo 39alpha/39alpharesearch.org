@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Science Mission
-permalink: /Science-Mission/
+permalink: /science-mission/
 ---
 
 # To Explore and Quantify the Human Effect on Earth
