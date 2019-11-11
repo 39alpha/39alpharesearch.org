@@ -13,6 +13,7 @@ addons:
 
 env:
     global:
+        - PYTHON=$(which python3)
         - GEM_HOME=$HOME/.gems
         - PATH="$GEM_HOME/bin:$HOME/.local/bin:$PATH"
 
