@@ -250,3 +250,45 @@
     }
   }
 }
+
+.giving {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+}
+
+.giving__levels {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.giving__level {
+    position: relative;
+    width: 204px;
+    height: 434px;
+    flex-shrink: 0;
+    &:first-child {
+        padding-right: 35px;
+    }
+}
+
+.giving__level--wide {
+    width: 511px;
+}
+
+.giving__hover {
+    position: absolute;
+    width: 204px;
+    height: 415px;
+}
+
+.giving__hover--wide {
+    width: 511px;
+    height: 434px;
+}
+
+.giving__hover--hidden {
+    display: none;
+}
