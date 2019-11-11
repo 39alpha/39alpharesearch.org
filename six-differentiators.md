@@ -69,10 +69,11 @@ unique array of other collaborations. Teams at 39Alpha will engage in one major 
 collectively decided upon by team members for an amount of time determined by the projects scope.
 
 # Method Evolution
-39Alpha teams operate at [levels 3 and 4](/giving-back/) simultaneous, continuously evaluating how
-their science is being done. The operational method followed by 39Alpha research teams is designed
-and monitored by [social and organization psychologists](/social-psych/), keen on using 39Alpha
-teams as a test bed for original publications and advancement in this field. These
-physiologists monitor how teams communicate and collaborate amongst themselves, how they
-collectively move on scientific goals and targets, and how the disciplinary backgrounds and
-personalities of individual team members affects creativety, productivity, and original discovery.
+39Alpha teams operate at [levels 3 and 4]({% link giving-back.md %}) simultaneous,
+continuously evaluating how their science is being done. The operational method followed by 39Alpha
+research teams is designed and monitored by [social and organization psychologists]({% link
+social-psych.md %}), keen on using 39Alpha teams as a test bed for original publications and
+advancement in this field.  These physiologists monitor how teams communicate and collaborate
+amongst themselves, how they collectively move on scientific goals and targets, and how the
+disciplinary backgrounds and personalities of individual team members affects creativety,
+productivity, and original discovery.
