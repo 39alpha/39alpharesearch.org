@@ -108,9 +108,9 @@ pre {
   }
 }
 
-.wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+@mixin wrapper($width) {
+  max-width: -webkit-calc(#{$width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
@@ -118,11 +118,21 @@ pre {
   @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: -webkit-calc(#{$width} - (#{$spacing-unit}));
+    max-width:         calc(#{$width} - (#{$spacing-unit}));
     padding-right: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
   }
+}
+
+.wrapper {
+    &--narrow {
+        @include wrapper($narrow-content-width);
+    }
+
+    &--wide {
+        @include wrapper($wide-content-width);
+    }
 }
 
 %clearfix:after {

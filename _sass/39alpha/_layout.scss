@@ -292,3 +292,45 @@
 .giving__hover--hidden {
     display: none;
 }
+
+.project {
+    &__header {
+        text-align: center;
+    }
+
+    &__sections {
+        display: flex;
+    }
+
+    &__section {
+        min-width: $narrow-content-width / 2;
+        width: 50%;
+        padding-left: 10px;
+        padding-right: 10px;
+        min-height: 100%;
+
+        &:first-child {
+            border-right: 1px solid $brand-color;
+        }
+
+        &:last-child {
+            border-left: 1px solid $brand-color;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 15px;
+            margin-bottom: 7px;
+            color: #444444;
+        }
+
+        h3 {
+            margin: 15px 10px 7px 0px;
+            color: #444444;
+            font-style: italic;
+        }
+    }
+}

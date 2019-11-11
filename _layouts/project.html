@@ -1,0 +1,17 @@
+---
+layout: wide
+---
+<div class="project">
+<header class="project__header">
+    <h1 class="project-title">{{ page.title | escape }}</h1>
+</header>
+
+<div class="project__sections">
+{% assign raw_content = content | split: '<hr />' %}
+{% for section in raw_content %}
+    <article class="project__section">
+        {{ section }}
+    </article>
+{% endfor %}
+</div>
+</div>
