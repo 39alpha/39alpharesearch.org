@@ -22,8 +22,8 @@ title: 39Alpha Research
 email: 39alpharesearch@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
     Nonprofit research
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://39alpha.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://39alpha.github.io"
 
 twitter_username: jekyllrb
 github_username:  jekyll
