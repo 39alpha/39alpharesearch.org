@@ -1,9 +1,10 @@
 using Documenter
 
-baseurl() = "/" * get(ENV, "TRAVIS_TAG", "latest")
+baseurl() = let tag = get(ENV, "TRAVIS_TAG", "")
+    isempty(tag) ? "/latest" : "/" * tag
+end
 
 function with_baseurl(func, baseurl=baseurl())
-    @show baseurl
     jekyll_config = joinpath(@__DIR__, "_config.yml")
     lines = readlines(jekyll_config, keep=true)
     open(jekyll_config, "w+") do f
