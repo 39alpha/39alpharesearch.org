@@ -3,6 +3,7 @@ using Documenter
 baseurl() = "/" * get(ENV, "TRAVIS_TAG", "latest")
 
 function with_baseurl(func, baseurl=baseurl())
+    @show baseurl
     jekyll_config = joinpath(@__DIR__, "_config.yml")
     lines = readlines(jekyll_config, keep=true)
     open(jekyll_config, "w+") do f
