@@ -8,8 +8,8 @@ function deploy()
     deploydocs(
         target = "_site",
         repo = repo,
-        branch = "gh-pages",
-        devbranch = "master",
+        branch = "master",
+        devbranch = "staging",
         devurl = devurl,
         versions = ["stable" => "v^", "v#.#", devurl => devurl]
     )
