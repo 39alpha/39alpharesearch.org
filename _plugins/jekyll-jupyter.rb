@@ -24,7 +24,7 @@ module Jekyll
             self.data['layout'] = 'page'
             self.data['title'] = notebook.basename
             self.data['permalink'] = "/notebooks/#{notebook.basename}"
-            self.content = %x[ python _plugins/jupyterconvert.py #{notebook.path} ]
+            self.content = %x[ python3 _plugins/jupyterconvert.py #{notebook.path} ]
         end
     end
 end

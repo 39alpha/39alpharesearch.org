@@ -4,12 +4,35 @@ os: linux
 
 julia: 1.2
 
+addons:
+    apt:
+        packages:
+            - python3
+            - python3-setuptools
+            - python3-pip
+
+env:
+    global:
+        - GEM_HOME=$HOME/.gems
+        - PATH="$GEM_HOME/bin:$HOME/.local/bin:$PATH"
+
+cache:
+    directories:
+        - $HOME/.local
+        - $HOME/.gems
+
+install:
+    - sudo python3 -m pip install --upgrade pip
+    - sudo python3 -m pip install --user nbconvert
+    - gem install bundler jekyll
+    - bundle install
+
 jobs:
     include:
         - state: "Website"
           julia: 1.2
           os: linux
           script:
-              - julia --version
-              - python --version
-              - ruby --version
+              - julia --project=. -e 'using Pkg; Pkg.instantiate()'
+              - julia --project=. make.jl
+          after_success: skip
