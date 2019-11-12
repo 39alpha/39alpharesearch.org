@@ -59,7 +59,7 @@ function extract_from_notebook(filename, outdir=dirname(filename))
     resourcepaths
 end
 
-function extract_from_notebooks(notebooksdir="notebooks")
+function extract_from_notebooks(notebooksdir="_notebooks")
     resources = []
     for (root, _, files) in walkdir(notebooksdir), file in files
         filename = joinpath(root, file)
