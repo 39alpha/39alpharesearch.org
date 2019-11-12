@@ -1,7 +1,6 @@
 ---
 layout: project
-title: Corbon Footprint of Modernizing Diets
-permalink: /projects/p1/
+title: Carbon Footprint of Modernizing Diets
 ---
 
 # Laymen
