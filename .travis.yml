@@ -21,6 +21,7 @@ cache:
     directories:
         - $HOME/.local
         - $HOME/.gems
+        - $HOME/.julia
 
 install:
     - sudo python3 -m pip install --upgrade pip
