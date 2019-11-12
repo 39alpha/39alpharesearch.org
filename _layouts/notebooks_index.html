@@ -1,0 +1,17 @@
+---
+layout: narrow
+---
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
+
+    <div class="post-content">
+        {% for notebook in site.notebooks %}
+            <div>
+                <h2><a href="{{ notebook.url | relative_url }}">{{ notebook.title }}</a></h2>
+                <p>{{ notebook.description | default: notebook.excerpt }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</article>
