@@ -1,6 +1,9 @@
 ---
 layout: project
 title: Carbon Footprint of Modernizing Diets
+description: >-
+    How is the modern human diet affecting the rate of emission of carbon dioxide ($\ce{CO2}$) and
+    methane ($\ce{CH4}$) into the atmosphere?
 purity: 4
 risk: 5
 reward: 10

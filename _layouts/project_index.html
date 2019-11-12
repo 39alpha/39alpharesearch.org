@@ -10,7 +10,7 @@ layout: narrow
         {% for project in site.projects %}
             <div>
                 <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
-                <p>{{ project.excerpt }}</p>
+                <p>{{ project.description | default: project.excerpt }}</p>
                 <ul>
                     <li>Purity: {{ project.purity }}</li>
                     <li>Risk: {{ project.risk }}</li>
