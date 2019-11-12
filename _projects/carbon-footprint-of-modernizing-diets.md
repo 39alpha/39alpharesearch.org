@@ -1,6 +1,9 @@
 ---
 layout: project
 title: Carbon Footprint of Modernizing Diets
+purity: 4
+risk: 5
+reward: 10
 ---
 
 # Laymen
