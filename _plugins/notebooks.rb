@@ -29,14 +29,15 @@ module Jekyll
             @dir = File.dirname(notebook.path)
             @name = 'index.md'
 
-            title = File.basename(@dir)
-
             self.process(@name)
             self.read_yaml(File.join(base, '_layouts'), 'page.html')
             self.data['layout'] = 'page'
-            self.data['title'] = title
-            self.data['permalink'] = "/notebooks/#{title}/"
             self.content = %x[ python3 _plugins/jupyter-convert.py #{notebook.path} ]
+            self.data['title'] ||= self.data['title'] || File.basename(@dir)
+            self.data['permalink'] = "/notebooks/#{File.basename(@dir)}/"
+
+            add_header
+
             self.data['excerpt'] = Jekyll::Excerpt.new(self)
         end
 
@@ -46,6 +47,21 @@ module Jekyll
 
         def yaml_file?
             YAML_FILE_EXTS.include?(extname)
+        end
+
+        def add_header
+            content_lines = []
+            found_title, leading = false, false
+            self.content.split(/\r?\n/).each do |line|
+                if not found_title and line =~ /^# /
+                    self.data['title'] = line.gsub(/^\# (.*)\r?\n?/, '\1')
+                    found_title, leading = true, true
+                elsif not leading or line !~ /^$/
+                    leading = false
+                    content_lines << line
+                end
+            end
+            self.content = content_lines.join("\n")
         end
     end
 
