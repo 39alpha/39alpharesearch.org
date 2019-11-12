@@ -4,4 +4,4 @@ _site
 .jekyll-metadata
 vendor
 .gems
-notebooks/**/*[.png,.jpg,.jpeg]
+_notebooks/**/*[.png,.jpg,.jpeg]

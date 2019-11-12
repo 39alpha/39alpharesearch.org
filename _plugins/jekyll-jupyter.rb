@@ -3,11 +3,17 @@ module Jekyll
         safe true
 
         def generate(site)
-            notebooks = site.static_files.select{|file| file.path =~ /.ipynb$/i}
+            notebooks_collection = site.collections['notebooks']
+            notebooks = notebooks_collection.files.select{|file| file.path =~ /.ipynb$/i}
             notebooks.each do |notebook|
-                site.pages << NotebookPage.new(site, site.source, notebook)
+                notebooks_collection.docs << NotebookPage.new(site, site.source, notebook)
             end
-            site.static_files = site.static_files - notebooks
+
+            notebooks_dir = notebooks_collection.directory
+            notebooks_collection.files.each do |file|
+                dir = File.dirname(file.relative_path)
+                site.static_files << NotebookStaticFile.new(site, site.source, dir, file.name)
+            end
         end
     end
 
@@ -26,6 +32,13 @@ module Jekyll
             self.data['title'] = title
             self.data['permalink'] = "/notebooks/#{title}/"
             self.content = %x[ python3 _plugins/jupyter-convert.py #{notebook.path} ]
+        end
+    end
+
+    class NotebookStaticFile < StaticFile
+        def destination(dest)
+            dest = @site.in_dest_dir(dest)
+            @site.in_dest_dir(dest, Jekyll::URL.unescape_path(url).gsub(/^_/, ''))
         end
     end
 end

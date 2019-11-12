@@ -51,6 +51,8 @@ collections:
     projects:
         output: true
         permalink: /:collection/:title/
+    notebooks:
+        permalink: /:collection/:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
