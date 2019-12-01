@@ -1,0 +1,10 @@
+- page: what-is-39alpha.md
+- page: six-differentiators.md
+- title: "Science Mission"
+  subpages:
+  - page: science-mission.md
+  - page: _projects/index.html
+  - page: _notebooks/index.html
+- page: giving-back.md
+- page: social-psych.md
+- page: contact-us.md

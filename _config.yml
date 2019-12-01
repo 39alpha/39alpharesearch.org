@@ -38,17 +38,6 @@ plugins:
     - jekyll-feed
     - jekyll-seo-tag
 
-header_pages:
-    - what-is-39alpha.md
-    - six-differentiators.md
-    - science-mission.md
-    - _projects/index.html
-    - _notebooks/index.html
-    - giving-back.md
-    - social-psych.md
-    - contact-us.md
-    - donate.md
-
 collections:
     projects:
         output: true
