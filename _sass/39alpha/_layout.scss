@@ -59,7 +59,7 @@
         top: 9px;
         right: $spacing-unit / 2;
         background-color: $background-color;
-        text-align: right;
+        text-align: left;
 
         label[for="nav-trigger"] {
             display: block;
@@ -102,6 +102,13 @@
                 margin-right: 0;
             }
             margin-left: 20px;
+        }
+
+        ul {
+            list-style: none;
+            &:first-child {
+                margin: 0;
+            }
         }
     }
 }
