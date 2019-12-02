@@ -1,10 +1,12 @@
-- page: what-is-39alpha.md
-- page: six-differentiators.md
+- title: "What is 39Alpha?"
+  subpages:
+  - page: what-is-39alpha.md
+  - page: six-differentiators.md
+  - page: giving-back.md
 - title: "Science Mission"
   subpages:
   - page: science-mission.md
   - page: _projects/index.html
   - page: _notebooks/index.html
-- page: giving-back.md
 - page: social-psych.md
 - page: contact-us.md
