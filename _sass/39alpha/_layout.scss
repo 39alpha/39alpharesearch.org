@@ -270,7 +270,7 @@
     margin-bottom: $spacing-unit;
 }
 
-.post-title {
+.post-title, .notebook-title {
     @include relative-font-size(2.625);
     letter-spacing: -1px;
     line-height: 1;
@@ -280,7 +280,7 @@
     }
 }
 
-.post-content {
+.post-content, .notebook-content {
     margin-bottom: $spacing-unit;
 
     h2 {
@@ -304,6 +304,21 @@
 
         @include media-query($on-laptop) {
             @include relative-font-size(1.125);
+        }
+    }
+}
+
+.notebook-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: $spacing-unit;
+
+    a {
+        img {
+            width: 30px;
+            height: 30px;
+            padding: 10px 0px 0px 20px;
         }
     }
 }

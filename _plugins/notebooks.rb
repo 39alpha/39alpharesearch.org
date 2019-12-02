@@ -30,8 +30,8 @@ module Jekyll
             @name = 'index.md'
 
             self.process(@name)
-            self.read_yaml(File.join(base, '_layouts'), 'page.html')
-            self.data['layout'] = 'page'
+            self.read_yaml(File.join(base, '_layouts'), 'notebook.html')
+            self.data['layout'] = 'notebook'
             self.content = %x[ python3 _plugins/jupyter-convert.py #{notebook.path} ]
             self.data['title'] ||= self.data['title'] || File.basename(@dir)
             self.data['permalink'] = "/notebooks/#{File.basename(@dir)}/"

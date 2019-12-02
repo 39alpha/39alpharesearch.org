@@ -1,0 +1,15 @@
+---
+layout: narrow
+---
+<article class="notebook">
+    <header class="notebook-header">
+        <h1 class="notebook-title">{{ page.title | escape }}</h1>
+        <a href="notebook.ipynb" title="Download Notebook">
+            <img src={{ "/assets/images/download.png" | relative_url }} alt="Download Notebook Icon"/>
+        </a>
+    </header>
+
+    <div class="notebook-content">
+        {{ content }}
+    </div>
+</article>
