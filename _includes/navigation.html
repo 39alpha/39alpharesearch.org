@@ -1,19 +1,15 @@
 <ul>
-    {%- for item in include.pages -%}
-    {%- if item.title -%}
-        <li>
-            <a class="page-link">{{ item.title | escape }}</a>
-            {%- if item.subpages -%}
-                {%- include navigation.html pages=item.subpages -%}
-            {%- endif -%}
-        </li>
-    {%- else -%}
-        {%- assign my_page = site.pages | where: "path", item.page | first -%}
-        {%- if my_page.title -%}
-        <li>
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-        </li>
-        {%- endif -%}
-    {%- endif -%}
-    {%- endfor -%}
+    {% for item in include.pages %}
+    <li>
+    {% if item.title %}
+        <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+    {% else %}
+        {% assign page = site.pages | where: "path", item.page | first %}
+        <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    {% endif %}
+    {% if item.subpages %}
+        {% include navigation.html pages=item.subpages %}
+    {% endif %}
+    </li>
+    {% endfor %}
 </ul>
