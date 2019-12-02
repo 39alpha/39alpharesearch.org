@@ -374,22 +374,38 @@
     }
 
     &__section {
+        position: relative;
         min-width: $narrow-content-width / 2;
         width: 50%;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 0px 50px;
         min-height: 100%;
+        text-align: justify;
+
+        h1 {
+            color: $brand-color;
+            opacity: 0.8;
+            position: absolute;
+            top: 0%;
+            margin: 10px 0px 0px 0px;
+        }
 
         &:first-child {
             border-right: 1px solid $brand-color;
+
+            h1 {
+                right: 0%;
+                transform: rotate(-90deg);
+                padding: 38px 0px 0px 0px;
+            }
         }
 
         &:last-child {
             border-left: 1px solid $brand-color;
-        }
-
-        h1 {
-            text-align: center;
+            h1 {
+                left: 0%;
+                transform: rotate(90deg);
+                padding: 50px 0px 0px 0px;
+            }
         }
 
         h2 {
