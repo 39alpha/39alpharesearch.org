@@ -14,4 +14,15 @@ layout: wide
     </article>
 {% endfor %}
 </div>
+{% if page.notebooks %}
+<h1>Project Notebooks:</h1>
+<ul class="project__notebook-listing">
+    {% for notebook in page.notebooks %}
+    {% capture notebook_dir %}/notebooks/{{ notebook }}/{% endcapture %}
+    {% assign notebook_page = site.notebooks | where: "dir", notebook_dir | first %}
+    <h2><a href="{{ notebook_page.url | relative_url }}">{{ notebook_page.title | escape}}</a></h2>
+    <p>{{ notebook_page.description | default: notebook_page.excerpt }}</p>
+    {% endfor %}
+</ul>
+{% endif %}
 </div>
