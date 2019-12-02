@@ -35,6 +35,47 @@
         display: none;
     }
 
+    .trigger {
+        ul {
+            list-style: none;
+        }
+
+        & > ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            & > li {
+                display: inline-block;
+                a:hover ~ ul {
+                    display: block;
+                }
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+
+                & > ul {
+                    line-height: $base-line-height;
+                    background: $background-color;
+                    border-left: 1px solid $brand-color;
+                    border-right: 1px solid $brand-color;
+                    border-bottom: 1px solid $brand-color;
+                    padding: 10px;
+                    margin-left: -10px;
+                    display: none;
+                    position: absolute;
+                    top: 90%;
+                    z-index: 500;
+                    text-align: left;
+
+                    &:hover {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
     .page-link {
         color: lighten($brand-color, 15%);
         line-height: $base-line-height;
@@ -46,11 +87,6 @@
         &:hover {
             color: $brand-color;
             text-decoration: none;
-        }
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
         }
     }
 
@@ -104,10 +140,24 @@
             margin-left: 20px;
         }
 
-        ul {
-            list-style: none;
-            &:first-child {
-                margin: 0;
+        .trigger {
+            ul {
+                list-style: none;
+                display: block;
+                &:first-child {
+                    margin: 0;
+                }
+                li {
+                    display: list-item;
+                    ul {
+                        line-height: $base-line-height;
+                        display: block;
+                        position: static;
+                        border: 0px;
+                        margin: auto 0px;
+                        padding: auto 0px;
+                    }
+                }
             }
         }
     }
