@@ -1,8 +1,7 @@
 ---
 layout: project
 title: Photic Zone Migration
-description: >-
-    As sea levels fluctuate in response to increases and decreases in abundance 
+description: As sea levels fluctuate in response to increases and decreases in abundance 
     of land-born ice, how does the photic zone migrate relative to the sea floor?
 purity: 9
 risk: 3
