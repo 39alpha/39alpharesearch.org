@@ -9,7 +9,7 @@ permalink: /what-is-39alpha/
 doctors of physics, information science, and geochemistry.
 
 # What we are doing
-We are conducting original open-source research on topics which furthre our scinetific mission: [To
+We are conducting original open-source research on topics which further our scinetific mission: [To
 explore and quantify human interactions with the Earth]({% link science-mission.md %}). We carry out
 this research under the direction of guiding principles which represent paradigm shifts in _how_
 open source research is conducted. This 39Alpha method stands apart from modern scientific orthodoxy
