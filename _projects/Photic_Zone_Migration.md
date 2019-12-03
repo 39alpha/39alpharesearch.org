@@ -14,7 +14,7 @@ reward: 10
 # Laymen
 A great deal of life in the oceans relies directly on both sunlight as a energy source, and on the seafloor itself to live on. This includes the vast majority if coral species. 
 
-Corals are important because they act as a physical structures for other species to live among, like trees in a forest, and because the consume CO2 and release O2.
+Corals are important because they act as physical structures for other species to live among, like trees in a forest, and because the consume CO2 and release O2.
 
 
 Light from the sun can only penetrate so far into seawater, meaning that corals rooted to the seafloor can only live in relatively shallow water. As sea levels rise, much of the seafloor that us currently lite up by sunlight during the day, may become to deep for enough light to penetrate.
