@@ -35,10 +35,3 @@ I known this is a phenomenon in China, where large demographic shifts are motiva
 
 Other impacts: water use, land use,
 
-## Methods
-
-### Step 1
-
-### Step 2
-
-## Conclusions
