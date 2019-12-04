@@ -8,3 +8,4 @@ _notebooks/**/*.png
 _notebooks/**/*.jpg
 _notebooks/**/*.jpeg
 _notebooks/**/*.gif
+.ipynb_checkpoints
