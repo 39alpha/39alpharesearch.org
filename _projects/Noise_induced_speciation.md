@@ -9,7 +9,7 @@ reward: 8
 
 
 
-# Laymen
+
 Imagine sitting in bar in the early afternoon at a table full of your coworkers. The place is relatively empty and you are 
 speaking easily with everyone at the table, including that attractive girl from accounting sitting a couple places down 
 across the table. Mary, you think her name is. Eventually, happy hour begins. The bar turns the music up and the crowds 
@@ -22,7 +22,7 @@ you all sat down.
 
 
 <hr />
-# Science
+
 Many whale species, such as sperm whales, blue whales, and humpback whales, depend on long range communication. 
 Species such as sperm whales can have regional dialects in their complex system of calls and clicks which facilitates 
 a culture of unknown complexity. The industrial revolution, followed by modern warfare has ushered in a new regime of 
