@@ -25,14 +25,14 @@ you all sat down.
 
 Many whale species, such as sperm whales, blue whales, and humpback whales, depend on long range communication. 
 Species such as sperm whales can have regional dialects in their complex system of calls and clicks which facilitates 
-a culture of unknown complexity. The industrial revolution, followed by modern warfare has ushered in a new regime of 
-sound production in the seas, across the bandwidth spectrum. Some regions of the spectrum that may have previously been quite, 
+a culture of unknown complexity. The industrial revolution, followed by advances in modern warfare has ushered in a new regime of 
+sound production in the seas across a range of frequencies. Some regions of the spectrum that may have previously been quite, 
 may now be very loud, including regions employed by these species for long range communication. Is it possible that such 
-noise pollution might cause speciation by segregating previously overlapping populations into dialect groups?  
-If so. Do whale population shave the numbers to support such a segregation? Can you even cause speciation via language? 
-I think the answer is maybe. Whales often find mates by answering calls over very large distances. If they stop recognizing 
-calls from their own species (due to different dialect), then maybe they stop answering them). 
+noise pollution might cause speciation by segregating previously overlapping populations into smaller dialect groups?  
+If so, do whale populations have the numbers to support such a segregation? Can you even cause speciation via language? 
+Many whale species often find mates by answering calls over very large distances. If they stop recognizing 
+calls from their own species (due to different dialect), then maybe they stop answering them. 
 If such noise pollution causes dialect schisms? and if these result in speciation. Just how small would the resulting 
-population shave to be to become susceptible to extinction via environmental change, bottelneck effects, and overfishing? 
+populations have to be in order to become susceptible to extinction via environmental change, bottelneck effects, and overfishing? 
 
 If such stocks are collapsed, then what are the effects down the food web?
