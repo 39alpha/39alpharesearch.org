@@ -8,15 +8,22 @@ layout: wide
 
 <div class="project__sections">
 {% assign raw_content = content | split: '<hr />' %}
-{% for section in raw_content %}
-    <article class="project__section">
-        {{ section }}
+{% assign conversational = raw_content | first %}
+    <article class="project__section project__section--conversational">
+        <h1>Conversational</h1>
+        {{ conversational }}
     </article>
-{% endfor %}
+{% assign technical = raw_content | last %}
+    <article class="project__section project__section--technical">
+        <h1>Technical</h1>
+        {{ technical }}
+    </article>
 </div>
+
+<div class="project__notebook-listing">
 {% if page.notebooks %}
-<h1>Project Notebooks:</h1>
-<ul class="project__notebook-listing">
+<h1>Project Notebooks</h1>
+<ul class="project__notebook-list">
     {% for notebook in page.notebooks %}
     {% capture notebook_dir %}/notebooks/{{ notebook }}/{% endcapture %}
     {% assign notebook_page = site.notebooks | where: "dir", notebook_dir | first %}
@@ -25,4 +32,5 @@ layout: wide
     {% endfor %}
 </ul>
 {% endif %}
+</div>
 </div>

@@ -4,7 +4,9 @@ title: Science Mission
 permalink: /science-mission/
 ---
 
-# To Explore and Quantify the Human Effect on Earth
+<div class="shout">
+"To Explore and Quantify the Human Effect on Earth"
+</div>
 
 It is the ultimate goal of 39Alpha teams to explore and quantify human interaction with our
 biogeochemical environment. Specifically, we are focused on interactions which may not reside in

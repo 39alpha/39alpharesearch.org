@@ -77,11 +77,11 @@
     }
 
     .page-link {
-        color: lighten($brand-color, 15%);
+        // color: lighten($brand-color, 15%);
         line-height: $base-line-height;
 
         &:visited {
-            color: lighten($brand-color, 15%);
+            // color: lighten($brand-color, 15%);
         }
 
         &:hover {
@@ -267,13 +267,15 @@
 }
 
 .post-header {
+    display: none;
     margin-bottom: $spacing-unit;
 }
 
 .post-title, .notebook-title {
-    @include relative-font-size(2.625);
+    @include relative-font-size(2);
     letter-spacing: -1px;
     line-height: 1;
+    text-align: center;
 
     @include media-query($on-laptop) {
         @include relative-font-size(2.25);
@@ -365,6 +367,10 @@
 }
 
 .project {
+    h1 {
+        text-align: center;
+    }
+
     &__header {
         text-align: center;
     }
@@ -377,7 +383,8 @@
         position: relative;
         min-width: $narrow-content-width / 2;
         width: 50%;
-        padding: 0px 50px;
+        padding: 0px 100px;
+        margin-top: 50px;
         min-height: 100%;
         text-align: justify;
 
@@ -389,24 +396,6 @@
             margin: 10px 0px 0px 0px;
         }
 
-        &:first-child {
-            border-right: 1px solid $brand-color;
-
-            h1 {
-                right: 0%;
-                transform: rotate(-90deg);
-                padding: 38px 0px 0px 0px;
-            }
-        }
-
-        &:last-child {
-            border-left: 1px solid $brand-color;
-            h1 {
-                left: 0%;
-                transform: rotate(90deg);
-                padding: 50px 0px 0px 0px;
-            }
-        }
 
         h2 {
             margin-top: 15px;
@@ -420,4 +409,60 @@
             font-style: italic;
         }
     }
+
+    &__section--conversational {
+        border-right: 1px solid $brand-color;
+
+        h1 {
+            font-weight: normal;
+            right: 0%;
+            transform: rotate(90deg);
+            padding: 0px 0px 165px 0px;
+        }
+    }
+
+    &__section--technical {
+        border-left: 1px solid $brand-color;
+
+        h1 {
+            font-weight: normal;
+            left: 0%;
+            transform: rotate(90deg);
+            padding: 100px 0px 0px 0px;
+            margin-top: 7px
+        }
+    }
+
+    &__notebook-listing {
+        margin: 0px auto;
+        max-width: 60%;
+    }
+}
+
+#code-hider {
+    text-align: right;
+    padding-bottom: 10px;
+
+    span {
+        color: $brand-color;
+        text-decoration: none;
+
+        &:hover {
+            cursor: pointer;
+            color: $brand-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+.code--hidden {
+    display: none;
+}
+
+.shout {
+    margin: 0px 40px 40px 40px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
 }
