@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: science
 title: Science Mission
 permalink: /science-mission/
 ---
@@ -16,5 +16,3 @@ associated solutions.
 The 39Alpha teams are free to engage in research which supports this ultimate goal in any way they
 see fit. The developing projects described below are examples of the type of projects which will be
 engaged upon to support the overall mission.
-
-**insert project plot**
