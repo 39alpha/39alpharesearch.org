@@ -7,8 +7,8 @@ reward: 8
 ---
 
 Imagine sitting in bar in the early afternoon at a table full of your coworkers. The place is relatively empty and you are 
-speaking easily with everyone at the table, including that attractive girl from accounting sitting a couple places down 
-across the table. Mary, you think her name is. Eventually, happy hour begins. The bar turns the music up and the crowds 
+speaking easily with everyone at the table, including that attractive woman from accounting sitting a couple places down 
+across the table, Mary. Eventually, happy hour begins. The bar turns the music up and the crowds 
 begin filing in. 30 minutes later you are talking loudly to the people sitting immediately next to you, Bob 
 (also from accounting) and Jared from customer support. You wanted to keep talking to the whole table, so as to include 
 Mary from accounting, but your environment changed. The noise has increased such that, even if you obnoxiously shouted, 
