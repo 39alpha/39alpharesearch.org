@@ -33,4 +33,4 @@ populations have to be in order to become susceptible to extinction via environm
 If such stocks are collapsed, then what are the effects down the food web?
 
 
-(whale-noise review= https://www.frontiersin.org/articles/10.3389/fmars.2019.00606/full)
+[The Effects of Ship Noise on Marine Mammals—A Review](https://www.frontiersin.org/articles/10.3389/fmars.2019.00606/full)
