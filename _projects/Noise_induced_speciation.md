@@ -18,7 +18,7 @@ you all sat down.
 
 <hr />
 
-Many whale species, such as sperm whales, blue whales, and humpback whales, depend on long range communication. 
+Many whale species, such as sperm whales, blue whales, and humpback whales, depend on long range vocal communication for mate and conspecific location. 
 Species such as sperm whales can have regional dialects in their complex system of calls and clicks which facilitates 
 a culture of unknown complexity. The industrial revolution, followed by advances in modern warfare has ushered in a new regime of 
 sound production in the seas across a range of frequencies. Some regions of the spectrum that may have previously been quite, 
@@ -31,3 +31,6 @@ If such noise pollution causes dialect schisms? and if these result in speciatio
 populations have to be in order to become susceptible to extinction via environmental change, bottelneck effects, and overfishing? 
 
 If such stocks are collapsed, then what are the effects down the food web?
+
+
+(whale-noise review= https://www.frontiersin.org/articles/10.3389/fmars.2019.00606/full)
