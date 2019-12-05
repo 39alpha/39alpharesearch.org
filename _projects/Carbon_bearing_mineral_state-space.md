@@ -6,9 +6,6 @@ purity: 5
 risk: 5
 reward: 5
 ---
-
-
-
 <hr />
 
 We wish to map the variable-space of CO2 bearing mineral phases (calcite, aragonite, siderite, etc.) 
