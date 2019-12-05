@@ -60,14 +60,16 @@ function extract_from_notebook(filename, outdir=dirname(filename))
 end
 
 function extract_from_notebooks(notebooksdir="_notebooks")
-    resources = []
-    for (root, _, files) in walkdir(notebooksdir), file in files
-        filename = joinpath(root, file)
-        if occursin(r".*\.ipynb$", file)
-            append!(resources, extract_from_notebook(filename))
+    if ispath(notebooksdir())
+        resources = []
+        for (root, _, files) in walkdir(notebooksdir), file in files
+            filename = joinpath(root, file)
+            if occursin(r".*\.ipynb$", file)
+                append!(resources, extract_from_notebook(filename))
+            end
         end
+        resources
     end
-    resources
 end
 
 const resources = extract_from_notebooks()
