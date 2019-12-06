@@ -5,7 +5,7 @@ permalink: /six-differentiators/
 ---
 
 # Team Driven
-Research at 39Alpha is conducted by teams of five (four PhD's and one part-time freshman
+Research at 39Alpha is conducted by teams of five (four Ph.D's and one part-time freshman
 undergraduate student), and is published as such. There are no individual authors. The reputation of
 the team (and its members) are one. We believe that the modern publication paradigm centered on
 individual authorship actively incentivizes behavior that, while necessarily beneficial to
@@ -75,5 +75,5 @@ research teams is designed and monitored by [social and organization psychologi
 social-psych.md %}), keen on using 39Alpha teams as a test bed for original publications and
 advancement in this field.  These physiologists monitor how teams communicate and collaborate
 amongst themselves, how they collectively move on scientific goals and targets, and how the
-disciplinary backgrounds and personalities of individual team members affects creativety,
+disciplinary backgrounds and personalities of individual team members affects creativity,
 productivity, and original discovery.
