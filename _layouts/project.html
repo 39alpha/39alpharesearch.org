@@ -27,7 +27,13 @@ layout: wide
     {% for notebook in page.notebooks %}
     {% capture notebook_dir %}/notebooks/{{ notebook }}/{% endcapture %}
     {% assign notebook_page = site.notebooks | where: "dir", notebook_dir | first %}
-    <h2><a href="{{ notebook_page.url | relative_url }}">{{ notebook_page.title | escape}}</a></h2>
+    <div class="notebook-header">
+        <h2><a href="{{ notebook_page.url | relative_url }}">{{ notebook_page.title | escape}}</a></h2>
+        <a href="{{ notebook_page.url | relative_url }}notebook.ipynb" title="Download Notebook">
+            <img src={{ "/assets/images/download.png" | relative_url }} alt="Download Notebook Icon"/>
+        </a>
+    </div>
+
     <p>{{ notebook_page.description | default: notebook_page.excerpt }}</p>
     {% endfor %}
 </ul>
