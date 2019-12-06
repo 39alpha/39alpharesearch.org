@@ -466,3 +466,26 @@
     font-size: 35px;
     text-align: center;
 }
+
+.axis--label {
+    font-family: "Courier New", monospace;
+    fill: #000000;
+}
+
+.project--node {
+    stroke: black;
+    stroke-width: 1px;
+    opacity: 0.7;
+}
+
+.project--label {
+    font: 12pt "Courier New", monospace;
+}
+
+#projects {
+    text-align: justify;
+}
+
+.project--hidden {
+    display: none;
+}
