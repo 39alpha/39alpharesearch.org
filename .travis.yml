@@ -17,6 +17,12 @@ env:
         - GEM_HOME=$HOME/.gems
         - PATH="$GEM_HOME/bin:$HOME/.local/bin:$PATH"
 
+cache:
+    directories:
+        - $HOME/.local
+        - $HOME/.gems
+        - $HOME/.julia
+
 install:
     - sudo python3 -m pip install --upgrade pip
     - python3 -m pip install --user nbconvert
