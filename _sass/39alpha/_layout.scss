@@ -327,42 +327,42 @@
 .giving {
     width: 100%;
     left: 0%;
-}
 
-.giving__levels {
-    display: flex;
-    position: relative;
-    width: 100%;
-    justify-content: center;
-}
-
-.giving__level {
-    position: relative;
-    width: 204px;
-    height: 434px;
-    flex-shrink: 0;
-    &:first-child {
-        padding-right: 35px;
+    &__levels {
+        display: flex;
+        position: relative;
+        width: 100%;
+        justify-content: center;
     }
-}
 
-.giving__level--wide {
-    width: 511px;
-}
+    &__level {
+        position: relative;
+        width: 204px;
+        height: 434px;
+        flex-shrink: 0;
+        &:first-child {
+            padding-right: 35px;
+        }
+    }
 
-.giving__hover {
-    position: absolute;
-    width: 204px;
-    height: 415px;
-}
+    &__level--wide {
+        width: 511px;
+    }
 
-.giving__hover--wide {
-    width: 511px;
-    height: 434px;
-}
+    &__hover {
+        position: absolute;
+        width: 204px;
+        height: 415px;
+    }
 
-.giving__hover--hidden {
-    display: none;
+    &__hover--wide {
+        width: 511px;
+        height: 434px;
+    }
+
+    &__hover--hidden {
+        display: none;
+    }
 }
 
 .project {
