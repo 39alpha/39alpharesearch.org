@@ -38,4 +38,4 @@ How small would resulting populations have to be in order to become susceptible 
 If such stocks are collapsed, what are the effects down the food web?
 
 
-<sup>1</sup>[The Effects of Ship Noise on Marine Mammals—A Review](https://www.frontiersin.org/articles/10.3389/fmars.2019.00606/full)
+<sup>1</sup>[Erbe, C., Marley, S. A., Schoeman, R. P., Smith, J. N., Trigg, L. E., & Embling, C. B. (2019). The Effects of Ship Noise on Marine Mammals—A Review. Frontiers in Marine Science, 6(October). https://doi.org/10.3389/fmars.2019.00606](https://www.frontiersin.org/articles/10.3389/fmars.2019.00606/full)
