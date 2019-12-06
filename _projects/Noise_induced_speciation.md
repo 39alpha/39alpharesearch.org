@@ -19,7 +19,7 @@ you all sat down.
 <hr />
 
 Many whale species depend on long range vocal communication for locating conspecifics and especially mates, including both mysticetes (baleen whales) and odontocetes (toothed whales).
-The industrial revolution, followed by increasing in shipping, recreational vehicles, and advances in modern undersea warfare, has ushered in a new era of sound production in the seas across a range of frequencies which include those used by whales<sup>1</sup> 1(https://www.frontiersin.org/articles/10.3389/fmars.2019.00606/full). 
+The industrial revolution, followed by increasing in shipping, recreational vehicles, and advances in modern undersea warfare, has ushered in a new era of sound production in the seas across a range of frequencies which include those used by whales<sup>1</sup>.
 
 If regions of the sound spectrum used by whales which had been relatively quite during their language evolution have become noisy, then the distance with which they can send and receive information has likely gone down, as the signal to noise ratio has decreased. This may decrease the distance to which young males can effectively signal in the search for females.
 
