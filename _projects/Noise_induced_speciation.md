@@ -18,19 +18,23 @@ you all sat down.
 
 <hr />
 
-Many whale species, such as sperm whales, blue whales, and humpback whales, depend on long range vocal communication for mate and conspecific location. 
-Species such as sperm whales can have regional dialects in their complex system of calls and clicks which facilitates 
-a culture of unknown complexity. The industrial revolution, followed by advances in modern warfare has ushered in a new regime of 
-sound production in the seas across a range of frequencies. Some regions of the spectrum that may have previously been quite, 
-may now be very loud, including regions employed by these species for long range communication. Is it possible that such 
-noise pollution might cause speciation by segregating previously overlapping populations into smaller dialect groups?
-If so, do whale populations have the numbers to support such a segregation? Can you even cause speciation via language? 
-Many whale species often find mates by answering calls over very large distances. If they stop recognizing 
-calls from their own species (due to different dialect), then maybe they stop answering them. 
-If such noise pollution causes dialect schisms? and if these result in speciation. Just how small would the resulting 
-populations have to be in order to become susceptible to extinction via environmental change, bottelneck effects, and overfishing? 
+Many whale species depend on long range vocal communication for locating conspecifics and especially mates, including both mysticetes (baleen whales) and odontocetes (toothed whales).
+The industrial revolution, followed by increasing in shipping, recreational vehicles, and advances in modern undersea warfare, has ushered in a new era of sound production in the seas across a range of frequencies which include those used by whales<sup>1</sup> 1(https://www.frontiersin.org/articles/10.3389/fmars.2019.00606/full). 
 
-If such stocks are collapsed, then what are the effects down the food web?
+If regions of the sound spectrum used by whales which had been relatively quite during their language evolution have become noisy, then the distance with which they can send and receive information has likely gone down, as the signal to noise ratio has decreased. This may decrease the distance to which young males can effectively signal in the search for females.
+
+This project focuses on exploring the possibility that such noise pollution might cause regional speciation via the segregating of previously overlapping populations, which would then be more susceptible to the genetic instabilities associated with smaller reproductive groups.
 
 
-[The Effects of Ship Noise on Marine Mammals—A Review](https://www.frontiersin.org/articles/10.3389/fmars.2019.00606/full)
+Do whale populations have the numbers to support such speciation? 
+
+Can such noise pollution causes dialect schisms, even among populations that are otherwise overlapping at least part of the year? Can dialect schisms cause speciation?
+
+How small do reproductive pools of different whale species need to become before the genetic instabilities result in likely extinction. 
+
+How small would resulting populations have to be in order to become susceptible to extinction via environmental change, bottelneck effects,overfishing, etc.
+
+If such stocks are collapsed, what are the effects down the food web?
+
+
+<sup>1</sup>[The Effects of Ship Noise on Marine Mammals—A Review](https://www.frontiersin.org/articles/10.3389/fmars.2019.00606/full)
