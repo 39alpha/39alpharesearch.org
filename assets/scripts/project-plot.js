@@ -122,7 +122,7 @@ const links = linkgroup.append('a')
             .attr('y', bypos)
             .attr('rx', 10)
             .attr('fill', '#df440f')
-            .attr('fill-opacity', 0.3)
+            .attr('fill-opacity', 0.5)
             .attr('stroke', '#df440f')
             .attr('stroke-width', 1);
     })
