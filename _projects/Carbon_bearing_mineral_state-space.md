@@ -1,11 +1,13 @@
 ---
 layout: project
 title: Carbon-bearing mineral state-space
-description: 
+description: Mapping the variable-space of carbon-bearing minerals onto Earth's aqueous environs.
 applicability: 5
 risk: 5
 reward: 5
 ---
+
+
 Lets say that you wanted to bake a chocolate cake, and you want to attempt this with the ingredients already in your kitchen. You sort through your pantry, pulling out all the ingredients that you’ll need. Alas, you find that you have almost everything, except, you are missing three eggs. You cannot bake the cake!
 
 The kitchen in this case is your environment, and it cannot support the baking (formation) of a chocolate cake. You can think of this kitchen as having a *distance* from the chocolate cake, and that distance is measured in eggs. IE, if you added three eggs to the kitchen it would support the formation of the chocolate cake. 
