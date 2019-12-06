@@ -2,8 +2,8 @@
 layout: project
 title: Carbon-bearing mineral state-space
 description: Mapping the variable-space of carbon-bearing minerals onto Earth's aqueous environs.
-applicability: 5
-risk: 5
+applicability: 3
+risk: 3
 reward: 5
 ---
 
