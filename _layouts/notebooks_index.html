@@ -9,7 +9,12 @@ layout: narrow
     <div class="post-content">
         {% for notebook in site.notebooks %}
             <div>
-                <h2><a href="{{ notebook.url | relative_url }}">{{ notebook.title }}</a></h2>
+                <div class="notebook-header">
+                    <h2><a href="{{ notebook.url | relative_url }}">{{ notebook.title | escape}}</a></h2>
+                    <a href="{{ notebook.url | relative_url }}notebook.ipynb" title="Download Notebook">
+                        <img src={{ "/assets/images/download.png" | relative_url }} alt="Download Notebook Icon"/>
+                    </a>
+                </div>
                 <p>{{ notebook.description | default: notebook.excerpt }}</p>
             </div>
         {% endfor %}
