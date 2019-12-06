@@ -2,6 +2,7 @@
 layout: project
 title: Noise-induced speciation
 applicability: 5
+description: Can whale poulations regionally speciate due to noise-induced decreases in their call range?
 risk: 5
 reward: 8
 ---
