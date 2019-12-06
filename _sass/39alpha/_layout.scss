@@ -96,6 +96,7 @@
         right: $spacing-unit / 2;
         background-color: $background-color;
         text-align: left;
+        z-index: 500;
 
         label[for="nav-trigger"] {
             display: block;
@@ -326,42 +327,38 @@
 
 .giving {
     width: 100%;
-    left: 0%;
+    height: auto;
+    min-height: 200px;
 
     &__levels {
         display: flex;
-        position: relative;
-        width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     &__level {
         position: relative;
-        width: 204px;
-        height: 434px;
-        flex-shrink: 0;
-        &:first-child {
-            padding-right: 35px;
+        min-width: 150px;
+        width: 25%;
+
+        img {
+            width: 100%;
+            height: auto;
         }
     }
 
     &__level--wide {
-        width: 511px;
+        min-width: 288px;
+        width: 49%;
     }
 
     &__hover {
-        position: absolute;
-        width: 204px;
-        height: 415px;
-    }
-
-    &__hover--wide {
-        width: 511px;
-        height: 434px;
+        position: relative;
     }
 
     &__hover--hidden {
         display: none;
+        position: absolute;
     }
 }
 
