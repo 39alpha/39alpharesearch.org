@@ -10,12 +10,12 @@ layout: wide
 {% assign raw_content = content | split: '<hr />' %}
 {% assign conversational = raw_content | first %}
     <article class="project__section project__section--conversational">
-        <h1>Conversational</h1>
+        <h1>Conversational Description</h1>
         {{ conversational }}
     </article>
 {% assign technical = raw_content | last %}
     <article class="project__section project__section--technical">
-        <h1>Technical</h1>
+        <h1>Technical Description</h1>
         {{ technical }}
     </article>
 </div>
