@@ -26,6 +26,7 @@ $wide-content-width:   1600px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
+$on-narrow:        1300px !default;
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
