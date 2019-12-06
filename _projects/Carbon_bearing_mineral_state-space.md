@@ -2,7 +2,7 @@
 layout: project
 title: Carbon-bearing mineral state-space
 description: 
-purity: 5
+applicability: 5
 risk: 5
 reward: 5
 ---

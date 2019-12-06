@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Noise-induced speciation
-purity: 5
+applicability: 5
 risk: 5
 reward: 8
 ---

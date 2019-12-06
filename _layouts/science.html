@@ -6,7 +6,7 @@ const projects = [
 {% for project in site.projects %}
     {
         title: "{{ project.title }}",
-        purity: {{ project.purity }},
+        applicability: {{ project.applicability }},
         risk: {{ project.risk }},
         reward: {{ project.reward }},
         url: "{{ project.url | relative_url }}",
@@ -49,7 +49,7 @@ const projects = [
 </article>
 
 <div style="text-align: center">
-    <svg id="risk-vs-purity"></svg>
+    <svg id="risk-vs-applicability"></svg>
 </div>
 
 <script>
@@ -69,14 +69,14 @@ const width = 6*margin + height;
 
 const innerwidth = Math.min(width, height) - 2*margin, innerheight = innerwidth;
 
-const svg = d3.select('#risk-vs-purity')
-                .attr('title', 'Risk vs. Purity')
+const svg = d3.select('#risk-vs-applicability')
+                .attr('title', 'Risk vs. Applicability')
                 .attr('version', 1.1)
                 .attr('xmlns', 'http://www.w3.org/2000/svg')
                 .attr('width', width)
                 .attr('height', height);
 
-const x = d3.scaleLinear().rangeRound([0, innerwidth]);
+const x = d3.scaleLinear().rangeRound([innerwidth, 0]);
 const y = d3.scaleLinear().rangeRound([innerheight, 0]);
 
 x.domain([10, 0]);
@@ -109,15 +109,15 @@ const xaxis = space.append('g')
 
 xaxis.append('text')
     .classed('axis--label', true)
-    .attr('text-anchor', 'middle')
-    .attr('x', 0)
+    .attr('text-anchor', 'start')
+    .attr('x', x(0))
     .attr('y', -margin / 2)
-    .text('Pure');
+    .text('Theoretical');
 
 xaxis.append('text')
     .classed('axis--label', true)
-    .attr('text-anchor', 'middle')
-    .attr('x', innerwidth)
+    .attr('text-anchor', 'end')
+    .attr('x', x(10))
     .attr('y', -margin / 2)
     .text('Applied');
 
@@ -130,7 +130,7 @@ const links = linkgroup.append('a')
     .classed('project--link', true)
     .attr('href', d => d.url)
     .attr('title', d => d.title)
-    .attr('transform', d => `translate(${x(d.purity)}, ${y(d.risk)})`)
+    .attr('transform', d => `translate(${x(d.applicability)}, ${y(d.risk)})`);
 
 links.append('circle')
     .classed('project--node', true)
