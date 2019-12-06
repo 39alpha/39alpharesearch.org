@@ -40,5 +40,14 @@ layout: narrow
                 .reduce((a,b) => a + b) === 0;
             d3.selectAll('#code-hider').classed('hidden', no_code);
         })();
+
+        (function() {
+            d3.selectAll('.notebook-content')
+                .selectAll('img')
+                .each(function() {
+                    const parent = d3.select(d3.select(this).node().parentNode);
+                    parent.style('text-align', 'center');
+                });
+        })();
     </script>
 </article>
