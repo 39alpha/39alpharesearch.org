@@ -33,5 +33,12 @@ layout: narrow
                     .html('Show Code');
             }
         }
+
+        (function() {
+            const no_code = d3.selectAll('.highlight')._groups
+                .map(g => g.length)
+                .reduce((a,b) => a + b) === 0;
+            d3.selectAll('#code-hider').classed('hidden', no_code);
+        })();
     </script>
 </article>
