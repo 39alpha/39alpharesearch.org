@@ -4,7 +4,9 @@ module Jekyll
 
         def generate(site)
             notebooks_collection = site.collections['notebooks']
-            notebooks = notebooks_collection.files.select{|file| file.path =~ /.ipynb$/i}
+            notebooks = notebooks_collection.files
+                .select{|file| file.path =~ /.ipynb$/i}
+                .select{|file| file.path !~ /.ipynb_checkpoints/i}
             notebooks.each do |notebook|
                 notebooks_collection.docs << NotebookPage.new(site, site.source, notebook)
             end
