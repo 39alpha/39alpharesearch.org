@@ -75,7 +75,60 @@ const links = linkgroup.append('a')
     .classed('project--link', true)
     .attr('href', d => d.url)
     .attr('title', d => d.title)
-    .attr('transform', d => `translate(${x(d.applicability)}, ${y(d.risk)})`);
+    .attr('transform', d => `translate(${x(d.applicability)}, ${y(d.risk)})`)
+    .on('mouseover', (d) => {
+        var xpos = x(d.applicability),
+            ypos = y(d.risk),
+            anchor;
+
+        if (d.applicability < 3) {
+            anchor = 'start';
+        } else if (d.applicability <= 7) {
+            anchor = 'middle';
+        } else if (d.applicability > 7) {
+            anchor = 'end';
+        }
+
+        if (d.risk <= 5) {
+            ypos -= 2*radius;
+        } else if (d.risk > 5) {
+            ypos += 2*radius;
+        }
+
+        d3.selectAll('#hovered-project').remove();
+
+        const g = space.append('g')
+            .attr('id', 'hovered-project');
+
+        const title = g.append('text')
+            .attr('text-anchor', anchor)
+            .attr('x', xpos)
+            .attr('y', ypos)
+            .text(d.title);
+
+        const { width, height } = title.node().getBBox();
+
+        const bypos = ypos - height;
+        var bxpos = xpos;
+        if (anchor === 'middle') {
+            bxpos -= 0.5*width + 5;
+        } else if (anchor === 'end') {
+            bxpos -= width + 5;
+        }
+        g.insert('rect', 'text')
+            .attr('width', width + 10)
+            .attr('height', 1.3*height)
+            .attr('x', bxpos)
+            .attr('y', bypos)
+            .attr('rx', 10)
+            .attr('fill', '#df440f')
+            .attr('fill-opacity', 0.3)
+            .attr('stroke', '#df440f')
+            .attr('stroke-width', 1);
+    })
+    .on('mouseleave', (d) => {
+        d3.selectAll('#hovered-project').remove();
+    });
 
 links.append('circle')
     .classed('project--node', true)
