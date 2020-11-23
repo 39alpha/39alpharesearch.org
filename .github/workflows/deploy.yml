@@ -15,11 +15,18 @@ jobs:
       - name: Install Go
         uses: actions/setup-go@v2
         with:
-            go-version: '^1.15.5'
+          go-version: '^1.15.5'
+
+      - name: Cache Hugo
+        id: cache-primes
+        uses: actions/cache@v2
+        with:
+          path: /home/runner/go
+          key: ${{ runner.os }}-go
 
       - name: Install Hugo
+        if: steps.cache-go.outputs.cache-hit != 'true'
         run: |
-          export GOPATH=/home/runner/go
           mkdir -p $GOPATH/src/github.com/gohugoio
           pushd $GOPATH/src/github.com/gohugoio
           git clone https://github.com/gohugoio/hugo
@@ -27,6 +34,18 @@ jobs:
           go install --tags extended
           popd
           hugo version
+        env:
+          GOPATH: /home/runner/go
+
+      - name: Install Jupyter
+        run: pip install jupyter
+
+      - name: Build Site
+        run: |
+          go run bin/nbconvert.go
+          hugo
+        env:
+          GOPATH: /home/runner/go
 
       # - name: Deploy 🚀
       #   uses: JamesIves/github-pages-deploy-action@3.7.1
