@@ -39,7 +39,9 @@ jobs:
           GOPATH: /home/runner/go
 
       - name: Install Jupyter
-        run: pip3 install jupyter
+        run: |
+            pip3 install -U pip setuptools
+            pip3 install jupyter
 
       - name: Build Site
         run: |
