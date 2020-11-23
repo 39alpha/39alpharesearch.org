@@ -40,7 +40,7 @@ jobs:
 
       - name: Install Jupyter
         run: |
-            pip3 install -U pip setuptools
+            pip3 install -U pip setuptools pygments
             pip3 install jupyter
 
       # - name: Build Site
