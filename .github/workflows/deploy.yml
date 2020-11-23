@@ -19,10 +19,11 @@ jobs:
 
       - name: Install Hugo
         run: |
-          pushd $GOPATH/src
-          mkdir -p github.com/gohugoio
+          export GOPATH=/home/runner/go
+          mkdir -p $GOPATH/src/github.com/gohugoio
+          pushd $GOPATH/src/github.com/gohugoio
           git clone https://github.com/gohugoio/hugo
-          cd github.com/gohugoio/hugo
+          cd hugo
           go install --tags extended
           popd
           hugo version
