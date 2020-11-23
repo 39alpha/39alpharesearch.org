@@ -1,0 +1,31 @@
+languageCode: en-us
+title: 39Alpha Research
+relativeURLS: true
+markup:
+    goldmark:
+        parser:
+            attribute: true
+        renderer:
+            unsafe: true
+params:
+    github_username: 39alpha
+    author:
+        name: 39Alpha Research
+        email: 39AlphaResearch@gmail.com
+    logo:
+        url: /images/39alpha.png
+    description: >-
+        39Alpha Research is a nonprofit scientific research organization founded on
+        the idea that there is a better way to do world-class science.
+menu:
+    main:
+        - identifier: projects
+          title: Projects
+          url: /projects
+          parent: "Science Mission"
+          weight: 1
+        - identifier: notebooks
+          title: Notebooks
+          url: /notebooks
+          parent: "Science Mission"
+          weight: 2

@@ -1,0 +1,122 @@
+<ul class="social-media-list">
+    {{ with .Site.Params.dribbble_username }}
+        <li>
+            <a href="https://dribbble.com/{{ . }}">
+                <svg class="svg-icon">
+                    <use xlink:href="/images/39alpha-social-icons.svg#dribbble"></use>
+                </svg>
+                <span class="username">{{ . }}</span>
+            </a>
+        </li>
+    {{ end }}
+
+    {{ with .Site.Params.facebook_username }}
+        <li>
+            <a href="https://www.facebook.com/{{ . }}">
+                <svg class="svg-icon">
+                    <use xlink:href="{{ .Site.BaseURL}}images/39alpha-social-icons.svg#facebook"></use>
+                </svg>
+                <span class="username">{{ . }}</span>
+            </a>
+        </li>
+    {{ end }}
+
+    {{ with .Site.Params.flickr_username }}
+        <li>
+            <a href="https://www.flickr.com/photos/{{ . }}">
+                <svg class="svg-icon">
+                    <use xlink:href="/images/39alpha-social-icons.svg#flickr"></use>
+                </svg>
+                <span class="username">{{ . }}</span>
+            </a>
+        </li>
+    {{ end }}
+
+    {{ with .Site.Params.github_username }}
+        <li>
+            <a href="https://github.com/{{ . }}">
+                <svg class="svg-icon">
+                    <use xlink:href="/images/39alpha-social-icons.svg#github"></use>
+                </svg>
+                <span class="username">{{ . }}</span>
+            </a>
+        </li>
+    {{ end }}
+
+    {{ with .Site.Params.instagram_username }}
+        <li>
+            <a href="https://instagram.com/{{ . }}">
+                <svg class="svg-icon">
+                    <use xlink:href="/images/39alpha-social-icons.svg#instagram"></use>
+                </svg>
+                <span class="username">{{ . }}</span>
+            </a>
+        </li>
+    {{ end }}
+
+    {{ with .Site.Params.linkedin_username }}
+        <li>
+            <a href="https://www.linkedin.com/in/{{ . }}">
+                <svg class="svg-icon">
+                    <use xlink:href="/images/39alpha-social-icons.svg#linkedin"></use>
+                </svg>
+                <span class="username">{{ . }}</span>
+            </a>
+        </li>
+    {{ end }}
+
+    {{ with .Site.Params.pinterest_username }}
+        <li>
+            <a href="https://www.pinterest.com/{{ . }}">
+                <svg class="svg-icon">
+                    <use xlink:href="/images/39alpha-social-icons.svg#pinterest"></use>
+                </svg>
+                <span class="username">{{ . }}</span>
+            </a>
+        </li>
+    {{ end }}
+
+    {{ with .Site.Params.twitter_username }}
+        <li>
+            <a href="https://www.twitter.com/{{ . }}">
+                <svg class="svg-icon">
+                    <use xlink:href="/images/39alpha-social-icons.svg#twitter"></use>
+                </svg> 
+                <span class="username">{{ . }}</span>
+            </a>
+        </li>
+    {{ end }}
+
+    {{ with .Site.Params.youtube_username }}
+        <li>
+            <a href="https://youtube.com/{{ . }}">
+                <svg class="svg-icon">
+                    <use xlink:href="/images/39alpha-social-icons.svg#youtube"></use>
+                </svg> 
+                <span class="username">{{ . }}</span>
+            </a>
+        </li>
+    {{ end }}
+
+    {{ with .Site.Params.googleplus_username }}
+        <li>
+            <a href="https://plus.google.com/{{ . }}">
+                <svg class="svg-icon">
+                    <use xlink:href="/images/39alpha-social-icons.svg#googleplus"></use>
+                </svg> 
+                <span class="username">{{ . }}</span>
+            </a>
+        </li>
+    {{ end }}
+
+    {{ with .Site.Params.rss }}
+        <li>
+            <a href="/feed.xml">
+                <svg class="svg-icon">
+                    <use xlink:href="/images/39alpha-social-icons.svg#rss"></use>
+                </svg> 
+                <span>{{ . }}</span>
+            </a>
+        </li>
+    {{ end }}
+</ul>
