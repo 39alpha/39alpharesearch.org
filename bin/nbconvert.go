@@ -14,6 +14,7 @@ import (
 )
 
 const (
+    checkpoints = ".ipynb_checkpoints"
     notebook_path = "notebooks"
     notebook_name = "notebook.ipynb"
     draft_notebook_name = "notebook_draft.ipynb"
@@ -124,7 +125,7 @@ func FindNotebooks() (files []string, err error) {
         }
         return nil
     })
-    return files, err
+    return
 }
 
 type Notebook struct {
@@ -166,6 +167,11 @@ func ReadNotebook(path string) (*Notebook, error) {
 
         basename := filepath.Base(path)
         if info.Mode().IsRegular() && basename != notebook_name && basename != draft_notebook_name {
+            for dir := filepath.Dir(path); dir != "/" && dir != "." && dir != ".." && dir != ""; dir = filepath.Dir(dir) {
+                if filepath.Base(dir) == checkpoints {
+                    return nil
+                }
+            }
             assets = append(assets, path)
         }
         return nil
