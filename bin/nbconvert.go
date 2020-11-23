@@ -19,6 +19,8 @@ const (
     notebook_name = "notebook.ipynb"
     draft_notebook_name = "notebook_draft.ipynb"
     markdown_name = "index.md"
+    jupyter_convert = "bin/jupyter-convert.py"
+    extract_assets = "bin/extract-assets.py"
 )
 
 var content_root = filepath.Join("content", "notebooks")
@@ -129,6 +131,7 @@ func FindNotebooks() (files []string, err error) {
 }
 
 type Notebook struct {
+    Path string
     Title string
     Draft bool
     Content string
@@ -141,7 +144,7 @@ func ReadNotebook(path string) (*Notebook, error) {
     title := filepath.Base(dir)
     draft := filepath.Base(path) == draft_notebook_name
 
-    cmd := exec.Command(PythonExe(), "bin/jupyter-convert.py", path)
+    cmd := exec.Command(PythonExe(), jupyter_convert, path)
 
     content, err := cmd.Output()
     if err != nil {
@@ -181,7 +184,7 @@ func ReadNotebook(path string) (*Notebook, error) {
         return nil, err
     }
 
-    return &Notebook{ title, draft, string(content), assets }, nil
+    return &Notebook{ path, title, draft, string(content), assets }, nil
 }
 
 func (nb *Notebook) CopyAssets(dir string) error {
@@ -198,6 +201,17 @@ func (nb *Notebook) CopyAssets(dir string) error {
 
         CopyFile(asset, dest)
     }
+    return nil
+}
+
+func (nb *Notebook) ExtractAssets(dir string) error {
+    cmd := exec.Command(PythonExe(), extract_assets, "--notebook", nb.Path, "--outdir", dir)
+
+    content, err := cmd.Output()
+    if err != nil {
+        return err
+    }
+    fmt.Print(string(content))
     return nil
 }
 
@@ -255,6 +269,7 @@ func main() {
             }
         }
         nb.CopyAssets(content_dir)
+        nb.ExtractAssets(content_dir)
 
         if err = WriteZip(notebook, content_dir); err != nil {
             log.Fatalf("error writing notebook zip: %v\n", err)
