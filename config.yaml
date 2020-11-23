@@ -7,6 +7,8 @@ markup:
             attribute: true
         renderer:
             unsafe: true
+    highlight:
+        noClasses: false
 params:
     github_username: 39alpha
     author:
