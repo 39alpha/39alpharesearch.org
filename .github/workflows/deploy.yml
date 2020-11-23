@@ -18,11 +18,12 @@ jobs:
           go-version: '^1.15.5'
 
       - name: Cache Hugo
-        id: cache-primes
+        id: cache-go
         uses: actions/cache@v2
         with:
           path: /home/runner/go
           key: ${{ runner.os }}-go
+          restore-keys: ${{ runner.os }}-go
 
       - name: Install Hugo
         if: steps.cache-go.outputs.cache-hit != 'true'
@@ -38,7 +39,7 @@ jobs:
           GOPATH: /home/runner/go
 
       - name: Install Jupyter
-        run: pip install jupyter
+        run: pip3 install jupyter
 
       - name: Build Site
         run: |
