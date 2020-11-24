@@ -5,6 +5,6 @@ menu:
         weight: 4
 ---
 
-<a href="mailto:39alpharesearch@gmail.com" style="font-size:50px">
-    39AlphaResearch@gmail.com
+<a href="mailto:39alpha@39alpharesearch.org" style="font-size:50px">
+    39alpha@39alpharesearch.org
 </a>
