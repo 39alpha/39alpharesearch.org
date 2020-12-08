@@ -13,7 +13,10 @@
                         {{ end }}
                     </li>
                     {{ with .Site.Params.author.email }}
-                        <li><a class="u-email" href="mailto:{{ . }}">{{ . }}</a></li>
+                    <li><a class="u-email" href="mailto:{{ . }}">{{ . }}</a></li>
+                    {{ end }}
+                    {{ with split .Site.Params.author.address.mailing "\n"}}
+                    <li>{{ delimit . "</br>" }}</li>
                     {{ end }}
                 </ul>
             </div>

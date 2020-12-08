@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="wrapper wrapper--narrow">
+    <article class="post">
+        <div class="post-content">
+            <header class="post-header post-header--visible">
+                <h1 class="post-title">{{ .Title }}</h1>
+            </header>
+
+            {{ .Content }}
+
+            <dl>
+            {{ with .Site.Params.author.email }}
+                <dt>Email:</dt>
+                <dd><a class="u-email" href="mailto:{{ . }}">{{ . }}</a></dd>
+            {{ end }}
+            {{ with split .Site.Params.author.address.mailing "\n" }}
+                <dt>Mailing Address:</dt>
+                <dd>{{ delimit . "</br>" }}</dd>
+            {{ end }}
+            </dl>
+        </div>
+    </article>
+</div>
+{{ end }}
