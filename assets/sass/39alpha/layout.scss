@@ -270,7 +270,12 @@
 .post-header {
     display: none;
     margin-bottom: $spacing-unit;
+
+    &--visible {
+        display: block;
+    }
 }
+
 
 .post-title, .notebook-title {
     @include relative-font-size(2);

@@ -50,6 +50,18 @@ li {
   }
 }
 
+dl {
+  margin-left: 2 * $spacing-unit;
+
+  > dt {
+    margin-top: $spacing-unit;
+    font-weight: 2 * $base-font-weight;
+  }
+  > dd {
+    margin-left: $spacing-unit;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 2 * $base-font-weight;
   margin-top: $spacing-unit;

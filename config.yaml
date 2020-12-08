@@ -14,6 +14,11 @@ params:
     author:
         name: 39Alpha Research
         email: 39alpha@39alpharesearch.org
+        address:
+            mailing:
+                2307 S. Rural Road
+
+                Tempe, Arizona 85282
     logo:
         url: /images/39alpha.png
     description: >-
