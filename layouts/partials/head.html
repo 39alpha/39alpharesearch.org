@@ -16,7 +16,7 @@
     {{ hugo.Generator -}}
     {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $style := resources.Get "/sass/main.scss" | resources.ToCSS $options }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <script type="text/javascript" id="d3js" src="https://d3js.org/d3.v5.min.js"></script>
     <script>
