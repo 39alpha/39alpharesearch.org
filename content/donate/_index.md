@@ -38,7 +38,7 @@ We ask that if you wish to donate more than $500, please consider [contacting us
     <div class="form__row">
         <div class="form__field">
             <label class="form__label" id="email" for="email">Email:</label>
-            <input class="form__input" type="text" name="email" aria-labelledby="email" aria-required="true" required>
+            <input class="form__input" type="email" name="email" aria-labelledby="email" aria-required="true" required>
         </div>
         <div class="form__field form__field--currency">
             <label class="form__label" id="donation_amount" for="amount">Amount:</label>
