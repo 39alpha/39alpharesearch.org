@@ -1,0 +1,19 @@
+<div class="donations">
+    <div class="donations__solicitation">
+        <h1 class="donations__solicitation--header">Show your support with a donation</h1>
+        {{- with .Site.Params.donations.solicitation -}}
+            <p class="donations__solicitation--body">{{- . -}}</p>
+        {{- end -}}
+    </div>
+    <div class="donations__options">
+        {{- range .Site.Params.donations.values -}}
+        <div class="donations__option">
+            <a class="donations__option--link" href="/donate?amount={{ . }}">
+                <div class="donations__option--value">
+                    ${{ . }}
+                </div>
+            </a>
+        </div>
+        {{- end -}}
+    </div>
+</div>
