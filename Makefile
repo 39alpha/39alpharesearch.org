@@ -4,8 +4,9 @@ all: convert
 serve: convert
 	hugo server
 
-serve-drafs: convert
+serve-drafts: convert
 	hugo server -D
 
 convert:
 	go run bin/nbconvert.go
+

@@ -1,44 +1,42 @@
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{ if .Title }}
-        <title>{{ .Title }} - {{ .Site.Title }}</title>
-    {{ else }}
-        <title>{{ .Site.Title }}</title>
-    {{ end }}
-    {{ with .Site.Params.description }}
-        <meta name="description" content="{{ . }}" />
-    {{ end }}
-    {{- with .Site.Author.Name }}
-        <meta name="author" content="{{ . }}"/>
-    {{- end }}
-    {{ hugo.Generator -}}
-    {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
-    {{ $style := resources.Get "/sass/main.scss" | resources.ToCSS $options }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <script type="text/javascript" id="d3js" src="https://d3js.org/d3.v5.min.js"></script>
-    <script>
-        MathJax = {
-            loader: {
-                load: ['[tex]/ams']
-            },
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                packages: {'[+]': ['ams']},
-            },
-            tex2jax: {
-                processEscapes: true
-            },
-            svg: {
-                fontCache: 'global'
-            },
-        };
-    </script>
-    <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    <script type="text/javascript" id="39Alpha" src="/js/39alpha.js"></script>
-    {{ if and hugo.IsProduction .Site.Params.google_analytics }}
-    {{- partial "google-analytics.html" -}}
-    {{ end }}
-</head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{ if .Title }}
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+{{ else }}
+    <title>{{ .Site.Title }}</title>
+{{ end }}
+{{ with .Site.Params.description }}
+    <meta name="description" content="{{ . }}" />
+{{ end }}
+{{- with .Site.Author.Name }}
+    <meta name="author" content="{{ . }}"/>
+{{- end }}
+{{ hugo.Generator -}}
+{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $style := resources.Get "/sass/main.scss" | resources.ToCSS $options }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<script type="text/javascript" id="d3js" src="https://d3js.org/d3.v5.min.js"></script>
+<script>
+    MathJax = {
+        loader: {
+            load: ['[tex]/ams']
+        },
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            packages: {'[+]': ['ams']},
+        },
+        tex2jax: {
+            processEscapes: true
+        },
+        svg: {
+            fontCache: 'global'
+        },
+    };
+</script>
+<script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script type="text/javascript" id="39Alpha" src="/js/39alpha.js"></script>
+{{ if and hugo.IsProduction .Site.Params.google_analytics }}
+{{- partial "google-analytics.html" -}}
+{{ end }}

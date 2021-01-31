@@ -24,6 +24,12 @@ params:
     description: >-
         39Alpha Research is a nonprofit scientific research organization founded on
         the idea that there is a better way to do world-class science.
+    donations:
+        values:
+            - 25.00
+            - 50.00
+            - 75.00
+            - 100.00
 menu:
     main:
         - identifier: projects

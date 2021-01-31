@@ -19,6 +19,9 @@
                     <li>{{ delimit . "</br>" }}</li>
                     {{ end }}
                 </ul>
+                {{ with .Site.Params.description }}
+                    <p>{{ . }}</p>
+                {{ end }}
             </div>
 
             <div class="footer-col footer-col-2">
@@ -26,9 +29,7 @@
             </div>
 
             <div class="footer-col footer-col-3">
-                {{ with .Site.Params.description }}
-                    <p>{{ . }}</p>
-                {{ end }}
+                {{- partial "donate.html" . -}}
             </div>
         </div>
     </div>
