@@ -4,7 +4,7 @@ description: Mapping the variable-space of carbon-bearing minerals onto Earth's 
 applicability: 3
 risk: 3
 reward: 5
-draft: false
+draft: true
 ---
 Lets say that you wanted to bake a chocolate cake, and you want to attempt this with the ingredients
 already in your kitchen. You sort through your pantry, pulling out all the ingredients that you'll
