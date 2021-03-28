@@ -7,7 +7,7 @@ description: >-
 applicability: 9
 risk: 3
 reward: 10
-draft: false
+draft: true
 ---
 A lot of life in the oceans relies directly on sunlight as a energy source and the seafloor itself
 to live on. This includes the majority if coral species.
