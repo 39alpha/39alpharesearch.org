@@ -29,7 +29,7 @@ both the air and in the water, when the amount of $\ce{CO2}$ increases,
 many other things also change. One thing we already see is that seawater
 is becoming acidic. Acids can wreak havoc on the tissues of living things
 like coral (remember when Walter White and Jesse used acid to dissolve
-something Breaking Bad?). We don’t know yet what other aspects of the
+something in Breaking Bad?). We don’t know yet what other aspects of the
 ocean will change, but we have an idea. Returning to the food and water
 example, if the amount of water in your house goes up, you should expect
 the wood in the walls to start rotting and mold to start growing. What
