@@ -3,7 +3,7 @@ layout: science
 title: Science Mission
 menu:
     main:
-        weight: 2
+        weight: 3
 ---
 
 <div class="shout">

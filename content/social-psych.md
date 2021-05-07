@@ -2,7 +2,7 @@
 title: Social Psych
 menu:
     main:
-        weight: 3
+        weight: 4
 ---
 
 39Alpha maintains an in-house STIR team (aka “Social Psych”) which works to assess and improve

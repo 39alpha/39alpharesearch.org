@@ -737,3 +737,81 @@
         background: transparentize($message-color, 0.8);
     }
 }
+
+.team {
+    h1 {
+        text-align: center;
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__sections {
+        display: flex;
+    }
+
+    &__section {
+        padding: 0px 100px;
+        margin-top: 50px;
+        min-height: 100%;
+        text-align: justify;
+
+        h1 {
+            color: $brand-color;
+            opacity: 0.8;
+            position: absolute;
+            top: 0%;
+            margin: 10px 0px 0px 0px;
+        }
+
+
+        h2 {
+            margin-top: 15px;
+            margin-bottom: 7px;
+            color: #444444;
+        }
+
+        h3 {
+            margin: 15px 10px 7px 0px;
+            color: #444444;
+            font-style: italic;
+        }
+    }
+
+    @include media-query($on-narrow) {
+        &__sections {
+            display: block;
+            margin: 0px auto 100px auto;
+        }
+
+        &__section {
+            min-width: inherit;
+            width: 80%;
+            padding: 0px 10px;
+            margin: 0px auto 0px auto;
+            min-height: 100%;
+            text-align: justify;
+
+            h1 {
+                color: $brand-color;
+                opacity: 0.8;
+                position: static;
+                top: inherit;
+                margin: inherit;
+            }
+
+            h2 {
+                margin-top: 15px;
+                margin-bottom: 7px;
+                color: #444444;
+            }
+
+            h3 {
+                margin: 15px 10px 7px 0px;
+                color: #444444;
+                font-style: italic;
+            }
+        }
+    }
+}
