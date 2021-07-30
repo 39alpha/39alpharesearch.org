@@ -563,10 +563,6 @@
     font: 12pt "Courier New", monospace;
 }
 
-#projects {
-    text-align: justify;
-}
-
 .project--hidden {
     display: none;
 }
@@ -739,79 +735,127 @@
 }
 
 .team {
-    h1 {
-        text-align: center;
-    }
-
     &__header {
         text-align: center;
     }
 
-    &__sections {
+    &__title {
+        text-align: center;
+    }
+
+    &__banner {
+    }
+
+    &__members {
+        list-style: none;
         display: flex;
+        justify-content: space-around;
+        padding-top: $spacing-unit / 2;
+        margin-left: 0;
+    }
+
+    &__member {
+        width: 100%;
+        &__info {
+        	margin-left: 0;
+        	padding-left: 0;
+        	padding-right: 0;
+        	list-style: none;
+        	&__name {
+        	}
+        	&__link {
+        		font-size: 3*$base-font-size/4;
+        	}
+        }
+    }
+
+    &__list {
+    	list-style: none;
+    	margin-left: 0;
+    }
+
+    &__sections {
     }
 
     &__section {
-        padding: 0px 100px;
         margin-top: 50px;
         min-height: 100%;
         text-align: justify;
 
         h1 {
-            color: $brand-color;
-            opacity: 0.8;
-            position: absolute;
-            top: 0%;
-            margin: 10px 0px 0px 0px;
-        }
-
-
-        h2 {
-            margin-top: 15px;
-            margin-bottom: 7px;
-            color: #444444;
-        }
-
-        h3 {
-            margin: 15px 10px 7px 0px;
-            color: #444444;
-            font-style: italic;
+            /* color: $brand-color; */
+            font-size: 1.5em;
+            text-align: center;
+            user-select: none;
         }
     }
 
-    @include media-query($on-narrow) {
-        &__sections {
-            display: block;
-            margin: 0px auto 100px auto;
-        }
+    &__experience {
+    	margin-bottom: $spacing-unit/2;
 
-        &__section {
-            min-width: inherit;
-            width: 80%;
-            padding: 0px 10px;
-            margin: 0px auto 0px auto;
-            min-height: 100%;
-            text-align: justify;
+    	&__title {
+    		font-weight: bold;
+    	}
 
-            h1 {
-                color: $brand-color;
-                opacity: 0.8;
-                position: static;
-                top: inherit;
-                margin: inherit;
-            }
+    	&__from, &__to {
+    		font-style: italic;
+    	}
 
-            h2 {
-                margin-top: 15px;
-                margin-bottom: 7px;
-                color: #444444;
-            }
+    	&__lab {
+    	}
 
-            h3 {
-                margin: 15px 10px 7px 0px;
-                color: #444444;
-                font-style: italic;
-            }
-        }
+    	&__department {
+    	}
+
+    	&__institution {
+    	}
+    }
+
+    &__body {
+    	&--hidden {
+    		display: none;
+    	}
+    }
+}
+
+.bibliography {
+    list-style: none;
+    text-align: left;
+    padding-bottom: 0em;
+    margin-left: 0em;
+    padding-left: $spacing-unit;
+    text-indent: -$spacing-unit;
+    &__entry {
+    	&__author {
+    		&--highlight {
+    			font-weight: bold;
+    			font-style: italic;
+    		}
+    	}
+    	&__etal {
+    		content: "et al.";
+    	}
+    	&__year {
+    		&:before {
+    			content: "(";
+    		}
+    		&:after {
+    			content: ")";
+    		}
+    	}
+    	&__title {
+    	}
+    	&__journal {
+    		font-style: italic;
+    	}
+    	&__volume{
+    		font-weight: bold;
+    	}
+    	&__number{
+    	}
+    	&__pages {
+    	}
+    	&__doi {}
+    	&__isbn {}
     }
 }
