@@ -1,9 +1,10 @@
 ---
-layout: list
+layout: team-list
 title: Teams
 menu:
-  main:
-    weight: 2
+    main:
+        parent: "About Us"
+        weight: 1
 ---
 # 39 Alpha Teams
 
