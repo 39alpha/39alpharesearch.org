@@ -274,6 +274,10 @@
     &--visible {
         display: block;
     }
+
+    h1 {
+        text-align: center;
+    }
 }
 
 
@@ -858,4 +862,20 @@
     	&__doi {}
     	&__isbn {}
     }
+}
+
+.textover {
+    position: relative;
+    &_top-right {
+        position: absolute;
+        top: -0.5 * $spacing-unit;
+        right: $spacing-unit;
+        a {
+            color: $text-color;
+        }
+    }
+}
+
+.space-after {
+    margin-bottom: $spacing-unit;
 }

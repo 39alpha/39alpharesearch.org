@@ -1,15 +1,18 @@
 {{ define "main" }}
 <div class="wrapper wrapper--narrow">
     <article class="post">
-        <header class="post-header">
-            <h1 class="post-title">{{ .Title }}</h1>
+        <header class="post-header post-header--visible">
+            {{ .Content }}
         </header>
 
         <div class="post-content">
             {{ if .Pages.ByTitle }}
                 {{ range .Pages.ByTitle }}
-                    <div>
-                        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                    <div class="textover space-after">
+                        <a href="{{ .RelPermalink }}">
+                            <img src="/images/teams/{{ .Params.Identifier }}/banner.webp" alt="Team 0 Headshots" />
+                        </a>
+                        <h2 class="textover_top-right"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2 class="textover_top-right">
                     </div>
                 {{ end }}
             {{ else }}
