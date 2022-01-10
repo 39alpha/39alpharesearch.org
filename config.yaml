@@ -21,9 +21,7 @@ params:
                 Tempe, Arizona 85282
     logo:
         url: /images/39alpha.png
-    description: >-
-        39Alpha Research is a nonprofit scientific research organization founded on
-        the idea that there is a better way to do world-class science.
+    ein: 84-3180111
     donations:
         values:
             - 25.00

@@ -173,6 +173,12 @@
 
 .site-footer {
     padding: $spacing-unit 0;
+
+    &__copyright {
+        @include relative-font-size(0.9375);
+        text-align: center;
+        color: $grey-color;
+    }
 }
 
 .footer-heading {
@@ -677,6 +683,7 @@
 
     &__options {
         display: flex;
+        margin-bottom: 0.5 * $spacing-unit;
     }
 
     &__option {
@@ -705,6 +712,7 @@
             }
         }
     }
+
 }
 
 .flash {

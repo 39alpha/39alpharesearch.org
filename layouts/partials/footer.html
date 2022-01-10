@@ -19,8 +19,9 @@
                     <li>{{ delimit . "</br>" }}</li>
                     {{ end }}
                 </ul>
-                {{ with .Site.Params.description }}
-                    <p>{{ . }}</p>
+                {{ with .Site.Params.ein }}
+                    A 501(c)(3) Organization.<br />
+                    EIN: {{ . }}
                 {{ end }}
             </div>
 
@@ -32,5 +33,9 @@
                 {{- partial "donate.html" . -}}
             </div>
         </div>
+        <p class="site-footer__copyright">
+            &#169; 2019-2022 39 Alpha Research.|
+            All Rights Reserved.
+        </p>
     </div>
 </footer>
