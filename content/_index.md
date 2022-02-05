@@ -1,9 +1,6 @@
 ---
 layout: single
 title: What is 39Alpha?
-menu:
-    main:
-        weight: 1
 ---
 
 # Who we are
