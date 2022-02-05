@@ -2,6 +2,9 @@
 layout: single
 title: What is 39Alpha?
 ---
+<div class="shout shout--quiet">
+    39Alpha is a nonprofit, scientific research organization.
+</div>
 
 # Who we are
 39Alpha is a nonprofit independent scientific research organization envisioned and founded by
