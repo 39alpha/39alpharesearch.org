@@ -625,6 +625,8 @@
 
         &--currency {
             display: flex;
+            background: $text-color;
+            color: #000;
         }
 
         &--borderless {
