@@ -917,3 +917,14 @@
         height: 500px;
     }
 }
+
+.figure {
+    text-align: center;
+    width: 0.75 * $narrow-content-width;
+    margin: 0 auto;
+    &__caption {
+        text-align: justify;
+        font-size: $small-font-size;
+        font-style: italic;
+    }
+}
