@@ -568,13 +568,13 @@
 
 .axis--label {
     font-family: "Courier New", monospace;
-    fill: #000000;
+    fill: $text-color;
+    font-size: 12pt;
 }
 
 .project--node {
-    stroke: black;
+    stroke: $text-color;
     stroke-width: 1px;
-    opacity: 0.7;
 }
 
 .project--label {

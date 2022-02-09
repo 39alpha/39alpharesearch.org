@@ -38,7 +38,7 @@ yaxis.append('text')
     .classed('axis--label', true)
     .attr('text-anchor', 'middle')
     .attr('x', 0)
-    .attr('y', -margin / 2)
+    .attr('y', -margin / 4)
     .text('High Risk');
 
 yaxis.append('text')
@@ -121,8 +121,7 @@ const links = linkgroup.append('a')
             .attr('x', bxpos)
             .attr('y', bypos)
             .attr('rx', 10)
-            .attr('fill', '#df440f')
-            .attr('fill-opacity', 0.5)
+            .attr('fill', '#ec5c29')
             .attr('stroke', '#df440f')
             .attr('stroke-width', 1);
     })
