@@ -14,7 +14,7 @@ We are conducting original open-source research on topics which further our scie
 explore and quantify human interactions with the Earth]({{< relref "science-mission.md" >}}). We
 carry out this research under the direction of guiding principles which represent paradigm shifts in
 _how_ open source research is conducted. This 39Alpha method stands apart from modern scientific
-orthodoxy in [six differentiating ways]({{< relref "six-differentiators.md" >}}):
+orthodoxy in [five differentiating ways]({{< relref "five-differentiators.md" >}}):
 
 <style>
 ol li {

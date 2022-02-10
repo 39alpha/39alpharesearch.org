@@ -1,5 +1,5 @@
 ---
-title: Six Differentiators
+title: Five Differentiators
 menu:
     main:
         parent: "What is 39Alpha?"
