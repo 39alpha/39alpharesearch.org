@@ -26,6 +26,5 @@ ol li {
 4. **We publish our failures as such.**
 5. **Our teams engage on one project at a time**, devoting their full attention to solving
    large-scale highly innovative and unconventional problems.
-6. **39Alpha maintains an in-house [social-psychology]({{< relref social-psych.md >}}) team** dedicated
    to evolving the method by which our teams interact, operate, and measure achievement.
 
