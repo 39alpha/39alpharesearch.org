@@ -1,0 +1,16 @@
+<div class="team__experience">
+    {{ with .title }}
+    <div><span class="team__experience__title">{{ . }}</span>
+    {{ end }}
+    {{ with .from }}<span class="team__experience__form">{{ . }}</span>{{ end }}-<span class="team__experience__to">{{ with .to }}{{ . }}{{ else }}Present{{ end }}</span>
+    </div>
+    {{ with .lab }}
+    <div><span class="team__experience__lab">{{ . }}</span></div>
+    {{ end }}
+    {{ with .department }}
+    <div><span class="team__experience__department">{{ . }}</span></div>
+    {{ end }}
+    {{ with .institution }}
+    <div><span class="team__experience__institution">{{ . }}</span></div>
+    {{ end }}
+</div>

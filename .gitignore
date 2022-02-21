@@ -1,5 +1,6 @@
 public
 resources
 content/notebooks
+data/bibliography.json
 .sass-cache
 .ipynb_checkpoints

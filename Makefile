@@ -1,12 +1,16 @@
-all: convert
+all: prepare
 	hugo
 
-serve: convert
+serve: prepare
 	hugo server
 
-serve-drafts: convert
+serve-drafts: prepare
 	hugo server -D
 
+prepare: convert
+	bin/sort-experience.ts data/experience.json
+
 convert:
+	bin/biblio.ts assets/bib/bibliography.bib -m assets/bib/members.json -o data/bibliography.json
 	go run bin/nbconvert.go
 

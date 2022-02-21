@@ -1,0 +1,30 @@
+[
+    {
+        "name": "American Mathematical Society",
+        "url": "https://ams.org"
+    },
+    {
+        "name": "American Physical Society",
+        "url": "https://aps.org"
+    },
+    {
+        "name": "ENKI",
+        "url": "http://enki-portal.org"
+    },
+    {
+        "name": "Exploring Ocean Worlds",
+        "url": "https://oceanworlds.whoi.edu/exploring-ocean-worlds"
+    },
+    {
+        "name": "Network for Life Detection",
+        "url": "https://nfold.org"
+    },
+    {
+        "name": "Network for Ocean Worlds",
+        "url": "https://oceanworlds.space"
+    },
+    {
+        "name": "Origin of Life Early-Career Network",
+        "url": "https://oolen.org"
+    }
+]

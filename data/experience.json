@@ -1,0 +1,99 @@
+[
+  {
+    "title": "NASA Astrobiology Postdoctoral Fellow",
+    "from": 2021,
+    "institution": "Arizona State University and Santa Fe Institute"
+  },
+  {
+    "title": "NASA Postdoctoral Fellow",
+    "from": 2020,
+    "lab": "Toner Laboratory for Low Temperature Geochemistry",
+    "institution": "University of Minnesota"
+  },
+  {
+    "title": "Postdoctoral Research Scientist, Team Leader",
+    "from": 2018,
+    "to": 2021,
+    "lab": "Cronin Group for Complex Chemical Systems",
+    "department": "Department of Chemistry",
+    "institution": "University of Glasgow"
+  },
+  {
+    "title": "Postdoctoral Research Scholar",
+    "from": 2016,
+    "to": 2021,
+    "lab": "Walker Lab, ELIFE",
+    "department": "BEYOND Center for Fundamental Concepts in Science",
+    "institution": "Arizona State University"
+  },
+  {
+    "title": "Graduate Researcher",
+    "from": 2013,
+    "to": 2020,
+    "lab": "Group Exploring Organic Processes in Geochemistry",
+    "department": "School of Earth and Space Exploration",
+    "institution": "Arizona State University"
+  },
+  {
+    "title": "Graduate Researcher",
+    "from": 2014,
+    "to": 2018,
+    "lab": "Walker Lab, ELIFE",
+    "department": "School of Earth and Space Exploration",
+    "institution": "Arizona State University"
+  },
+  {
+    "title": "Graduate Researcher",
+    "from": 2016,
+    "to": 2016,
+    "lab": "Group Exploring Organic Processes in Geochemistry",
+    "department": "Complex Systems Summer School",
+    "institution": "Santa Fe Institute"
+  },
+  {
+    "title": "Instructor",
+    "from": 2016,
+    "to": 2016,
+    "lab": "Sawant Lab",
+    "department": "Department of Radiation Oncology",
+    "institution": "University of Maryland, Baltimore"
+  },
+  {
+    "title": "Postdoctoral Researcher",
+    "from": 2015,
+    "to": 2016,
+    "lab": "Sawant Lab",
+    "department": "Department of Radiation Oncology",
+    "institution": "The University of Texas Southwestern Medical Center"
+  },
+  {
+    "title": "Graduate Researcher",
+    "from": 2014,
+    "to": 2014,
+    "department": "Complex Systems Summer School",
+    "institution": "Santa Fe Institute"
+  },
+  {
+    "title": "Adjunct Faculty",
+    "from": 2012,
+    "to": 2014,
+    "department": "Department of Mathematics and Physics",
+    "institution": "McLennan Community College"
+  },
+  {
+    "title": "Undergraudate Researcher",
+    "from": 2012,
+    "to": 2012,
+    "lab": "Johnson Lab",
+    "department": "Planetary Ices Group",
+    "institution": "Jet Propulsion Laboratory"
+  },
+  {
+    "title": "Undergraudate Researcher",
+    "from": 2011,
+    "to": 2012,
+    "lab": "Saltikov Lab",
+    "department": "Microbiology and Environmental Toxicology",
+    "institution": "University of California, Santa Cruz"
+  }
+]

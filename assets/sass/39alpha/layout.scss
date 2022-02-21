@@ -854,14 +854,21 @@
     }
 }
 
+@counter-style thumbs {
+    system: numeric;
+    prefix: "[";
+    suffix: "]";
+}
+
 .bibliography {
     list-style: none;
-    text-align: left;
+    text-align: justify;
     padding-bottom: 0em;
     margin-left: 0em;
     padding-left: $spacing-unit;
     text-indent: -$spacing-unit;
     &__entry {
+        padding-bottom: 0.5em;
         &__author {
             &--highlight {
                 font-weight: bold;
