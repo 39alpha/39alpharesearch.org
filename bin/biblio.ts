@@ -74,14 +74,20 @@ async function convert(args: Args): Promise<void> {
         });
 }
 
-function bib2json(filename: string): Promise<Array<BibJsonEntry>> {
+async function bib2json(filename: string): Promise<Array<BibJsonEntry>> {
     const proc = Deno.run({
         cmd: ['pandoc-citeproc', '--bib2json', filename],
         stdout: 'piped',
         stderr: 'null',
     });
 
-    return proc.output().then(decode).then(JSON.parse);
+    const raw = await proc.output().then(decode);
+    try {
+        return JSON.parse(raw);
+    } catch (err) {
+        console.log(`While Reading Bibliography: ${err.toString()}`);
+        throw err;
+    }
 }
 
 async function addDOI(entry: BibJsonEntry): Promise<BibJsonEntry> {
@@ -149,7 +155,12 @@ function matchReference(bibentry: BibJsonEntry, crossref: CrossRefEntry): Boolea
 
 async function readMembers(filename: string): Promise<Array<Author>> {
     const content = await Deno.readTextFile(filename);
-    return JSON.parse(content);
+    try {
+        return JSON.parse(content);
+    } catch (err) {
+        console.log(`While Reading Members: ${err.toString()}`);
+	throw err;
+    }
 }
 
 function isMember(author: Author, members: Array<Author>) {
