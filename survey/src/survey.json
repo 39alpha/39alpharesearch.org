@@ -1,0 +1,31 @@
+{
+  "title": "A title",
+  "description": "This is your survey. There are many like it, but this one is yours",
+  "questions": [
+    {
+      "type": "multiple-choice",
+      "statement": "How old are you?",
+      "answers": [
+          "< 18",
+          "18 - 35",
+          "old"
+      ]
+    },
+    {
+      "type": "all-that-apply",
+      "statement": "What is your field of research?",
+      "answers": [
+        "Physics",
+        "An inferior science"
+      ]
+    },
+    {
+      "type": "short-answer",
+      "statement": "What is your email address?"
+    },
+    {
+      "type": "long-answer",
+      "statement": "What do you think?"
+    }
+  ]
+}

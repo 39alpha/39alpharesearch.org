@@ -1,0 +1,31 @@
+@import "../sass/defs";
+
+.survey {
+    display: flex;
+    flex-direction: column;
+
+    &__questions {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $spacing-unit;
+    }
+
+    &__button {
+        width: 200px;
+        border-radius: 5px;
+        font-family: $base-font-family;
+        font-size: $base-font-size;
+        padding: 5px 10px;
+
+        background: $brand-color;
+        color: $background-color;
+        border: 2px solid $brand-color;
+        box-shadow: 0 0 0 1px #e0e0e0;
+        font-weight: bold;
+
+        &:hover {
+            cursor: pointer;
+            border: 2px solid $text-color;
+        }
+    }
+}

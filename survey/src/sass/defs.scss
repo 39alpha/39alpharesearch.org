@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+$base-font-family: "Courier New", monospace, !default;
+$base-font-size:   12pt !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$large-font-size:  $base-font-size * 1.125 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #fff !default;
+$background-color: #202222 !default;
+$brand-color:      #ec5c29 !default;
+$message-color:    #339900 !default;
+$warning-color:    #ffcc00 !default;
+$error-color:      #cc3300 !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;

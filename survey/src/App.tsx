@@ -1,5 +1,6 @@
 import './App.scss';
 import * as config from './config.json';
+import * as survey from './survey.json';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Survey from './components/Survey';
@@ -12,11 +13,7 @@ export default function App() {
                 <div className="wrapper wrapper--narrow">
                     <article className="post">
                         <div className="post-content">
-                            <Survey
-                                title="A title"
-                                description="This is the survey. There are many like it, but this is yours."
-                                questions={[]}
-                            />
+                            <Survey {...survey} />
                         </div>
                     </article>
                 </div>

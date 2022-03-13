@@ -1,0 +1,11 @@
+@import "../sass/defs.scss";
+
+$question-spacing-unit: 0.25 * $spacing-unit !default;
+
+.question {
+    background: lighten($background-color, 2%);
+    border: 1px solid $grey-color;
+    border-radius: 2px;
+    margin: $question-spacing-unit 0px;
+    padding: $question-spacing-unit $question-spacing-unit;
+}
