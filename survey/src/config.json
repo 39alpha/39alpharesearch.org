@@ -1,0 +1,58 @@
+{
+  "name": "39 Alpha Research",
+  "title": "39Alpha Research",
+  "logo": "/images/39alpha.png",
+  "author": {
+    "name": "39 Alpha Research",
+    "email": "39alpha@39alpharesearch.org",
+    "address": [
+      "2307 S. Rural Rd.",
+      "Tempe, Arizona 85282"
+    ]
+  },
+  "ein": "84-3180111",
+  "social": [
+    {
+        "service": "github",
+        "url": "https://github.com/39alpha",
+        "username": "39alpha"
+    }
+  ],
+  "donate": {
+    "values": [25, 50, 75, 100]
+  },
+  "menu": [
+    {
+      "url": "/about",
+      "title": "About Us",
+      "children": [
+        {
+          "url": "/about/teams",
+          "title": "Teams"
+        }
+      ]
+    },
+    {
+      "url": "/science-mission",
+      "title": "Science Mission",
+      "children": [
+        {
+          "url": "/projects",
+          "title": "Projects"
+        },
+        {
+          "url": "/notebooks",
+          "title": "Notebooks"
+        }
+      ]
+    },
+    {
+      "url": "/contact-us",
+      "title": "Contact Us"
+    },
+    {
+      "url": "/donate",
+      "title": "Donate"
+    }
+  ]
+}

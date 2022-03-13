@@ -1,5 +1,6 @@
 all: prepare
 	hugo
+	make -C survey
 
 serve: prepare
 	hugo server
