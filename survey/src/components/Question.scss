@@ -8,4 +8,8 @@ $question-spacing-unit: 0.25 * $spacing-unit !default;
     border-radius: 2px;
     margin: $question-spacing-unit 0px;
     padding: $question-spacing-unit $question-spacing-unit;
+
+    &__answers {
+        padding-bottom: $question-spacing-unit;
+    }
 }

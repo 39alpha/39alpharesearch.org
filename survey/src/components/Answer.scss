@@ -1,0 +1,11 @@
+@import "../sass/defs";
+
+.answer {
+    &__text {
+        width: 50%;
+    }
+
+    &__textarea {
+        width: 100%;
+    }
+}
