@@ -1,11 +1,23 @@
 @import "../sass/defs";
 
 .answer {
+    &--multiple-choice, &--all-that-apply {
+        margin-right: $spacing-unit;
+        & input {
+            margin-right: 10px;
+        }
+    }
+
     &__text {
-        width: 50%;
+        width: 100%;
+        padding: 10px 5px;
+        border-radius: 10px;
     }
 
     &__textarea {
         width: 100%;
+        height: 5em;
+        padding: 10px 5px;
+        border-radius: 10px;
     }
 }

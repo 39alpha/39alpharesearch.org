@@ -30,12 +30,16 @@ export default class Answer extends Component<AnswerProps, AnswerState> {
                 return (<></>);
         }
     }
+
+    className() {
+        return "answer answer--" + this.props.type;
+    }
 }
 
 class MultipleChoice extends Answer {
     render() {
         return (
-            <>
+            <div className={this.className()}>
                 <input
                     type="radio"
                     className="answer__radio"
@@ -46,7 +50,7 @@ class MultipleChoice extends Answer {
                 <label htmlFor={"question" + this.props.questionNum + "answer" + this.props.answerNum}>
                     {this.props.value}
                 </label>
-            </>
+            </div>
         );
     }
 }
@@ -54,7 +58,7 @@ class MultipleChoice extends Answer {
 class AllThatApply extends Answer {
     render() {
         return (
-            <>
+            <div className={this.className()}>
                 <input
                     type="checkbox"
                     className="answer__checkbox"
@@ -65,7 +69,7 @@ class AllThatApply extends Answer {
                 <label htmlFor={"question" + this.props.questionNum + "answer" + this.props.answerNum}>
                     {this.props.value}
                 </label>
-            </>
+            </div>
         );
     }
 }
@@ -73,11 +77,13 @@ class AllThatApply extends Answer {
 class ShortAnswer extends Answer {
     render() {
         return (
-            <input
-                type="text"
-                className="answer__text"
-                id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
-            />
+            <div className={this.className()}>
+                <input
+                    type="text"
+                    className="answer__text"
+                    id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
+                />
+            </div>
         );
     }
 }
@@ -85,10 +91,12 @@ class ShortAnswer extends Answer {
 class LongAnswer extends Answer {
     render() {
         return (
-            <textarea
-                className="answer__textarea"
-                id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
-            ></textarea>
+            <div className={this.className()}>
+                <textarea
+                    className="answer__textarea"
+                    id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
+                ></textarea>
+            </div>
         );
     }
 }

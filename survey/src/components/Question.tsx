@@ -28,7 +28,7 @@ export default class Question extends Component<QuestionProps, QuestionState> {
         return (
             <div className="question">
                 <p className="question__statement">{this.props.statement}</p>
-                <div className="question__answers">
+                <div className={"question__answers question__answers--" + this.props.type}>
                     {this.renderAnswers()}
                 </div>
             </div>
@@ -40,13 +40,11 @@ export default class Question extends Component<QuestionProps, QuestionState> {
             case 'short-answer':
             case 'long-answer':
                 return (
-                    <div className="answer">
-                        <Answer
-                            type={this.props.type}
-                            questionNum={this.props.questionNum}
-                            answerNum="0"
-                        />
-                    </div>
+                    <Answer
+                        type={this.props.type}
+                        questionNum={this.props.questionNum}
+                        answerNum="0"
+                    />
                 );
             default:
                 if (this.props.answers === undefined) {
@@ -54,14 +52,13 @@ export default class Question extends Component<QuestionProps, QuestionState> {
                 }
                 return this.props.answers.map((answer, index) => {
                     return (
-                        <div className="answer" key={index.toString()}>
-                            <Answer
-                                type={this.props.type}
-                                questionNum={this.props.questionNum}
-                                answerNum={index.toString()}
-                                value={answer}
-                            />
-                        </div>
+                        <Answer
+                            key={index.toString()}
+                            type={this.props.type}
+                            questionNum={this.props.questionNum}
+                            answerNum={index.toString()}
+                            value={answer}
+                        />
                     );
                 });
         }

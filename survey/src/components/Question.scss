@@ -1,15 +1,29 @@
 @import "../sass/defs.scss";
 
-$question-spacing-unit: 0.25 * $spacing-unit !default;
+$half-space: 0.5 * $spacing-unit !default;
 
 .question {
-    background: lighten($background-color, 2%);
-    border: 1px solid $grey-color;
-    border-radius: 2px;
-    margin: $question-spacing-unit 0px;
-    padding: $question-spacing-unit $question-spacing-unit;
+    background: lighten($background-color, 3%);
+    border-radius: 10px;
+    margin: $half-space 0px;
+    padding-top: $spacing-unit;
+    padding-right: $spacing-unit;
+    padding-bottom: $spacing-unit;
+    padding-left: $spacing-unit;
+
+    &__statement {
+        font-weight: bold;
+    }
 
     &__answers {
-        padding-bottom: $question-spacing-unit;
+        padding: 0px;
+
+        &--multiple-choice, &--all-that-apply {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &--short-answer, &--long-answer {
+        }
     }
 }
