@@ -30,6 +30,7 @@ export default class Question<State = QuestionState> extends Component<QuestionP
     render() {
         switch (this.props.type) {
             case 'multiple-choice':
+            case 'email':
             case 'short-answer':
             case 'long-answer':
                 return this.renderQuestion();
@@ -54,6 +55,7 @@ export default class Question<State = QuestionState> extends Component<QuestionP
 
     renderAnswers() {
         switch (this.props.type) {
+            case 'email':
             case 'short-answer':
             case 'long-answer':
                 return (

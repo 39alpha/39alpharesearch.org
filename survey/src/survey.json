@@ -20,8 +20,12 @@
       ]
     },
     {
-      "type": "short-answer",
+      "type": "email",
       "statement": "What is your email address?"
+    },
+    {
+      "type": "short-answer",
+      "statement": "What's your name?"
     },
     {
       "type": "long-answer",

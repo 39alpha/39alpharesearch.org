@@ -28,6 +28,8 @@ export default class Answer extends Component<AnswerProps, AnswerState> {
                 return (<MultipleChoice {...this.props} />);
             case 'all-that-apply':
                 return (<AllThatApply {...this.props} />);
+            case 'email':
+                return (<Email {...this.props} />);
             case 'short-answer':
                 return (<ShortAnswer {...this.props} />);
             case 'long-answer':
@@ -77,6 +79,21 @@ class AllThatApply extends Answer {
                 <label htmlFor={"question" + this.props.questionNum + "answer" + this.props.answerNum}>
                     {this.props.value}
                 </label>
+            </div>
+        );
+    }
+}
+
+class Email extends Answer {
+    render() {
+        return (
+            <div className={this.className()}>
+                <input
+                    type="email"
+                    className="answer__email"
+                    id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
+                    onChange={this.onAnswerChange}
+                />
             </div>
         );
     }
