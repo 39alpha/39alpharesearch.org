@@ -2,7 +2,7 @@ import { Component, FormEvent } from 'react';
 import { default as Question, QuestionSpec } from './Question';
 import './Survey.scss';
 
-interface SurveyProps {
+export interface SurveyProps {
     title: string;
     description: string;
     questions: Array<QuestionSpec>;
