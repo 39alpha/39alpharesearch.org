@@ -53,7 +53,7 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
         });
     }
 
-    onAnswerChange(questionNum: string, answer: string) {
+    onAnswerChange(questionNum: string, answer: any) {
         this.setState(state => {
             const responses = [...state.responses];
             responses[parseInt(questionNum)] = answer;
@@ -77,7 +77,7 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
                                     questionNum={questionNum}
                                     isFlagged={this.state.flagged.has(index)}
                                     onAnswerChange={
-                                        (answer: string) => this.onAnswerChange(questionNum, answer)
+                                        (answer: any) => this.onAnswerChange(questionNum, answer)
                                     }
                                     {...question}
                                 />

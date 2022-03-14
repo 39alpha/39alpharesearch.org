@@ -11,13 +11,13 @@ export interface QuestionSpec {
 interface QuestionProps extends QuestionSpec {
     questionNum: string;
     isFlagged: boolean;
-    onAnswerChange: (answer: string) => void;
+    onAnswerChange: (answer: any) => void;
 }
 
 interface QuestionState {
 }
 
-export default class Question extends Component<QuestionProps, QuestionState> {
+export default class Question<State = QuestionState> extends Component<QuestionProps, State> {
     constructor(props: QuestionProps) {
         super(props);
         this.onAnswerChange = this.onAnswerChange.bind(this);
@@ -28,7 +28,17 @@ export default class Question extends Component<QuestionProps, QuestionState> {
     }
 
     render() {
-        return this.renderQuestion();
+        switch (this.props.type) {
+            case 'multiple-choice':
+            case 'short-answer':
+            case 'long-answer':
+                return this.renderQuestion();
+            case 'all-that-apply':
+                return (<MultipleResponse {...this.props} />);
+            default:
+                return (<></>);
+        }
+
     }
 
     renderQuestion() {
@@ -72,5 +82,35 @@ export default class Question extends Component<QuestionProps, QuestionState> {
                 });
         }
     }
+}
 
+interface MultipleResponseState {
+    selected: Set<string>;
+}
+
+class MultipleResponse extends Question<MultipleResponseState> {
+    constructor(props: QuestionProps) {
+        super(props)
+        this.onAnswerChange = this.onAnswerChange.bind(this);
+        this.state = {
+            selected: new Set(),
+        }
+    }
+
+    onAnswerChange(answer: string) {
+        this.setState((state, props) => {
+            const selected = new Set(state.selected);
+            if (selected.has(answer)) {
+                selected.delete(answer);
+            } else {
+                selected.add(answer);
+            }
+            props.onAnswerChange([...selected]);
+            return { selected };
+        });
+    }
+
+    render() {
+        return this.renderQuestion();
+    }
 }
