@@ -10,6 +10,8 @@ export interface QuestionSpec {
 
 interface QuestionProps extends QuestionSpec {
     questionNum: string;
+    isFlagged: boolean;
+    onAnswerChange: (answer: string) => void;
 }
 
 interface QuestionState {
@@ -18,6 +20,11 @@ interface QuestionState {
 export default class Question extends Component<QuestionProps, QuestionState> {
     constructor(props: QuestionProps) {
         super(props);
+        this.onAnswerChange = this.onAnswerChange.bind(this);
+    }
+
+    onAnswerChange(answer: string) {
+        this.props.onAnswerChange(answer);
     }
 
     render() {
@@ -26,7 +33,7 @@ export default class Question extends Component<QuestionProps, QuestionState> {
 
     renderQuestion() {
         return (
-            <div className="question">
+            <div className={'question' + (this.props.isFlagged ? ' question--flagged' : '')}>
                 <p className="question__statement">{this.props.statement}</p>
                 <div className={"question__answers question__answers--" + this.props.type}>
                     {this.renderAnswers()}
@@ -44,6 +51,7 @@ export default class Question extends Component<QuestionProps, QuestionState> {
                         type={this.props.type}
                         questionNum={this.props.questionNum}
                         answerNum="0"
+                        onAnswerChange={this.onAnswerChange}
                     />
                 );
             default:
@@ -58,6 +66,7 @@ export default class Question extends Component<QuestionProps, QuestionState> {
                             questionNum={this.props.questionNum}
                             answerNum={index.toString()}
                             value={answer}
+                            onAnswerChange={this.onAnswerChange}
                         />
                     );
                 });

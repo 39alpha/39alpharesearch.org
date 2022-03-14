@@ -26,4 +26,8 @@ $half-space: 0.5 * $spacing-unit !default;
         &--short-answer, &--long-answer {
         }
     }
+
+    &--flagged {
+        background: darken($error-color, 20%);
+    }
 }

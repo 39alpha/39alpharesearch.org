@@ -1,11 +1,12 @@
 import "./Answer.scss";
-import { Component } from 'react';
+import { ChangeEvent, Component } from 'react';
 
 interface AnswerProps {
     type: string;
     questionNum: string;
     answerNum: string;
     value?: string;
+    onAnswerChange: (answer: string) => void;
 }
 
 interface AnswerState {
@@ -14,6 +15,11 @@ interface AnswerState {
 export default class Answer extends Component<AnswerProps, AnswerState> {
     constructor(props: AnswerProps) {
         super(props);
+        this.onAnswerChange = this.onAnswerChange.bind(this);
+    }
+
+    onAnswerChange(e: ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) {
+        this.props.onAnswerChange(e.target.value);
     }
 
     render() {
@@ -46,6 +52,7 @@ class MultipleChoice extends Answer {
                     id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
                     name={"question" + this.props.questionNum}
                     value={this.props.value}
+                    onChange={this.onAnswerChange}
                 />
                 <label htmlFor={"question" + this.props.questionNum + "answer" + this.props.answerNum}>
                     {this.props.value}
@@ -65,6 +72,7 @@ class AllThatApply extends Answer {
                     id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
                     name={"question" + this.props.questionNum}
                     value={this.props.value}
+                    onChange={this.onAnswerChange}
                 />
                 <label htmlFor={"question" + this.props.questionNum + "answer" + this.props.answerNum}>
                     {this.props.value}
@@ -82,6 +90,7 @@ class ShortAnswer extends Answer {
                     type="text"
                     className="answer__text"
                     id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
+                    onChange={this.onAnswerChange}
                 />
             </div>
         );
@@ -95,6 +104,7 @@ class LongAnswer extends Answer {
                 <textarea
                     className="answer__textarea"
                     id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
+                    onChange={this.onAnswerChange}
                 ></textarea>
             </div>
         );
