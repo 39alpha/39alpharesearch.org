@@ -24,13 +24,13 @@ export default class App extends Component {
                             <article className="post">
                                 <div className="post-content">
                                     <Routes>
-                                        <Route path="/survey" element={<Home  />} />
+                                        <Route path="/surveys" element={<Home  />} />
                                         <Route
-                                            path="/survey/:surveyId"
+                                            path="/surveys/:surveyId"
                                             element={<TheSurvey />}
                                         />
                                         <Route
-                                            path="/survey/:surveyId/*"
+                                            path="/surveys/:surveyId/*"
                                             element={<RedirectToSurvey />}
                                         />
                                     </Routes>
@@ -51,7 +51,7 @@ function Home() {
 
     function submit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        navigate(`/survey/${surveyId}`);
+        navigate(`/surveys/${surveyId}`);
     }
 
     function onChange(e: ChangeEvent<HTMLInputElement>) {
@@ -85,5 +85,5 @@ function TheSurvey() {
 
 function RedirectToSurvey() {
     const { surveyId } = useParams();
-    return (<Navigate to={`/survey/${surveyId}`} />);
+    return (<Navigate to={`/surveys/${surveyId}`} />);
 }
