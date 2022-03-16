@@ -91,7 +91,7 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
                 <h2>{this.props.title}</h2>
                 <p>{this.props.description}</p>
                 <Flash skippedQuestions={this.state.flagged.size} />
-                <form className="survey" onSubmit={this.submit}>
+                <form className="survey" autoComplete="on" onSubmit={this.submit}>
                     <div className="survey__questions">
                         {this.props.questions.map((question, index) => {
                             return (

@@ -33,6 +33,8 @@ export default class Answer extends Component<AnswerProps, AnswerState> {
                 return (<AllThatApply {...this.props} />);
             case 'email':
                 return (<Email {...this.props} />);
+            case 'name':
+                return (<Name {...this.props} />);
             case 'short-answer':
                 return (<ShortAnswer {...this.props} />);
             case 'long-answer':
@@ -93,7 +95,23 @@ class Email extends Answer {
             <div className={this.className()}>
                 <input
                     type="email"
-                    className="answer__email"
+                    className="answer__text"
+                    id={"question" + this.props.questionId + "answer" + this.props.id}
+                    onChange={this.onResponseChange}
+                />
+            </div>
+        );
+    }
+}
+
+class Name extends Answer {
+    render() {
+        return (
+            <div className={this.className()}>
+                <input
+                    type="text"
+                    autoComplete="name"
+                    className="answer__text"
                     id={"question" + this.props.questionId + "answer" + this.props.id}
                     onChange={this.onResponseChange}
                 />
