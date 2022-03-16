@@ -3,13 +3,21 @@ import { default as Question, QuestionSpec } from './Question';
 import './Survey.scss';
 
 export interface SurveyProps {
+    id: string;
     title: string;
     description: string;
     questions: Array<QuestionSpec>;
 }
 
+type ResponseValue = string | Array<string>;
+
+interface Response {
+    id: number;
+    response: ResponseValue;
+}
+
 interface SurveyState {
-    responses: Array<any>;
+    responses: Array<Response>;
     flagged: Set<number>;
 }
 
@@ -28,7 +36,7 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
     constructor(props: SurveyProps) {
         super(props)
         this.submit = this.submit.bind(this);
-        this.onAnswerChange = this.onAnswerChange.bind(this);
+        this.onResponseChange = this.onResponseChange.bind(this);
         this.state = {
             responses: new Array(props.questions.length),
             flagged: new Set(),
@@ -53,10 +61,10 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
         });
     }
 
-    onAnswerChange(questionNum: string, answer: any) {
+    onResponseChange(questionNum: number, questionId: number, response: ResponseValue) {
         this.setState(state => {
             const responses = [...state.responses];
-            responses[parseInt(questionNum)] = answer;
+            responses[questionNum] = { id: questionId, response };
             return { responses };
         });
     }
@@ -70,14 +78,18 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
                 <form className="survey" onSubmit={this.submit}>
                     <div className="survey__questions">
                         {this.props.questions.map((question, index) => {
-                            const questionNum = index.toString();
                             return (
                                 <Question
-                                    key={questionNum}
-                                    questionNum={questionNum}
+                                    key={question.id}
                                     isFlagged={this.state.flagged.has(index)}
-                                    onAnswerChange={
-                                        (answer: any) => this.onAnswerChange(questionNum, answer)
+                                    onResponseChange={
+                                        (response: ResponseValue) => {
+                                            return this.onResponseChange(
+                                                index,
+                                                question.id,
+                                                response
+                                            );
+                                        }
                                     }
                                     {...question}
                                 />

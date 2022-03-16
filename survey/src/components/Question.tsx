@@ -1,17 +1,17 @@
 import { Component } from 'react';
-import Answer from './Answer';
+import { default as Answer, AnswerSpec } from './Answer';
 import "./Question.scss";
 
 export interface QuestionSpec {
+    id: number;
     type: string;
     statement: string;
-    answers?: Array<string>;
+    answers?: Array<AnswerSpec>;
 }
 
 interface QuestionProps extends QuestionSpec {
-    questionNum: string;
     isFlagged: boolean;
-    onAnswerChange: (answer: any) => void;
+    onResponseChange: (answer: string | Array<string>) => void;
 }
 
 interface QuestionState {
@@ -20,11 +20,11 @@ interface QuestionState {
 export default class Question<State = QuestionState> extends Component<QuestionProps, State> {
     constructor(props: QuestionProps) {
         super(props);
-        this.onAnswerChange = this.onAnswerChange.bind(this);
+        this.onResponseChange = this.onResponseChange.bind(this);
     }
 
-    onAnswerChange(answer: string) {
-        this.props.onAnswerChange(answer);
+    onResponseChange(answer: string) {
+        this.props.onResponseChange(answer);
     }
 
     render() {
@@ -61,9 +61,9 @@ export default class Question<State = QuestionState> extends Component<QuestionP
                 return (
                     <Answer
                         type={this.props.type}
-                        questionNum={this.props.questionNum}
-                        answerNum="0"
-                        onAnswerChange={this.onAnswerChange}
+                        questionId={this.props.id}
+                        id={0}
+                        onResponseChange={this.onResponseChange}
                     />
                 );
             default:
@@ -73,12 +73,12 @@ export default class Question<State = QuestionState> extends Component<QuestionP
                 return this.props.answers.map((answer, index) => {
                     return (
                         <Answer
-                            key={index.toString()}
+                            key={answer.id}
                             type={this.props.type}
-                            questionNum={this.props.questionNum}
-                            answerNum={index.toString()}
-                            value={answer}
-                            onAnswerChange={this.onAnswerChange}
+                            questionId={this.props.id}
+                            id={answer.id}
+                            value={answer.value}
+                            onResponseChange={this.onResponseChange}
                         />
                     );
                 });
@@ -93,13 +93,13 @@ interface MultipleResponseState {
 class MultipleResponse extends Question<MultipleResponseState> {
     constructor(props: QuestionProps) {
         super(props)
-        this.onAnswerChange = this.onAnswerChange.bind(this);
+        this.onResponseChange = this.onResponseChange.bind(this);
         this.state = {
             selected: new Set(),
         }
     }
 
-    onAnswerChange(answer: string) {
+    onResponseChange(answer: string) {
         this.setState((state, props) => {
             const selected = new Set(state.selected);
             if (selected.has(answer)) {
@@ -107,7 +107,7 @@ class MultipleResponse extends Question<MultipleResponseState> {
             } else {
                 selected.add(answer);
             }
-            props.onAnswerChange([...selected]);
+            props.onResponseChange([...selected]);
             return { selected };
         });
     }

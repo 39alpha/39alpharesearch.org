@@ -1,12 +1,15 @@
 import "./Answer.scss";
 import { ChangeEvent, Component } from 'react';
 
-interface AnswerProps {
-    type: string;
-    questionNum: string;
-    answerNum: string;
+export interface AnswerSpec {
+    id: number;
     value?: string;
-    onAnswerChange: (answer: string) => void;
+}
+
+interface AnswerProps extends AnswerSpec {
+    type: string;
+    questionId: number;
+    onResponseChange: (answer: string) => void;
 }
 
 interface AnswerState {
@@ -15,11 +18,11 @@ interface AnswerState {
 export default class Answer extends Component<AnswerProps, AnswerState> {
     constructor(props: AnswerProps) {
         super(props);
-        this.onAnswerChange = this.onAnswerChange.bind(this);
+        this.onResponseChange = this.onResponseChange.bind(this);
     }
 
-    onAnswerChange(e: ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) {
-        this.props.onAnswerChange(e.target.value);
+    onResponseChange(e: ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) {
+        this.props.onResponseChange(e.target.value);
     }
 
     render() {
@@ -51,12 +54,12 @@ class MultipleChoice extends Answer {
                 <input
                     type="radio"
                     className="answer__radio"
-                    id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
-                    name={"question" + this.props.questionNum}
+                    id={"question" + this.props.questionId + "answer" + this.props.id}
+                    name={"question" + this.props.questionId}
                     value={this.props.value}
-                    onChange={this.onAnswerChange}
+                    onChange={this.onResponseChange}
                 />
-                <label htmlFor={"question" + this.props.questionNum + "answer" + this.props.answerNum}>
+                <label htmlFor={"question" + this.props.questionId + "answer" + this.props.id}>
                     {this.props.value}
                 </label>
             </div>
@@ -71,12 +74,12 @@ class AllThatApply extends Answer {
                 <input
                     type="checkbox"
                     className="answer__checkbox"
-                    id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
-                    name={"question" + this.props.questionNum}
+                    id={"question" + this.props.questionId + "answer" + this.props.id}
+                    name={"question" + this.props.questionId}
                     value={this.props.value}
-                    onChange={this.onAnswerChange}
+                    onChange={this.onResponseChange}
                 />
-                <label htmlFor={"question" + this.props.questionNum + "answer" + this.props.answerNum}>
+                <label htmlFor={"question" + this.props.questionId + "answer" + this.props.id}>
                     {this.props.value}
                 </label>
             </div>
@@ -91,8 +94,8 @@ class Email extends Answer {
                 <input
                     type="email"
                     className="answer__email"
-                    id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
-                    onChange={this.onAnswerChange}
+                    id={"question" + this.props.questionId + "answer" + this.props.id}
+                    onChange={this.onResponseChange}
                 />
             </div>
         );
@@ -106,8 +109,8 @@ class ShortAnswer extends Answer {
                 <input
                     type="text"
                     className="answer__text"
-                    id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
-                    onChange={this.onAnswerChange}
+                    id={"question" + this.props.questionId + "answer" + this.props.id}
+                    onChange={this.onResponseChange}
                 />
             </div>
         );
@@ -120,8 +123,8 @@ class LongAnswer extends Answer {
             <div className={this.className()}>
                 <textarea
                     className="answer__textarea"
-                    id={"question" + this.props.questionNum + "answer" + this.props.answerNum}
-                    onChange={this.onAnswerChange}
+                    id={"question" + this.props.questionId + "answer" + this.props.id}
+                    onChange={this.onResponseChange}
                 ></textarea>
             </div>
         );
