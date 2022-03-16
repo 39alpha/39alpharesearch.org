@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { Component, FormEvent } from 'react';
 import { default as Question, QuestionSpec } from './Question';
 import './Survey.scss';
@@ -45,20 +46,29 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
 
     submit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        this.setState((state, props) => {
-            const flagged = new Set(state.flagged);
-            for (let i = 0; i < props.questions.length; ++i) {
-                if (state.responses[i] === undefined) {
-                    flagged.add(i);
-                } else {
-                    flagged.delete(i);
-                }
+        const flagged = new Set(this.state.flagged);
+        for (let i = 0; i < this.props.questions.length; ++i) {
+            if (this.state.responses[i] === undefined) {
+                flagged.add(i);
+            } else {
+                flagged.delete(i);
             }
-            if (flagged.size === 0) {
-                console.log(state.responses);
-            }
-            return { flagged };
-        });
+        }
+
+        if (flagged.size !== 0) {
+            this.setState({ flagged });
+            return;
+        }
+
+        console.log('Sending results');
+        axios.put(`http://penguin.linux.test/api/v0/surveys/${this.props.id}/responses`, {
+            responses: this.flattenResponses(this.state.responses),
+        })
+        .then(() => {
+            console.log('submitted');
+            this.setState({ flagged });
+        })
+        .catch(err => console.error(err));
     }
 
     onResponseChange(questionNum: number, questionId: number, response: ResponseValue) {
@@ -100,5 +110,22 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
                 </form>
             </>
         );
+    }
+
+    flattenResponses(responses: Array<Response>): Array<Response> {
+        const flat = [];
+        for (const response of responses) {
+            if (typeof response.response === 'string') {
+                flat.push(response);
+            } else {
+                for (const subresponse of response.response) {
+                    flat.push({
+                        id: response.id,
+                        response: subresponse,
+                    });
+                }
+            }
+        }
+        return flat;
     }
 }
