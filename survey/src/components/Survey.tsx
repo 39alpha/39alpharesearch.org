@@ -73,9 +73,15 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
 
     onResponseChange(questionNum: number, questionId: number, response: ResponseValue) {
         this.setState(state => {
+            const flagged = new Set(state.flagged);
             const responses = [...state.responses];
-            responses[questionNum] = { id: questionId, response };
-            return { responses };
+            if (response.length === 0) {
+                delete responses[questionNum];
+            } else {
+                responses[questionNum] = { id: questionId, response };
+                flagged.delete(questionNum);
+            }
+            return { responses, flagged };
         });
     }
 
