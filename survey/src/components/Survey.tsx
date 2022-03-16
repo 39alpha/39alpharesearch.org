@@ -24,6 +24,8 @@ interface Response {
 interface SurveyState {
     isPending: boolean;
     notFound: boolean;
+    submitted: boolean;
+    submissionFailed: boolean;
     survey: SurveySpec | undefined;
     responses: Array<Response>;
     flagged: Set<number>;
@@ -48,6 +50,8 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
         this.state = {
             isPending: true,
             notFound: false,
+            submitted: false,
+            submissionFailed: false,
             survey: undefined,
             responses: [],
             flagged: new Set(),
@@ -101,15 +105,20 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
             return;
         }
 
-        console.log('Sending results');
         axios.post(`http://penguin.linux.test/api/v0/surveys/${this.props.id}/responses`, {
             responses: this.flattenResponses(this.state.responses),
         })
         .then(() => {
-            console.log('submitted');
-            this.setState({ flagged });
+            this.setState({
+                submitted: true,
+                flagged,
+            });
         })
-        .catch(err => console.error(err));
+        .catch(err => {
+            this.setState({
+                submissionFailed: true,
+            });
+        });
     }
 
     onResponseChange(questionNum: number, questionId: number, response: ResponseValue) {
@@ -129,6 +138,10 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
     render() {
         if (this.state.isPending) {
             return this.Loading();
+        } else if (this.state.submissionFailed) {
+            return this.SubmissionFailed();
+        } else if (this.state.submitted) {
+            return this.Submitted();
         } else if (this.state.notFound || this.state.survey === undefined) {
             return this.NotFound();
         }
@@ -167,10 +180,36 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
 
     Loading() {
         return (
-            <div className="survey__loading">
+            <>
                 <h2>39Alpha Surveys</h2>
                 <p>Loading survey {this.props.id}...</p>
-            </div>
+            </>
+        );
+    }
+
+    Submitted() {
+        return (
+            <>
+                <h2>39Alpha Surveys</h2>
+                <p>
+                    Thank you so much for your contribution. If you'd like to help further the
+                    39Alpha mission in other ways, consider <a href="/donate">donating</a> or <a
+                    href="/contact-us">contact us</a> for suggestions.
+                </p>
+            </>
+        );
+    }
+
+    SubmissionFailed() {
+        return (
+            <>
+                <h2>39Alpha Surveys</h2>
+                <p>
+                    It seems we're having issues submitting your survey responses. Please try again
+                    in a few minutes. If the problem persists, please <a href="/contact-us">
+                    contact us</a>.
+                </p>
+            </>
         );
     }
 

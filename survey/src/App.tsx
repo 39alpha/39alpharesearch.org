@@ -1,6 +1,5 @@
 import './App.scss';
 import * as config from './config.json';
-import axios from 'axios';
 import { Component } from 'react';
 import Survey from './components/Survey';
 import Footer from './components/Footer';
