@@ -3,11 +3,15 @@ import { Component, FormEvent } from 'react';
 import { default as Question, QuestionSpec } from './Question';
 import './Survey.scss';
 
-export interface SurveyProps {
+export interface SurveySpec {
     id: string;
     title: string;
     description: string;
     questions: Array<QuestionSpec>;
+}
+
+interface SurveyProps {
+    id: string | undefined;
 }
 
 type ResponseValue = string | Array<string>;
@@ -18,6 +22,9 @@ interface Response {
 }
 
 interface SurveyState {
+    isPending: boolean;
+    notFound: boolean;
+    survey: SurveySpec | undefined;
     responses: Array<Response>;
     flagged: Set<number>;
 }
@@ -39,15 +46,49 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
         this.submit = this.submit.bind(this);
         this.onResponseChange = this.onResponseChange.bind(this);
         this.state = {
-            responses: new Array(props.questions.length),
+            isPending: true,
+            notFound: false,
+            survey: undefined,
+            responses: [],
             flagged: new Set(),
         };
     }
 
+    componentDidMount() {
+        axios
+            .get<SurveySpec>(`http://penguin.linux.test/api/v0/surveys/${this.props.id}`)
+            .then(response => {
+                this.setState(state => {
+                    return {
+                        isPending: false,
+                        notFound: false,
+                        survey: response.data,
+                    };
+                });
+            })
+            .catch(err => {
+                this.setState(state => {
+                    return {
+                        isPending: false,
+                        notFound: true,
+                        survey: undefined,
+                    };
+                });
+            });
+    }
+
     submit(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
+        if (this.state.survey === undefined) {
+            this.setState({
+                isPending: false,
+                notFound: true,
+            });
+            return;
+        }
+
         const flagged = new Set(this.state.flagged);
-        for (let i = 0; i < this.props.questions.length; ++i) {
+        for (let i = 0; i < this.state.survey.questions.length; ++i) {
             if (this.state.responses[i] === undefined) {
                 flagged.add(i);
             } else {
@@ -86,14 +127,20 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
     }
 
     render() {
+        if (this.state.isPending) {
+            return this.Loading();
+        } else if (this.state.notFound || this.state.survey === undefined) {
+            return this.NotFound();
+        }
+
         return (
             <>
-                <h2>{this.props.title}</h2>
-                <p>{this.props.description}</p>
+                <h2>{this.state.survey.title}</h2>
+                <p>{this.state.survey.description}</p>
                 <Flash skippedQuestions={this.state.flagged.size} />
                 <form className="survey" autoComplete="on" onSubmit={this.submit}>
                     <div className="survey__questions">
-                        {this.props.questions.map((question, index) => {
+                        {this.state.survey.questions.map((question, index) => {
                             return (
                                 <Question
                                     key={question.id}
@@ -114,6 +161,27 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
                     </div>
                     <input type="submit" className="survey__button" value="Submit" />
                 </form>
+            </>
+        );
+    }
+
+    Loading() {
+        return (
+            <div className="survey__loading">
+                <h2>39Alpha Surveys</h2>
+                <p>Loading survey {this.props.id}...</p>
+            </div>
+        );
+    }
+
+    NotFound() {
+        return (
+            <>
+                <h2>39alpha Surveys</h2>
+                <p>
+                    Sorry, we couldn't find the survey ({this.props.id}) you were looking for.
+                    Maybe check the code again?
+                </p>
             </>
         );
     }
