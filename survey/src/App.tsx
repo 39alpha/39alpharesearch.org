@@ -31,7 +31,7 @@ export default class App extends Component<AppProps, AppState> {
         if (window.location.search !== '') {
             const survey_id = window.location.search.replace(/^\?/, '');
             axios
-                .get<SurveyProps>(`http://penguin.linux.test/api/v0/survey/${survey_id}`, {
+                .get<SurveyProps>(`http://penguin.linux.test/api/v0/surveys/${survey_id}`, {
                     headers: {
                         'Content-Type': 'application/json',
                     },
