@@ -4,7 +4,7 @@ import { Component } from 'react';
 import Survey from './components/Survey';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import { BrowserRouter as Router, Routes, Route, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Routes, Route, useParams } from 'react-router-dom';
 
 export default class App extends Component {
     render() {
@@ -19,8 +19,12 @@ export default class App extends Component {
                                     <Routes>
                                         <Route path="/survey" element={<Home  />} />
                                         <Route
-                                            path="/survey/:surveyId/*"
+                                            path="/survey/:surveyId"
                                             element={<TheSurvey />}
+                                        />
+                                        <Route
+                                            path="/survey/:surveyId/*"
+                                            element={<RedirectToSurvey />}
                                         />
                                     </Routes>
                                 </div>
@@ -50,4 +54,9 @@ function Home() {
 function TheSurvey() {
     const { surveyId } = useParams();
     return (<Survey id={surveyId} />);
+}
+
+function RedirectToSurvey() {
+    const { surveyId } = useParams();
+    return (<Navigate to={`/survey/${surveyId}`} />);
 }
