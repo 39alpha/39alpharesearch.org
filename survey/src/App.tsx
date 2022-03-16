@@ -1,10 +1,17 @@
 import './App.scss';
 import * as config from './config.json';
-import { Component } from 'react';
+import { ChangeEvent, Component, FormEvent, useState } from 'react';
 import Survey from './components/Survey';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import { BrowserRouter as Router, Navigate, Routes, Route, useParams } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Navigate,
+    Routes,
+    Route,
+    useNavigate,
+    useParams,
+} from 'react-router-dom';
 
 export default class App extends Component {
     render() {
@@ -39,14 +46,34 @@ export default class App extends Component {
 }
 
 function Home() {
+    const [surveyId, setSurveyId] = useState('');
+    const navigate = useNavigate();
+
+    function submit(e: FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        navigate(`/survey/${surveyId}`);
+    }
+
+    function onChange(e: ChangeEvent<HTMLInputElement>) {
+        setSurveyId(e.target.value);
+    }
+
+
     return (
         <>
             <h2>39Alpha Surveys</h2>
             <p>
                 39Alpha Research hosts a number of research surveys. If you are interested in
                 participating in one, please <a href="/contact-us">contact us</a> and we will send
-                you a link to one that suits your interest and our needs.
+                you a link or survey identifier to one that suits your interest and our needs.
             </p>
+
+            <h3>Survey Search</h3>
+            <p>If you know the survey's identifier, you can enter it below to load the survey.</p>
+            <form className="search" onSubmit={submit}>
+                <input type="text" className="search__text" onChange={onChange} required/>
+                <input type="submit" className="search__button" value="Go" />
+            </form>
         </>
     );
 }
