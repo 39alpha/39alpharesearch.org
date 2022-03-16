@@ -61,7 +61,7 @@ export default class Survey extends Component<SurveyProps, SurveyState> {
         }
 
         console.log('Sending results');
-        axios.put(`http://penguin.linux.test/api/v0/surveys/${this.props.id}/responses`, {
+        axios.post(`http://penguin.linux.test/api/v0/surveys/${this.props.id}/responses`, {
             responses: this.flattenResponses(this.state.responses),
         })
         .then(() => {
