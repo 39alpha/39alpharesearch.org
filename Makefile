@@ -1,6 +1,6 @@
 all: prepare
 	hugo
-	make -C survey
+	make -C surveys
 
 serve: prepare
 	hugo server
