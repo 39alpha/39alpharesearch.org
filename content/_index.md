@@ -19,7 +19,7 @@ ol li {
 }
 </style>
 
-1. **We operate and publish as teams.** There are no individual authors.
+1. **We operate and publish as teams.** There are no individual authors!
 2. **Our researchers do not hustle their own research grants.** Their job is to do research.
 3. **We publish our tools (software) in full**, integrated within and alongside our scientific
    publications.
