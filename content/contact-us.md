@@ -3,5 +3,5 @@ layout: contact
 title: Contact Us
 menu:
     main:
-        weight: 5
+        weight: 4
 ---
