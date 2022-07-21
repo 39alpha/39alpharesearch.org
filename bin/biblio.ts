@@ -76,7 +76,7 @@ async function convert(args: Args): Promise<void> {
 
 async function bib2json(filename: string): Promise<Array<BibJsonEntry>> {
     const proc = Deno.run({
-        cmd: ['pandoc', '-t', 'csljson', filename],
+        cmd: ['pandoc-citeproc', '--bib2json', filename],
         stdout: 'piped',
         stderr: 'null',
     });
@@ -131,7 +131,7 @@ function cleanup(entry: BibJsonEntry, members: Array<Author>): BibJsonEntry {
         entry.journal = entry['container-title'];
         const [ [ year, month ] ] = entry.issued['date-parts'];
         entry.date = { year, month };
-    
+
         entry.author.forEach(toInitials);
         entry.author.forEach(author => isMember(author, members));
     } catch (err) {
@@ -159,7 +159,7 @@ async function readMembers(filename: string): Promise<Array<Author>> {
         return JSON.parse(content);
     } catch (err) {
         console.log(`While Reading Members: ${err.toString()}`);
-	throw err;
+    throw err;
     }
 }
 
