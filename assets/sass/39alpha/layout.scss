@@ -935,3 +935,35 @@
         font-style: italic;
     }
 }
+
+.news {
+    &__item {
+        padding-left: $spacing-unit;
+        padding-right: 0.5 * $spacing-unit;
+        padding-top: 0.25 * $spacing-unit;
+        padding-bottom: 0.25 * $spacing-unit;
+        margin-bottom: $spacing-unit;
+        font-size: $large-font-size;
+        background: $grey-color-dark;
+        border: 1px solid $grey-color-dark;
+        border-radius: 5px;
+    }
+
+    &__details {
+        margin-top: 0.25 * $spacing-unit;
+        margin-left: $spacing-unit;
+        margin-bottom: 0;
+    }
+
+    &__datetime {
+        font-size: $small-font-size;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    &__body{
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

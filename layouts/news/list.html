@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="wrapper wrapper--narrow">
+    <article class="post">
+        <header class="post-header post-header--visible">
+            <h1>News and Ongoing Work</h1>
+        </header>
+
+        <div class="post-content">
+            {{ if .Pages.ByDate.Reverse }}
+                {{ range .Pages.ByDate.Reverse }}
+                    <div class="news__item">
+                        <div class="news__body">
+                            {{ .Content }}
+                            <p class="news__details">
+                                {{ if .Params.Team }}
+                                    {{ $path := path.Join "/about/teams" .Params.Team }}
+                                    {{ with .Site.GetPage $path }}
+                                        <span class="news__team"><a href="{{ .RelPermalink }}">{{ .Title }}</a></span> &mdash;
+                                    {{ end }}
+                                {{ end }}
+                                <time class="news__datetime">{{ .Date.Format "2006-01-02T15:04:05Z" }}</time>
+                            </p>
+                        </div>
+                    </div>
+                {{ end }}
+            {{ else }}
+                <p>39Alpha Research is tirelessly working on high-quality, comprehensible research, so stay tuned for updates.</p>
+            {{ end }}
+        </div>
+    </article>
+</div>
+{{ end }}
+
