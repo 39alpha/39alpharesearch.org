@@ -961,9 +961,9 @@
         font-weight: bold;
     }
 
-    &__body{
-        p {
-            margin-bottom: 0;
+    &__body {
+        section ol {
+            margin-top: $spacing-unit / 2;
         }
     }
 }
