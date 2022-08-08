@@ -22,9 +22,9 @@ measured in feet, or miles, but can be most anything. In this case, eggs!
 
 In this way, the project described to the right is measuring the distance of different water-based
 environments (lakes, streams, ship bilges, whatever it may be) from their inclination to precipitate
-(form) minerals which contain carbon. Mineral precipitation, such as when calcium builds up on your
-shower head, is a common feature of water-based systems. In the case of carbon, precipitation of
-minerals that contain carbon can offer a way to remove it from the atmosphere, and hence our
+(form) minerals which contain carbon. Mineral precipitation, such as when calcium carbonate builds up 
+on your shower head, is a common feature of water-based systems. In the case of carbon, precipitation
+of minerals that contain carbon can offer a way to remove it from the atmosphere, and hence our
 interest here.
 
 The distance measure that is typically used in chemistry is in terms of energy. However we cannot
