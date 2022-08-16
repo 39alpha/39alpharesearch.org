@@ -5,3 +5,4 @@ data/bibliography.json
 .sass-cache
 .ipynb_checkpoints
 .hugo_build.lock
+bin/nbconvert/nbconvert

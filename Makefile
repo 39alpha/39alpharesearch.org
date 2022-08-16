@@ -15,7 +15,10 @@ experience:
 bibliography:
 	bin/biblio.ts assets/bib/bibliography.bib -m assets/bib/members.json -o data/bibliography.json
 
-notebooks:
-	go run bin/nbconvert.go
+notebooks: nbconvert
+	bin/nbconvert/nbconvert
+
+nbconvert:
+	make -C bin/nbconvert
 
 .PHONY: prepare experience bibliography notebooks
