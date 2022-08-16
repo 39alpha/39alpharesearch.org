@@ -189,7 +189,24 @@ func (nb *Notebook) Render() error {
 	}
 	cmd := exec.Command(QuartoExe(), "render", nb.BaseName(), "--to=hugo", "--output", markdown_name)
 	cmd.Dir = filepath.Join(cwd, nb.Directory())
-	return cmd.Run()
+
+	stderr, err := cmd.StderrPipe()
+	if err != nil {
+		return err
+	}
+
+	if err := cmd.Start(); err != nil {
+		return err
+	}
+
+	slurp, _ := io.ReadAll(stderr)
+
+	if err := cmd.Wait(); err != nil {
+		fmt.Fprintf(os.Stderr, "Notebook %q failed to build\n%s\n", nb.path, slurp)
+		return err
+	}
+
+	return nil
 }
 
 func (nb *Notebook) CopyAssets() error {
@@ -293,21 +310,22 @@ func (nb *Notebook) Execute() error {
 		return fmt.Errorf("error creating notebook directory: %v\n", err)
 	}
 
-	fmt.Printf("%s → %s\n", nb.path, content_dir)
+	fmt.Printf("Executing notebook %q\n", nb.path)
 
-	err = nb.CopyAssets()
-	if err != nil {
+	if err = nb.Cleanup(); err != nil {
+		return fmt.Errorf("error cleaning up generated assets for notebook %q: %v\n", nb.path, err)
+	}
+
+	if err = nb.CopyAssets(); err != nil {
 		return fmt.Errorf("error copying assets to content directory for notebook %q: %v\n", nb.path, err)
 	}
 
-	err = nb.Render()
-	if err != nil {
+	if err = nb.Render(); err != nil {
 		return fmt.Errorf("error converting notebook %q: %v\n", nb.path, err)
 	}
 	defer nb.Cleanup()
 
-	err = nb.MoveGeneratedAssets()
-	if err != nil {
+	if err = nb.MoveGeneratedAssets(); err != nil {
 		return fmt.Errorf("error copying generated assets to content directory for notebook %q: %v\n", nb.path, err)
 	}
 
