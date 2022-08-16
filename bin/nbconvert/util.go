@@ -2,10 +2,10 @@ package main
 
 import (
 	"archive/zip"
-	"os"
 	"io"
-	"os/exec"
 	"io/ioutil"
+	"os"
+	"os/exec"
 	"path/filepath"
 )
 

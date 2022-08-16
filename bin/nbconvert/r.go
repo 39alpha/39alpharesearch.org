@@ -1,7 +1,7 @@
 package main
 
 type RNotebook struct {
-	path  string
+	path   string
 	assets []*Asset
 }
 

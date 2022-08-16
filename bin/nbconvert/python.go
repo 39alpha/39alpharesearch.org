@@ -1,7 +1,7 @@
 package main
 
 type PythonNotebook struct {
-	path  string
+	path   string
 	assets []*Asset
 }
 

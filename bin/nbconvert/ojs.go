@@ -1,7 +1,7 @@
 package main
 
 type ObservableNotebook struct {
-	path  string
+	path   string
 	assets []*Asset
 }
 

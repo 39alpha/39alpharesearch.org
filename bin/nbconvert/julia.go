@@ -1,11 +1,11 @@
 package main
 
 import (
-	"path/filepath"
-	"os/exec"
-	"log"
 	"fmt"
+	"log"
 	"os"
+	"os/exec"
+	"path/filepath"
 )
 
 func JuliaExe() string {
@@ -17,7 +17,7 @@ func JuliaExe() string {
 }
 
 type JuliaNotebook struct {
-	path  string
+	path   string
 	assets []*Asset
 }
 
@@ -36,13 +36,13 @@ func (nb *JuliaNotebook) AddAsset(asset *Asset) []*Asset {
 
 func (nb *JuliaNotebook) IsIgnoredAsset(path string) bool {
 	name := filepath.Base(path)
-	switch(name) {
-		case "Manifest.toml":
-			return true
-		case "Project.toml":
-			return true
-		default:
-			return false
+	switch name {
+	case "Manifest.toml":
+		return true
+	case "Project.toml":
+		return true
+	default:
+		return false
 	}
 }
 

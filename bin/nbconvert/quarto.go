@@ -1,13 +1,13 @@
 package main
 
 import (
-	"path/filepath"
-	"log"
-	"os/exec"
-	"regexp"
-	"io/ioutil"
 	"bytes"
 	"fmt"
+	"io/ioutil"
+	"log"
+	"os/exec"
+	"path/filepath"
+	"regexp"
 )
 
 func IsQuarto(path string) bool {
@@ -93,16 +93,16 @@ func InferQuartoLanguageFromBody(content []byte) (Language, error) {
 
 func LangFromQuarto(blang []byte) Language {
 	lang := string(bytes.ToLower(bytes.TrimSpace(blang)))
-	switch(lang) {
-		case "python":
-			return PythonLang
-		case "julia":
-			return JuliaLang
-		case "r":
-			return RLang
-		case "ojs":
-			return ObservableLang
-		default:
-			return UnknownLang
+	switch lang {
+	case "python":
+		return PythonLang
+	case "julia":
+		return JuliaLang
+	case "r":
+		return RLang
+	case "ojs":
+		return ObservableLang
+	default:
+		return UnknownLang
 	}
 }

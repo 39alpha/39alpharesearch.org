@@ -72,17 +72,17 @@ func FindNotebooks() (notebooks []Notebook, err error) {
 				return err
 			}
 
-			switch (lang) {
-				case PythonLang:
-					nb = &PythonNotebook{path, []*Asset{}}
-				case JuliaLang:
-					nb = &JuliaNotebook{path, []*Asset{}}
-				case RLang:
-					nb = &RNotebook{path, []*Asset{}}
-				case ObservableLang:
-					nb = &ObservableNotebook{path, []*Asset{}}
-				default:
-					return fmt.Errorf("unable to infer language for notebook %q", path)
+			switch lang {
+			case PythonLang:
+				nb = &PythonNotebook{path, []*Asset{}}
+			case JuliaLang:
+				nb = &JuliaNotebook{path, []*Asset{}}
+			case RLang:
+				nb = &RNotebook{path, []*Asset{}}
+			case ObservableLang:
+				nb = &ObservableNotebook{path, []*Asset{}}
+			default:
+				return fmt.Errorf("unable to infer language for notebook %q", path)
 			}
 
 			if err = FindAssets(nb); err != nil {
@@ -96,7 +96,7 @@ func FindNotebooks() (notebooks []Notebook, err error) {
 }
 
 func InferLanguage(path string) (Language, error) {
-	if (IsQuarto(path)) {
+	if IsQuarto(path) {
 		return InferQuartoLanguage(path)
 	}
 	return InferIpynbLanguage(path)
@@ -302,5 +302,5 @@ func RunCommand(nb Notebook, cmd *exec.Cmd) ([]byte, []byte, error) {
 		return o, e, err
 	}
 
-	return o, e,  nil
+	return o, e, nil
 }

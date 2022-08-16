@@ -1,9 +1,9 @@
 package main
 
 import (
-	"path/filepath"
 	"encoding/json"
 	"io/ioutil"
+	"path/filepath"
 )
 
 type KernelSpec struct {
