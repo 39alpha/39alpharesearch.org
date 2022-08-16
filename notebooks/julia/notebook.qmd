@@ -6,9 +6,14 @@ format: hugo
 jupyter: julia-1.7
 ---
 
+```{julia}
+using DrWatson
+@quickactivate
+```
+
 ## Parametric Plots
 
-Plot function pair (x(u), y(u)). 
+Plot function pair (x(u), y(u)).
 See @fig-parametric for an example.
 
 ```{julia}
@@ -17,10 +22,10 @@ See @fig-parametric for an example.
 
 using Plots
 
-plot(sin, 
-     x->sin(2x), 
-     0, 
-     2π, 
-     leg=false, 
+plot(sin,
+     x->sin(2x),
+     0,
+     2π,
+     leg=false,
      fill=(0,:lavender))
 ```

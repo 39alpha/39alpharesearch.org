@@ -21,3 +21,7 @@ func (nb *RNotebook) AddAsset(asset *Asset) []*Asset {
 func (nb *RNotebook) Render() error {
 	return Quarto(nb)
 }
+
+func (nb *RNotebook) IsIgnoredAsset(path string) bool {
+	return false
+}

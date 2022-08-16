@@ -3,9 +3,7 @@ package main
 import (
 	"archive/zip"
 	"fmt"
-	"io"
 	"os"
-	"os/exec"
 	"path/filepath"
 )
 
@@ -33,6 +31,7 @@ type Notebook interface {
 	Path() string
 	Assets() []*Asset
 	AddAsset(*Asset) []*Asset
+	IsIgnoredAsset(path string) bool
 	Render() error
 }
 
@@ -46,33 +45,6 @@ func Directory(nb Notebook) string {
 
 func AssetPath(nb Notebook, path string) string {
 	return filepath.Join(Directory(nb), path)
-}
-
-func Quarto(nb Notebook) error {
-	cwd, err := os.Getwd()
-	if err != nil {
-		return err
-	}
-	cmd := exec.Command(QuartoExe(), "render", BaseName(nb), "--to=hugo", "--output", markdown_name)
-	cmd.Dir = filepath.Join(cwd, Directory(nb))
-
-	stderr, err := cmd.StderrPipe()
-	if err != nil {
-		return err
-	}
-
-	if err := cmd.Start(); err != nil {
-		return err
-	}
-
-	slurp, _ := io.ReadAll(stderr)
-
-	if err := cmd.Wait(); err != nil {
-		fmt.Fprintf(os.Stderr, "Notebook %q failed to build\n%s\n", nb.Path(), slurp)
-		return err
-	}
-
-	return nil
 }
 
 func FindNotebooks() (notebooks []Notebook, err error) {
@@ -111,8 +83,6 @@ func FindNotebooks() (notebooks []Notebook, err error) {
 					return fmt.Errorf("unable to infer language for notebook %q", path)
 			}
 
-			fmt.Printf("%T %v\n", nb, nb)
-
 			if err = FindAssets(nb); err != nil {
 				return err
 			}
@@ -138,10 +108,15 @@ func FindAssets(nb Notebook) error {
 	}
 	for _, file := range files {
 		path := AssetPath(nb, file.Name())
+		if nb.IsIgnoredAsset(path) {
+			continue
+		}
+
 		info, err := file.Info()
 		if err != nil {
 			return err
 		}
+
 		if isNotebook(path, info) || file.Name() == checkpoints {
 			continue
 		}
