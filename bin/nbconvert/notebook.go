@@ -2,21 +2,22 @@ package main
 
 import (
 	"archive/zip"
-	"path/filepath"
+	"fmt"
+	"io"
 	"os"
 	"os/exec"
-	"io"
-	"fmt"
-	"log"
+	"path/filepath"
 )
 
-func QuartoExe() string {
-	quarto, err := exec.LookPath("quarto")
-	if err != nil {
-		log.Fatalf("Could not find `quarto`; perhaps you need to install it?")
-	}
-	return quarto
-}
+type Language string
+
+const (
+	PythonLang     Language = "python"
+	JuliaLang               = "julia"
+	RLang                   = "r"
+	ObservableLang          = "observable"
+	UnknownLang             = "unknown"
+)
 
 func isNotebook(path string, file os.FileInfo) bool {
 	basename := filepath.Base(path)
@@ -29,7 +30,7 @@ type Asset struct {
 }
 
 type Notebook interface {
-	Path()   string
+	Path() string
 	Assets() []*Asset
 	AddAsset(*Asset) []*Asset
 	Render() error
@@ -45,10 +46,6 @@ func Directory(nb Notebook) string {
 
 func AssetPath(nb Notebook, path string) string {
 	return filepath.Join(Directory(nb), path)
-}
-
-func IsQuarto(nb Notebook) bool {
-	return BaseName(nb) == quarto_name
 }
 
 func Quarto(nb Notebook) error {
@@ -94,7 +91,28 @@ func FindNotebooks() (notebooks []Notebook, err error) {
 		}
 
 		if isNotebook(path, info) {
-			nb := &ObservableNotebook{path, []*Asset{}}
+			var nb Notebook
+
+			lang, err := InferLanguage(path)
+			if err != nil {
+				return err
+			}
+
+			switch (lang) {
+				case PythonLang:
+					nb = &PythonNotebook{path, []*Asset{}}
+				case JuliaLang:
+					nb = &JuliaNotebook{path, []*Asset{}}
+				case RLang:
+					nb = &RNotebook{path, []*Asset{}}
+				case ObservableLang:
+					nb = &ObservableNotebook{path, []*Asset{}}
+				default:
+					return fmt.Errorf("unable to infer language for notebook %q", path)
+			}
+
+			fmt.Printf("%T %v\n", nb, nb)
+
 			if err = FindAssets(nb); err != nil {
 				return err
 			}
@@ -103,6 +121,13 @@ func FindNotebooks() (notebooks []Notebook, err error) {
 		return nil
 	})
 	return
+}
+
+func InferLanguage(path string) (Language, error) {
+	if (IsQuarto(path)) {
+		return InferQuartoLanguage(path)
+	}
+	return InferIpynbLanguage(path)
 }
 
 func FindAssets(nb Notebook) error {
@@ -120,7 +145,7 @@ func FindAssets(nb Notebook) error {
 		if isNotebook(path, info) || file.Name() == checkpoints {
 			continue
 		}
-		nb.AddAsset(&Asset{ path, info })
+		nb.AddAsset(&Asset{path, info})
 	}
 	return nil
 }
@@ -194,7 +219,7 @@ func Cleanup(nb Notebook) error {
 		}
 	}
 
-	if IsQuarto(nb) {
+	if IsQuarto(nb.Path()) {
 		return os.RemoveAll(AssetPath(nb, notebook_name))
 	}
 
