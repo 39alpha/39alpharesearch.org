@@ -3,7 +3,9 @@ package main
 import (
 	"archive/zip"
 	"fmt"
+	"io"
 	"os"
+	"os/exec"
 	"path/filepath"
 )
 
@@ -262,4 +264,43 @@ func Execute(nb Notebook) error {
 	}
 
 	return nil
+}
+
+func RunCommand(nb Notebook, cmd *exec.Cmd) ([]byte, []byte, error) {
+	cwd, err := os.Getwd()
+	if err != nil {
+		return nil, nil, err
+	}
+
+	cmd.Dir = filepath.Join(cwd, Directory(nb))
+
+	stdout, err := cmd.StdoutPipe()
+	if err != nil {
+		return nil, nil, err
+	}
+
+	stderr, err := cmd.StderrPipe()
+	if err != nil {
+		return nil, nil, err
+	}
+
+	if err := cmd.Start(); err != nil {
+		return nil, nil, err
+	}
+
+	o, err := io.ReadAll(stdout)
+	if err != nil {
+		return nil, nil, err
+	}
+
+	e, err := io.ReadAll(stderr)
+	if err != nil {
+		return nil, nil, err
+	}
+
+	if err := cmd.Wait(); err != nil {
+		return o, e, err
+	}
+
+	return o, e,  nil
 }

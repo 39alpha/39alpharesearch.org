@@ -2,7 +2,6 @@ package main
 
 import (
 	"path/filepath"
-	"io"
 	"os/exec"
 	"log"
 	"fmt"
@@ -51,33 +50,12 @@ func (nb *JuliaNotebook) Instantiate() error {
 	if info, err := os.Stat(AssetPath(nb, "Project.toml")); err != nil || !info.Mode().IsRegular() {
 		return nil
 	}
-	fmt.Printf("Running instantiation on notebook %q\n", nb.Path())
-
-	cwd, err := os.Getwd()
-	if err != nil {
-		return err
-	}
 
 	cmd := exec.Command(JuliaExe(), "--project=.", "-E", "using Pkg; Pkg.instantiate()")
-	cmd.Dir = filepath.Join(cwd, Directory(nb))
 
-	stderr, err := cmd.StderrPipe()
+	_, _, err := RunCommand(nb, cmd)
 	if err != nil {
-		return err
-	}
-
-	if err := cmd.Start(); err != nil {
-		return err
-	}
-
-	slurp, err := io.ReadAll(stderr)
-	if err != nil {
-		return err
-	}
-
-	if err := cmd.Wait(); err != nil {
-		fmt.Fprintf(os.Stderr, "Notebook %q failed to instantiate\n%s\n", nb.Path(), slurp)
-		return err
+		return fmt.Errorf("failed to instantiate project %q: %v\n", nb.Path(), err)
 	}
 
 	return nil
@@ -87,6 +65,5 @@ func (nb *JuliaNotebook) Render() error {
 	if err := nb.Instantiate(); err != nil {
 		return err
 	}
-	return nil
-	// return Quarto(nb)
+	return Quarto(nb)
 }

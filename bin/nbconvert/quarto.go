@@ -3,8 +3,6 @@ package main
 import (
 	"path/filepath"
 	"log"
-	"os"
-	"io"
 	"os/exec"
 	"regexp"
 	"io/ioutil"
@@ -25,34 +23,11 @@ func QuartoExe() string {
 }
 
 func Quarto(nb Notebook) error {
-	cwd, err := os.Getwd()
-	if err != nil {
-		return err
-	}
-
 	cmd := exec.Command(QuartoExe(), "render", BaseName(nb), "--to=hugo", "--output", markdown_name)
-	cmd.Dir = filepath.Join(cwd, Directory(nb))
 
-	stderr, err := cmd.StderrPipe()
-	if err != nil {
-		return err
-	}
+	_, _, err := RunCommand(nb, cmd)
 
-	if err := cmd.Start(); err != nil {
-		return err
-	}
-
-	slurp, err := io.ReadAll(stderr)
-	if err != nil {
-		return err
-	}
-
-	if err := cmd.Wait(); err != nil {
-		fmt.Fprintf(os.Stderr, "Notebook %q failed to build\n%s\n", nb.Path(), slurp)
-		return err
-	}
-
-	return nil
+	return err
 }
 
 func InferQuartoLanguage(path string) (Language, error) {
