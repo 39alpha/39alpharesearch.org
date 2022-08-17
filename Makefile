@@ -19,6 +19,6 @@ notebooks: nbconvert
 	bin/nbconvert/nbconvert
 
 nbconvert:
-	make -C bin/nbconvert
+	+make -C bin/nbconvert
 
 .PHONY: prepare experience bibliography notebooks

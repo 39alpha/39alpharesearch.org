@@ -8,38 +8,61 @@
             </a>
         </header>
 
-        <div id="code-hider" onclick="toggle_code();"><span>Hide Code</span></div>
-
         <div class="notebook-content">
             {{ .Content }}
         </div>
 
         <script>
-            function toggle_code() {
-                const is_hidden = d3.select('.highlight')
-                    .classed('code--hidden');
-                if (is_hidden) {
-                    d3.selectAll('.highlight')
-                        .classed('code--hidden', false);
-                    d3.selectAll('#code-hider')
-                        .selectAll('span')
-                        .html('Hide Code');
-                } else {
-                    d3.selectAll('.highlight')
-                        .classed('code--hidden', true);
-                    d3.selectAll('#code-hider')
-                        .selectAll('span')
-                        .html('Show Code');
-                }
+            function expanded(node) {
+                node.select('svg').select('path')
+                    .attr('transform', null);
+
+                node.select('span').html('Hide Code');
             }
 
-            (function() {
-                const no_code = d3.selectAll('.highlight')._groups
-                    .map(g => g.length)
-                    .reduce((a,b) => a + b) === 0;
-                d3.selectAll('#code-hider').classed('hidden', no_code);
+            function collapsed(node) {
+                node.select('svg').select('path')
+                    .attr('transform', 'translate(5, 5) rotate(-90) translate(-5, -5)');
+
+                node.select('span').html('Show Code');
+            }
+
+            // DGM: Add a code collape before each code block in the notebook.
+            (function () {
+                d3.selectAll('.highlight').each(function() {
+                    const code = d3.select(this);
+
+                    const hider = d3.create('div')
+                        .classed('code-hider', true)
+                        .on('click', function() {
+                            const hider = d3.select(this);
+
+                            const is_hidden = code.classed('code--hidden');
+
+                            code.classed('code--hidden', !is_hidden);
+                            if (is_hidden) {
+                                expanded(hider);
+                            } else {
+                                collapsed(hider);
+                            }
+                        });
+
+                    hider.append('svg')
+                        .attr('width', 10)
+                        .attr('height', 10)
+                        .append('path')
+                            .attr('d', 'M5 9L0 1h10z')
+                            .attr('fill', 'currentColor');
+
+                    hider.append('span')
+                        .html('Hide Code');
+
+                    this.parentNode.insertBefore(hider.node(), this);
+                });
             })();
 
+            // DGM: Center all images in the notebook.
+            //      I'm not really sure why we aren't doing this in CSS, but hey...
             (function() {
                 d3.selectAll('.notebook-content')
                     .selectAll('img')

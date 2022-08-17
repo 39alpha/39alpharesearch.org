@@ -554,12 +554,14 @@
     }
 }
 
-#code-hider {
+.code-hider {
+    color: $brand-color;
     text-align: right;
     padding-bottom: 10px;
+    user-select: none;
 
     span {
-        color: $brand-color;
+        margin-left: $spacing-unit / 4;
         text-decoration: none;
 
         &:hover {
