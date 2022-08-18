@@ -7,10 +7,18 @@ serve: prepare
 serve-drafts: prepare
 	hugo server -D
 
-prepare: convert
+prepare: experience bibliography notebooks
+
+experience:
 	bin/sort-experience.ts data/experience.json
 
-convert:
+bibliography:
 	bin/biblio.ts assets/bib/bibliography.bib -m assets/bib/members.json -o data/bibliography.json
-	go run bin/nbconvert.go
 
+notebooks: nbconvert
+	bin/nbconvert/nbconvert
+
+nbconvert:
+	+make -C bin/nbconvert
+
+.PHONY: prepare experience bibliography notebooks
