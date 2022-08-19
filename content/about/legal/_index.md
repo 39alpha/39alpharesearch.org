@@ -41,6 +41,7 @@ In addition, we have policies guiding how we execute on our scientific mission.
 
 # Board Meetings
 
-## Meeting Minutes
+We publically maintain board minutes and resolutions.
 
-## Board Resolutions
+- [Meeting Minutes](docs/minutes)
+- Board Resolutions
