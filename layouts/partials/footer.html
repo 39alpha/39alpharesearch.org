@@ -19,9 +19,12 @@
                     <li>{{ delimit . "</br>" }}</li>
                     {{ end }}
                 </ul>
+                A 501(c)(3) Organization.<br />
                 {{ with .Site.Params.ein }}
-                    A 501(c)(3) Organization.<br />
-                    EIN: {{ . }}
+                    EIN: {{ . }}<br />
+                {{ end }}
+                {{ with .Site.Params.legal }}
+                    <a href="{{ . }}">Legal Documentation</a>
                 {{ end }}
             </div>
 

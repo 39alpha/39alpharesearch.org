@@ -22,6 +22,7 @@ params:
     logo:
         url: /images/39alpha.png
     ein: 84-3180111
+    legal: /about/legal
     donations:
         values:
             - 25.00
