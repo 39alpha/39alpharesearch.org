@@ -277,7 +277,7 @@
 }
 
 .post-header {
-    display: none;
+    // display: none;
     margin-bottom: $spacing-unit;
 
     &--visible {
@@ -285,10 +285,10 @@
     }
 
     h1 {
+    	@include relative-font-size(1.5);
         text-align: center;
     }
 }
-
 
 .post-title, .notebook-title {
     @include relative-font-size(2);
@@ -304,8 +304,16 @@
 .post-content, .notebook-content {
     margin-bottom: $spacing-unit;
 
+    h1 {
+        @include relative-font-size(1.625);
+
+        @include media-query($on-laptop) {
+            @include relative-font-size(1.75);
+        }
+    }
+
     h2 {
-        @include relative-font-size(2);
+        @include relative-font-size(1.25);
 
         @include media-query($on-laptop) {
             @include relative-font-size(1.75);
@@ -313,7 +321,7 @@
     }
 
     h3 {
-        @include relative-font-size(1.625);
+        @include relative-font-size(1.125);
 
         @include media-query($on-laptop) {
             @include relative-font-size(1.375);
@@ -321,7 +329,9 @@
     }
 
     h4 {
-        @include relative-font-size(1.25);
+        @include relative-font-size(1);
+        font-weight: bold;
+        font-style: italic;
 
         @include media-query($on-laptop) {
             @include relative-font-size(1.125);
@@ -964,5 +974,103 @@
         section ol {
             margin-top: $spacing-unit / 2;
         }
+    }
+}
+
+.minutes {
+	&-list-heading {
+   		@include relative-font-size(1.75);
+	}
+	&-list {
+        margin-left: 0;
+        list-style: none;
+
+        > li {
+            margin-bottom: $spacing-unit;
+        }
+    }
+
+	&-meta {
+        font-size: $small-font-size;
+        color: $grey-color;
+    }
+
+    &-link {
+        display: block;
+        @include relative-font-size(1.5);
+    }
+
+    &-header {
+        margin-bottom: $spacing-unit;
+
+        &--visible {
+            display: block;
+        }
+
+        h1 {
+            @include relative-font-size(1.5);
+            text-align: center;
+        }
+    }
+
+    &-title {
+        @include relative-font-size(2);
+        letter-spacing: -1px;
+        line-height: 1;
+        text-align: center;
+
+        @include media-query($on-laptop) {
+            @include relative-font-size(2.25);
+        }
+    }
+
+    &-content {
+        margin-bottom: $spacing-unit;
+
+        h1 {
+            @include relative-font-size(1.625);
+
+            @include media-query($on-laptop) {
+                @include relative-font-size(1.75);
+            }
+        }
+
+        h2 {
+            @include relative-font-size(1.25);
+
+            @include media-query($on-laptop) {
+                @include relative-font-size(1.75);
+            }
+        }
+
+        h3 {
+            @include relative-font-size(1.125);
+
+            @include media-query($on-laptop) {
+                @include relative-font-size(1.375);
+            }
+        }
+
+        h4 {
+            @include relative-font-size(1);
+            font-weight: bold;
+            font-style: italic;
+
+            @include media-query($on-laptop) {
+                @include relative-font-size(1.125);
+            }
+        }
+    }
+
+    &-article {
+    	h1 {
+    		margin-top: 2 * $spacing-unit;
+    	}
+    }
+
+    &-footer {
+    	border-top: 1px solid $brand-color;
+    	margin-top: 2 * $spacing-unit;
+    	padding-top: $spacing-unit / 2;
     }
 }

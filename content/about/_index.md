@@ -36,8 +36,3 @@ ol li {
 We believe that there is inherent value in quantifying our biological, chemical, and integrated
 place on Earth, and we believe that modern scientific practices can be evolved to be more creative,
 more efficient, and more consequential.
-
-### Public Documents
-
-* [IRS Favorable Determination Letter](/docs/favorable-determination.pdf)
-* Federal Filing: [2020](/docs/2020-990N.pdf)

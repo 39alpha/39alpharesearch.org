@@ -1,6 +1,7 @@
 languageCode: en-us
 title: 39Alpha Research
 relativeURLS: true
+timeZone: America/Phoenix
 markup:
     goldmark:
         parser:
@@ -22,6 +23,7 @@ params:
     logo:
         url: /images/39alpha.png
     ein: 84-3180111
+    legal: /about/legal
     donations:
         values:
             - 25.00
