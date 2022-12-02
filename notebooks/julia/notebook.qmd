@@ -3,7 +3,7 @@ title: "Plots Demo"
 author: "Norah Jones"
 date: "5/22/2021"
 format: hugo
-jupyter: julia-1.7
+jupyter: julia-1.8
 ---
 
 ```{julia}
