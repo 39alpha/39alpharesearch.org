@@ -42,3 +42,9 @@ menu:
           url: /notebooks
           parent: "Science Mission"
           weight: 2
+        - identifier: data
+          title: Datasets
+          url: /data
+          parent: "Science Mission"
+          weight: 3
+
