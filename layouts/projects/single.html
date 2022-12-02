@@ -1,9 +1,11 @@
 {{ define "main" }}
 <div class="wrapper wrapper--wide">
     <div class="project">
+        {{ if .Title }}
         <header class="project__header">
             <h1 class="project-title">{{ .Title }}</h1>
         </header>
+        {{ end }}
 
         <div class="project__sections">
             {{ $raw_content := split .Content "<hr />" }}

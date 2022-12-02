@@ -285,7 +285,7 @@
     }
 
     h1 {
-    	@include relative-font-size(1.5);
+        @include relative-font-size(1.5);
         text-align: center;
     }
 }
@@ -978,10 +978,10 @@
 }
 
 .minutes {
-	&-list-heading {
-   		@include relative-font-size(1.75);
-	}
-	&-list {
+    &-list-heading {
+           @include relative-font-size(1.75);
+    }
+    &-list {
         margin-left: 0;
         list-style: none;
 
@@ -990,7 +990,7 @@
         }
     }
 
-	&-meta {
+    &-meta {
         font-size: $small-font-size;
         color: $grey-color;
     }
@@ -1063,14 +1063,62 @@
     }
 
     &-article {
-    	h1 {
-    		margin-top: 2 * $spacing-unit;
-    	}
+        h1 {
+            margin-top: 2 * $spacing-unit;
+        }
     }
 
     &-footer {
-    	border-top: 1px solid $brand-color;
-    	margin-top: 2 * $spacing-unit;
-    	padding-top: $spacing-unit / 2;
+        border-top: 1px solid $brand-color;
+        margin-top: 2 * $spacing-unit;
+        padding-top: $spacing-unit / 2;
+    }
+}
+
+.dataset {
+    &__section {
+        border-bottom: 1px solid $grey-color;
+    }
+
+    &__description {
+    }
+
+    &__header {
+        a {
+            color: $text-color;
+            &:hover {
+                color: $text-color;
+                  text-decoration: none;
+            }
+        }
+    }
+}
+
+.version {
+    &__sections {
+        padding: $spacing-unit/2 $spacing-unit;
+        h1 {
+            margin: 0px 0px $spacing-unit/4 0px;
+        }
+    }
+
+    &__section {
+        padding-left: $spacing-unit;
+        h1 {
+            margin: 0px;
+            @include relative-font-size(1.25);
+
+            @include media-query($on-laptop) {
+                @include relative-font-size(1.75);
+            }
+
+        }
+    }
+
+    &__header {
+    }
+
+    &__notes {
+        margin-left: $spacing-unit;
     }
 }

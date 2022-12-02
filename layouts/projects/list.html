@@ -1,9 +1,11 @@
 {{ define "main" }}
 <div class="wrapper wrapper--narrow">
     <article class="post">
+        {{ if .Title }}
         <header class="post-header">
             <h1 class="post-title">{{ .Title }}</h1>
         </header>
+        {{ end }}
 
         <div class="post-content">
             {{ if .Pages.ByTitle }}
@@ -20,7 +22,7 @@
                 {{ end }}
             {{ else }}
                 <h2>Science Takes Time</h2>
-                
+
                 <p>39Alpha Research is tirelessly working on high-quality,
                 comprehensible research, so stay tuned for updates.</p>
             {{ end }}
