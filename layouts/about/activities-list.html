@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="wrapper wrapper--wide">
+    <article class="post">
+        <header class="post-header post-header--visible">
+            {{ .Content }}
+        </header>
+
+        <div class="post-content">
+            {{ if .Pages.ByTitle }}
+            <ul>
+                {{ range .Pages.ByTitle }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </u>
+            {{ else }}
+            <h2>Science Takes Time</h2>
+            <p>39Alpha Research is tirelessly working on high-quality,
+            comprehensible research, so stay tuned for updates.</p>
+            {{ end }}
+        </div>
+    </article>
+</div>
+{{ end }}
+

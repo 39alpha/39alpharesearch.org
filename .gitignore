@@ -4,3 +4,4 @@ content/notebooks
 data/bibliography.json
 .sass-cache
 .ipynb_checkpoints
+.hugo_build.lock
