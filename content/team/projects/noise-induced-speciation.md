@@ -1,4 +1,5 @@
 ---
+layout: projects
 title: Noise-Induced Speciation
 description: >-
     Can whale poulations regionally speciate due to noise-induced decreases in their call range?

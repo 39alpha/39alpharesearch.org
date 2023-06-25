@@ -1,4 +1,5 @@
 ---
+layout: projects
 title: Photic Zone Migration
 description: >-
     As sea levels fluctuate in response to decreases in the abundance of land-born ice, how does the

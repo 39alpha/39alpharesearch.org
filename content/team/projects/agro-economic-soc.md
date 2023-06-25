@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: projects
 title: Monocultures, Famine, and Self-organized Criticality 
 description: Modelling the dynamic balance between economic maximization and ecological stability in agriculture 
 applicability: 5
