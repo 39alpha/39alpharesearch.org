@@ -1,4 +1,5 @@
 ---
+layout: projects
 title: Carbonate State Space
 team: t0
 identifier: CSS0
@@ -6,7 +7,9 @@ description: Quantifying the projected changes in ocean conditions as a result o
 applicability: 5
 risk: 5
 reward: 5
-draft: false
+date: 2021-03-28
+aliases:
+    - /projects/carbonate-state-space
 ---
 
 Carbon dioxide, also called "$\ce{CO2}$", is a gas produced by life and

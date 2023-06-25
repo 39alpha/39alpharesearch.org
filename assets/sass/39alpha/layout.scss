@@ -3,9 +3,7 @@
 
     display: flex;
     flex-direction: column;
-    text-align: center;
-
-    position: relative;
+    justify-content: center;
 }
 
 .site-title {
@@ -15,6 +13,8 @@
     letter-spacing: -1px;
     margin: $spacing-unit 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
 
     &, &:visited {
         color: $grey-color-dark;
@@ -50,14 +50,15 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            justify-content: center;
 
             & > li {
                 display: inline-block;
+                margin-left: 0.5 * $spacing-unit;
+                margin-right: 0.5 * $spacing-unit;
                 a:hover ~ ul {
                     display: block;
-                }
-                &:not(:last-child) {
-                    margin-right: 20px;
                 }
 
                 & > ul {
@@ -82,10 +83,6 @@
     .page-link {
         // color: lighten($brand-color, 15%);
         line-height: $base-line-height;
-
-        &:visited {
-            // color: lighten($brand-color, 15%);
-        }
 
         &:hover {
             color: $brand-color;
@@ -773,26 +770,28 @@
         text-align: center;
     }
 
-    &__banner {
-    }
-
     &__members {
         list-style: none;
         display: flex;
         justify-content: space-around;
+        @include media-query($on-palm) {
+            flex-direction: column;
+        }
         padding-top: $spacing-unit / 2;
         margin-left: 0;
     }
 
     &__member {
+        @include media-query($on-palm) {
+            padding-top: $spacing-unit/3;
+            padding-bottom: $spacing-unit/3;
+        }
         width: 100%;
         &__info {
             margin-left: 0;
             padding-left: 0;
             padding-right: 0;
             list-style: none;
-            &__name {
-            }
             &__link {
                 font-size: 3*$base-font-size/4;
             }
@@ -802,9 +801,6 @@
     &__list {
         list-style: none;
         margin-left: 0;
-    }
-
-    &__sections {
     }
 
     &__section {
@@ -820,16 +816,40 @@
 
         }
 
-        &--expanded {
-            h1 {
-                &:after {
+        &--horizontal {
+            display: flex;
+            justify-content: space-evenly;
+
+            div {
+                flex-grow: 1;
+                padding-left: 10%;
+                padding-right: 10%;
+
+                &:not(:first-child) {
+                    border-left: 1px solid $brand-color;
+                }
+
+                &:not(:last-child) {
+                    border-right: 1px solid $brand-color;
                 }
             }
-        }
 
-        &--collapsed {
-            h1 {
-                &:after {
+            @include media-query($on-palm) {
+                flex-direction: column;
+                border: none;
+
+                div {
+                    flex-grow: 1;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    &:not(:first-child) {
+                        border: none;
+                    }
+
+                    &:not(:last-child) {
+                        border: none;
+                    }
                 }
             }
         }
@@ -853,6 +873,19 @@
         }
 
         &__institution {
+        }
+    }
+
+    &__blurb {
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 30px;
+        padding-left: 30px;
+        margin-top: 2*$spacing-unit;
+
+        @include media-query($on-palm) {
+            padding-right: 0;
+            padding-left: 0;
         }
     }
 
@@ -1059,12 +1092,12 @@
 .news {
     &__item {
         padding-left: $spacing-unit;
-        padding-right: 0.5 * $spacing-unit;
-        padding-top: 0.25 * $spacing-unit;
-        padding-bottom: 0.25 * $spacing-unit;
+        padding-right: $spacing-unit;
+        padding-top: $spacing-unit;
+        padding-bottom: 0.5 * $spacing-unit;
         margin-bottom: $spacing-unit;
         font-size: $large-font-size;
-        background: $grey-color-dark;
+        background: $grey-color-light;
         border: 1px solid $grey-color-dark;
         border-radius: 5px;
     }

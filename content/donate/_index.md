@@ -3,7 +3,7 @@ layout: donate
 title: Donate
 menu:
     main:
-        weight: 5
+        weight: 4
 ---
 
 # Donate to 39Alpha Research

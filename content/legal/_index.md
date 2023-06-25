@@ -1,10 +1,6 @@
 ---
 layout: narrow
 title: "Public Records"
-menu:
-  main:
-    parent: "About Us"
-    weight: 2
 ---
 
 # Incorporation and Bylaws
