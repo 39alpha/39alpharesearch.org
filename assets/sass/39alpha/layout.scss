@@ -863,6 +863,117 @@
     }
 }
 
+.activities {
+    &__header {
+        text-align: center;
+        margin-bottom: 2*$spacing-unit;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__banner {
+    }
+
+    &__members {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding-top: $spacing-unit / 2;
+        margin-left: 0;
+    }
+
+    &__member {
+        width: 100%;
+        &__info {
+            margin-left: 0;
+            padding-left: 0;
+            padding-right: 0;
+            list-style: none;
+            &__name {
+            }
+            &__link {
+                font-size: 3*$base-font-size/4;
+            }
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin-left: 0;
+    }
+
+    &__sections {
+    }
+
+    &__section {
+        margin-top: 50px;
+        min-height: 100%;
+        text-align: justify;
+
+        h1 {
+            /* color: $brand-color; */
+            font-size: 1.5em;
+            text-align: center;
+            user-select: none;
+
+        }
+
+        &--expanded {
+            h1 {
+                &:after {
+                }
+            }
+        }
+
+        &--collapsed {
+            h1 {
+                &:after {
+                }
+            }
+        }
+    }
+
+    &__experience {
+        margin-bottom: $spacing-unit/2;
+
+        &__title {
+            font-weight: bold;
+        }
+
+        &__from, &__to {
+            font-style: italic;
+        }
+
+        &__lab {
+        }
+
+        &__department {
+        }
+
+        &__institution {
+        }
+    }
+
+    &__body {
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__content {
+        &--narrow {
+            max-width: -webkit-calc(800px - (30px * 2));
+            max-width: calc(800px - (30px * 2));
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+    }
+}
+
 @counter-style thumbs {
     system: numeric;
     prefix: "[";

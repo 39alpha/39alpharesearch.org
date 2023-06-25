@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="wrapper wrapper--wide">
+    <div class="activities">
+        <header class="activities__header">
+            <h1 class="activities__title">{{ .Title }}</h1>
+            <img class="activities__banner" src="/images/teams/{{ .Params.Identifier }}/banner.webp" alt="Team Headshot" />
+            <ul class="activities__members">
+                {{ range .Params.Members }}
+                <li class="activities__member">
+                    <ul class="activities__member__info">
+                        <li class="activities__member__info__name">{{ .name }}</li>
+                        {{ if .website }}<li class="activities__member__info__link"><a href="{{ .website }}">{{ .website }}</a></li>{{ end }}
+                        {{ if .github }}<li class="activities__member__info__link"><a href="{{ .github }}">{{ .github }}</a>
+                        </li>{{ end }}
+                    </ul>
+                </li>
+                {{ end }}
+            </ul>
+        </header>
+        <div class="activities__content activities__content--narrow">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+{{ end }}
