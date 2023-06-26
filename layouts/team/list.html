@@ -8,6 +8,8 @@
                     <li class="team__member">
                         <ul class="team__member__info">
                             <li class="team__member__info__name">{{ .name }}</li>
+                            {{ if .scholar }}<li class="team__member__info__link"><a href="{{ .scholar }}">{{ .scholar }}</a></li>{{ end }}
+                            {{ if .contact }}<li class="team__member__info__link"><a href="{{ .contact }}">{{ .contact }}</a></li>{{ end }}
                             {{ if .website }}<li class="team__member__info__link"><a href="{{ .website }}">{{ .website }}</a></li>{{ end }}
                             {{ if .github }}<li class="team__member__info__link"><a href="{{ .github }}">{{ .github }}</a></li>{{ end }}
                         </ul>
