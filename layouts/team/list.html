@@ -2,7 +2,6 @@
 <div class="wrapper wrapper--wide">
     <div class="team">
         <header class="team__header">
-            <h1 class="team__title">{{ .Title }}</h1>
             <img class="team__banner" src="/images/teams/{{ .Params.Identifier }}/banner.webp" alt="Team Headshots" />
             <ul class="team__members">
                 {{ range .Params.Members }}
@@ -15,6 +14,7 @@
                     </li>
                 {{ end }}
             </ul>
+            <h1 class="team__title">{{ .Title }}</h1>
         </header>
         <div class="team__content">
             <div class="team_sections">
