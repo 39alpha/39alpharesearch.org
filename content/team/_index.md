@@ -9,7 +9,7 @@ members:
       github: https://github.com/colemathis
     - name: Tucker Ely
       contact: Tucker@39alpharesearch.org
-      scholar: https://scholar.google.com/citations?user=yqYm8z8AAAAJ&hl=en&oi=ao
+      scholar: [Google Scholar](https://scholar.google.com/citations?user=yqYm8z8AAAAJ&hl=en&oi=ao)
       github: https://github.com/tucker-ely
     - name: Douglas G. Moore
       contact: Doug@39alpharesearch.org
