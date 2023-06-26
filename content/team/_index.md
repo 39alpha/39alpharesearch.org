@@ -27,4 +27,4 @@ menu:
         weight: 2
 ---
 
-This is a blurb about out team specificially.
+Team 0 is 39Alpha's inagural research team. We met in graduate schol, had similar penchants of rvigourously debating scinetice, developing code for novel research, and arguing with each other. It worked.
