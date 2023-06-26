@@ -5,7 +5,7 @@ title: "Public Records"
 
 # Incorporation and Bylaws
 
-39 Alpha Research's articles of incorporation were federally approved on September 11, 2010, and our bylaws and governance policies were adopted on **date**.
+39 Alpha Research's articles of incorporation were federally approved on September 11, 2019, and our bylaws and governance policies were adopted on **date**.
 
 - [Articles of Incorporation](docs/articles-of-incorporation.pdf)
 - [Bylaws](docs/2021-bylaws.pdf)
