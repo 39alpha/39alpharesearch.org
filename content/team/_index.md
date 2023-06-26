@@ -4,16 +4,16 @@ identifier: t0
 members:
     - name: Cole Mathis
       contact: Cole@39alpharesearch.org
-      google scholar: https://scholar.google.com/citations?user=MCCB-1gAAAAJ&hl=en&oi=sra
+      scholar: https://scholar.google.com/citations?user=MCCB-1gAAAAJ&hl=en&oi=sra
       website: https://colemathis.github.io
       github: https://github.com/colemathis
     - name: Tucker Ely
       contact: Tucker@39alpharesearch.org
-      google scholar: https://scholar.google.com/citations?user=yqYm8z8AAAAJ&hl=en&oi=ao
+      scholar: https://scholar.google.com/citations?user=yqYm8z8AAAAJ&hl=en&oi=ao
       github: https://github.com/tucker-ely
     - name: Douglas G. Moore
       contact: Doug@39alpharesearch.org
-      google scholar: https://scholar.google.com/citations?user=2MUS27QAAAAJ&hl=en&oi=sra
+      scholar: https://scholar.google.com/citations?user=2MUS27QAAAAJ&hl=en&oi=sra
       website: https://dglmoore.com
       github: https://github.com/dglmoore
 skills: https://observablehq.com/embed/@dglmoore/39a-cloud?cells=chart
