@@ -9,6 +9,9 @@ menu:
     39Alpha is a nonprofit, scientific research organization.
 </div>
 
+39Alpha is a nonprofit independent scientific research organization envisioned and founded by
+doctors of physics, information science, and geochemistry.
+
 We are conducting original open-source research on topics which further our scientific mission:
 <span class="emphasize">To explore and quantify human interactions with the Earth</span>. We carry
 out this research under the direction of guiding principles which represent paradigm shifts in _how_
@@ -27,28 +30,7 @@ ol li {
    publications.
 3. **We make our failures public.** Tools, methodology, everything other researchers might need to learn from our expeirence, correct our mistakes, and avoid out pitfalls.
 
-# Who we are
-39Alpha is a nonprofit independent scientific research organization envisioned and founded by
-doctors of physics, information science, and geochemistry.
-
-# What we are doing
-We are conducting original open-source research on topics which further our scientific mission. We
-carry out this research under the direction of guiding principles which represent paradigm shifts in
-_how_ open source research is conducted. This 39Alpha method stands apart from modern scientific
-orthodoxy in three differentiating ways:
-
-<style>
-ol li {
-    padding-bottom: 1em;
-    margin-left: 2em;
-}
-</style>
-
-1. **We operate and publish as a team.** There are no individual authors!
-2. **We publish our tools (software) in full**, integrated within and alongside our scientific
-   publications.
-3. **We make our failures public.** Tools, methodology, everything other researchers might need to learn from our expeirence, correct our mistakes, and avoid out pitfalls.
-
+<!-- 
 # Why we are doing it
 We believe that there is inherent value in quantifying our biological, chemical, and integrated
 place on Earth, and we believe that modern scientific practices can be evolved to be more creative,
@@ -97,16 +79,4 @@ shortcomings in method, initial assumptions, false pretenses, etc., will nonethe
 failures in the same digital interactive style as their successes. Though not published in
 peer-reviewed journals like their successful counterparts, they will nonetheless be identified as
 failures and made available to the larger scientific community, code and all.
-
-<div class="shout">
-"To Explore and Quantify the Human Effect on Earth"
-</div>
-
-It is the ultimate goal of 39Alpha teams to perform original research which explores and quantifies
-humanities various interactions with our bio-geochemical environment. Specifically, we are focused
-on interactions which may not reside in steady state, so that we might identify deleterious
-components of our effects, and postulate associated solutions.
-
-The 39Alpha teams are free to engage in research which supports this ultimate goal in any way they
-see fit. The developing projects diagrammed below are examples of the type of projects to which
-teams will apply themselves.
+-->
