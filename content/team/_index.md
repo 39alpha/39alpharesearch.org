@@ -20,8 +20,5 @@ menu:
         title: "Our Team"
         weight: 2
 ---
-We are conducting original open-source research on topics which further our scientific mission:
-<span class="emphasize">To explore and quantify human interactions with the Earth</span>. We carry
-out this research under the direction of guiding principles which represent paradigm shifts in _how_
-research is conducted. This 39Alpha method stands apart from modern scientific orthodoxy in <span
-class="emphasize">three differentiating ways</span>:
+
+This is a blurb about out team specificially.
