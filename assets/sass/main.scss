@@ -38,17 +38,16 @@ $on-laptop:        800px !default;
 $on-narrow:        1300px !default;
 
 @mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
+    @media screen and (max-width: $device) {
+        @content;
+    }
 }
 
 @mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
+    font-size: $base-font-size * $ratio;
 }
 
 @import
-  "39alpha/base",
-  "39alpha/layout",
-  "39alpha/syntax-highlighting"
-;
+    "39alpha/base",
+    "39alpha/layout",
+    "39alpha/syntax-highlighting";

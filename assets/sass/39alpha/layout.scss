@@ -273,7 +273,6 @@
 }
 
 .post-header {
-    // display: none;
     margin-bottom: $spacing-unit;
 
     &--visible {
@@ -462,6 +461,19 @@
         max-width: 60%;
     }
 
+    &--node {
+        stroke: $text-color;
+        stroke-width: 1px;
+    }
+
+    &--label {
+        font: 12pt "Courier New", monospace;
+    }
+
+    &--hidden {
+        display: none;
+    }
+
     @include media-query($on-narrow) {
         &__sections {
             display: block;
@@ -555,8 +567,10 @@
     }
 }
 
-.code--hidden {
-    display: none;
+.code {
+    &--hidden {
+        display: none;
+    }
 }
 
 .shout {
@@ -577,23 +591,12 @@
     }
 }
 
-.axis--label {
-    font-family: "Courier New", monospace;
-    fill: $text-color;
-    font-size: 12pt;
-}
-
-.project--node {
-    stroke: $text-color;
-    stroke-width: 1px;
-}
-
-.project--label {
-    font: 12pt "Courier New", monospace;
-}
-
-.project--hidden {
-    display: none;
+.axis {
+    &--label {
+        font-family: "Courier New", monospace;
+        fill: $text-color;
+        font-size: 12pt;
+    }
 }
 
 .form {
@@ -687,6 +690,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
     &__solicitation {
         width: 100%;
         flex-wrap: wrap;
@@ -697,9 +701,6 @@
         &--header {
             @include relative-font-size(0.9375);
             margin-top: 0px;
-        }
-
-        &--body {
         }
     }
 
@@ -994,20 +995,25 @@
                 font-style: italic;
             }
         }
+
         &__etal {
             content: "et al.";
         }
+
         &__year {
             &:before {
                 content: "(";
             }
+
             &:after {
                 content: ")";
             }
         }
+
         &__journal {
             font-style: italic;
         }
+
         &__volume{
             font-weight: bold;
         }
@@ -1040,6 +1046,7 @@
     text-align: center;
     width: 0.75 * $narrow-content-width;
     margin: 0 auto;
+
     &__caption {
         text-align: justify;
         font-size: $small-font-size;
@@ -1057,7 +1064,6 @@
         font-size: $large-font-size;
         background: $grey-color-light;
         border: 1px solid $grey-color-dark;
-        // border-radius: 5px;
     }
 
     &__details {
@@ -1080,10 +1086,10 @@
 }
 
 .minutes {
-    &-list-heading {
+    &__list-heading {
            @include relative-font-size(1.75);
     }
-    &-list {
+    &__list {
         margin-left: 0;
         list-style: none;
 
@@ -1092,20 +1098,20 @@
         }
     }
 
-    &-meta {
+    &__meta {
         font-size: $small-font-size;
         color: $grey-color;
     }
 
-    &-link {
+    &__link {
         display: block;
         @include relative-font-size(1.5);
     }
 
-    &-header {
+    &__header {
         margin-bottom: $spacing-unit;
 
-        &--visible {
+        &__visible {
             display: block;
         }
 
@@ -1115,7 +1121,7 @@
         }
     }
 
-    &-title {
+    &__title {
         @include relative-font-size(2);
         letter-spacing: -1px;
         line-height: 1;
@@ -1126,7 +1132,7 @@
         }
     }
 
-    &-content {
+    &__content {
         margin-bottom: $spacing-unit;
 
         h1 {
@@ -1164,13 +1170,13 @@
         }
     }
 
-    &-article {
+    &__article {
         h1 {
             margin-top: 2 * $spacing-unit;
         }
     }
 
-    &-footer {
+    &__footer {
         border-top: 1px solid $brand-color;
         margin-top: 2 * $spacing-unit;
         padding-top: $spacing-unit / 2;
@@ -1180,9 +1186,6 @@
 .dataset {
     &__section {
         border-bottom: 1px solid $grey-color;
-    }
-
-    &__description {
     }
 
     &__header {
@@ -1215,9 +1218,6 @@
             }
 
         }
-    }
-
-    &__header {
     }
 
     &__notes {
