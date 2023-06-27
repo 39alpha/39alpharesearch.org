@@ -220,5 +220,10 @@ iframe {
 .footnotes {
     ol {
         padding-top: 0.5 * $spacing-unit;
+        margin-bottom: 0;
+
+        li {
+            padding: 0;
+        }
     }
 }
