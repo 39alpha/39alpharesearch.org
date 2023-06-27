@@ -565,10 +565,16 @@
     font-weight: bold;
     font-size: 35px;
     text-align: center;
-}
 
-.shout--quiet {
-    font-style: normal;
+    &--quiet {
+        font-style: normal;
+    }
+
+    &--inline {
+        font-size: 18pt;
+        display: inline;
+        margin: 0;
+    }
 }
 
 .axis--label {
