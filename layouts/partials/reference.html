@@ -25,7 +25,7 @@
     {{ with .pages }}
         <span class="bibliography__entry__pages">{{ . }}</span>.
     {{ end }}
-    {{ with .doi }}
+    {{ with .DOI }}
         <span class="bibliography__entry__doi"><a href="https://doi.org/{{ . }}">doi:{{ . }}</a></span>.
     {{ end }}
 </li>
