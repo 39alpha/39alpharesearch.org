@@ -1,0 +1,43 @@
+<header class="team__header">
+    <img class="team__banner" src="/images/teams/{{ .Params.Identifier }}/banner.webp" alt="Team Headshots" />
+    <ul class="team__members">
+        {{ range .Params.Members }}
+            <li class="team__member">
+                <ul class="team__member__info">
+                    <li class="team__member__info__name">{{ .name }}</li>
+                    {{ if .contact }}
+                    <li class="team__member__info__item">
+                        <a href="{{ .contact }}">{{ .contact }}</a>
+                    </li>
+                    {{ end }}
+                    <li class="team__member__info__item">
+                        {{ if .website }}
+                        <a class="team__member__info__social" href="{{ .website }}">
+                            <svg class="svg-icon">
+                                <use xlink:href="/images/39alpha-social-icons.svg#website"></use>
+                            </svg>
+                        </a>
+                        {{ end }}
+                        {{ if .scholar }}
+                        <a class="team__member__info__social" href="https://scholar.google.com/citations?hl=en&oi=ao?user=/{{ .scholar }}">
+                            <svg class="svg-icon">
+                                <use xlink:href="/images/39alpha-social-icons.svg#scholar"></use>
+                            </svg>
+                        </a>
+                        {{ end }}
+                        {{ if .github }}
+                        <a class="team__member__info__social" href="https://github.com/{{ .github }}">
+                            <svg class="svg-icon">
+                                <use xlink:href="/images/39alpha-social-icons.svg#github"></use>
+                            </svg>
+                        </a>
+                        {{ end }}
+                    </li>
+                </ul>
+            </li>
+        {{ end }}
+    </ul>
+    {{ if .Title }}
+        <h1 class="team__title">{{ .Title }}</h1>
+    {{ end }}
+</header>

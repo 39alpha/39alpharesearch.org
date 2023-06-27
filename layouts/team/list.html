@@ -1,54 +1,7 @@
 {{ define "main" }}
 <div class="wrapper wrapper--wide">
     <div class="team">
-        <header class="team__header">
-            <img class="team__banner" src="/images/teams/{{ .Params.Identifier }}/banner.webp" alt="Team Headshots" />
-            <ul class="team__members">
-                {{ range .Params.Members }}
-                    <li class="team__member">
-                        <!-- <ul class="team__member__info"> -->
-                        <ul class="social-media-list">
-                            <li class="team__member__info__name">{{ .name }}</li>
-                            {{ if .contact }}
-                            <li class="team__member__info__link">
-                                <a href="{{ .contact }}">{{ .contact }}</a>
-                            </li>
-                            {{ end }}
-                            <li class="team__member__info__link">
-                                {{ if .website }}
-                                <span>
-                                    <a href="{{ .website }}">
-                                        <svg class="svg-icon">
-                                            <use xlink:href="/images/39alpha-social-icons.svg#website"></use>
-                                        </svg>
-                                    </a>
-                                </span>
-                                {{ end }}
-                                {{ if .scholar }}
-                                <span>
-                                    <a href="https://scholar.google.com/citations?hl=en&oi=ao?user=/{{ .scholar }}">
-                                        <svg class="svg-icon">
-                                            <use xlink:href="/images/39alpha-social-icons.svg#scholar"></use>
-                                        </svg>
-                                    </a>
-                                </span>
-                                {{ end }}
-                                {{ if .github }}
-                                <span>
-                                    <a href="https://github.com/{{ .github }}">
-                                        <svg class="svg-icon">
-                                            <use xlink:href="/images/39alpha-social-icons.svg#github"></use>
-                                        </svg>
-                                    </a>
-                                </span>
-                                {{ end }}
-                            </li>
-                        </ul>
-                    </li>
-                {{ end }}
-            </ul>
-            <h1 class="team__title">{{ .Title }}</h1>
-        </header>
+        {{ partial "team-header.html" . }}
         <div class="team__content">
             <div class="team_sections">
                 {{ if .Content }}
