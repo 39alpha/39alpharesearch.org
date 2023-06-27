@@ -37,8 +37,8 @@ Each of us at Team 0 maintains our public science careers in geochemistry, and t
 
 Team 0 is actively working on their [Carbonate State-Space](/link) project, to quantify the effect of CO2-induced acidification on calcifying organisms in the Northern Pacific Ocean, where we are employing Eleanor, a novel code package originally developed by Team0 in collaboration with NASA’s [Exploring Ocean Worlds](https://oceanworlds.whoi.edu/projects/exploring-ocean-worlds-exow/) initiative. Eleanor will be publicly available soon, once she makes it out of the beta testing stage, so check back or pop into our [Github](https://github.com/39alpha) repo.  
 
-We are also exploring new project ideas related to clean hydrogen generation from geologic sources. Check out Tucker Ely’s recent [paper](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GC010658) on H2-generation in Ultramafic-hosted hydrothermal systems. Hydrogen has the potential to replace hydrocarbons as societies dominant energy source. We are interested in discovering new geologic settings and conditions that might yield large quantities of hydrogen naturally, and exploring which settings might be easily harnessed by engineered solutions.
+We are also exploring new project ideas related to clean hydrogen generation from geologic sources. Check out Tucker Ely’s recent [paper](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GC010658) on H<sub>2</sub>-generation in Ultramafic-hosted hydrothermal systems. Hydrogen has the potential to replace hydrocarbons as societies dominant energy source. We are interested in discovering new geologic settings and conditions that might yield large quantities of hydrogen naturally, and exploring which settings might be easily harnessed by engineered solutions.
 
-If you are also driven by original environmental research, and want to see , please consider donating. All donations to team0 go to our active research projects.
+If you are also driven by original environmental research, and want to see, please consider [donating](). All donations to 39Alpha go to Team0's active research projects.
 
  
