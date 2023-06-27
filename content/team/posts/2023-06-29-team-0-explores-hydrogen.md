@@ -1,5 +1,5 @@
 ---
-layout: activities
+layout: posts
 title: Team 0 Explores Hydrogen!
 identifier: t0
 members:

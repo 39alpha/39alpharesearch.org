@@ -19,6 +19,7 @@ members:
 skills: https://observablehq.com/embed/@dglmoore/39a-cloud?cells=chart
 aliases:
     - /team/activities
+    - /team/posts
     - /team/projects
     - /science-mission
 menu:
