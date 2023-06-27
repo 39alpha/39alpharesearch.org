@@ -27,7 +27,6 @@ menu:
         weight: 2
 ---
 
-<<<<<<< HEAD
 Welcome! We are Team 0, 39 Alpha's inaugural research team. Born in the [ridiculous heat](https://www.washingtonpost.com/weather/2020/09/01/phoenix-hottest-summer/) of the Sonoran desert in 2020, we met while working between Everett Shock's [Group Exploring Organic Process In Geochemistry](https://search.asu.edu/profile/388445) and [Sara Walker’s ELife lab](http://emergence.asu.edu/) exploring novel astrobiology and related physics problems at Arizona State University.
 
 Each of us had similar addictions to pure science, developing code for novel research ideas, and arguing with each other. Along the way we also discovered a craving for difficult environmental projects that ignore traditional disciplinary silos. We believe that humanity is at a unique point in our collective history. Humans simultaneously have the power to destroy the environment that sustain us (and we are) while also harboring the intellect and compassion to investigate and comprehend our impact on the Earth and it's biosphere.
