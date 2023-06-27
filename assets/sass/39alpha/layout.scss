@@ -944,21 +944,25 @@
     }
 }
 
-@counter-style thumbs {
-    system: numeric;
-    prefix: "[";
-    suffix: "]";
-}
-
 .bibliography {
     list-style: none;
     text-align: justify;
     padding-bottom: 0em;
     margin-left: 0em;
-    padding-left: $spacing-unit;
-    text-indent: -$spacing-unit;
+    counter-reset: item;
+
     &__entry {
         padding-bottom: 0.5em;
+        margin-left: 2*$spacing-unit;
+
+        &::before {
+            display: inline-block;
+            content: "[" counter(item) "] ";
+            counter-increment: item;
+            width: 2*$spacing-unit;
+            margin-left: -2*$spacing-unit;
+        }
+
         &__author {
             &--highlight {
                 font-weight: bold;
@@ -976,20 +980,12 @@
                 content: ")";
             }
         }
-        &__title {
-        }
         &__journal {
             font-style: italic;
         }
         &__volume{
             font-weight: bold;
         }
-        &__number{
-        }
-        &__pages {
-        }
-        &__doi {}
-        &__isbn {}
     }
 }
 
