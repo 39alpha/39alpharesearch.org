@@ -1,4 +1,4 @@
-r---
+---
 title: Team 0
 identifier: t0
 members:
