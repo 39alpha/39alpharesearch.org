@@ -6,7 +6,7 @@ menu:
         weight: 4
 ---
 
-# Donate to 39Alpha Research
+# Donate to 39 Alpha Research
 
 Support our work to make scientific research more open and productive.
 

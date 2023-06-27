@@ -1,5 +1,5 @@
 languageCode: en-us
-title: 39Alpha Research
+title: 39 Alpha Research
 relativeURLS: true
 timeZone: America/Phoenix
 markup:
@@ -13,7 +13,7 @@ markup:
 params:
     github_username: 39alpha
     author:
-        name: 39Alpha Research
+        name: 39 Alpha Research
         email: 39alpha@39alpharesearch.org
         address:
             mailing:
