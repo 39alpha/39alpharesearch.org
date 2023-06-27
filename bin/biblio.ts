@@ -76,7 +76,7 @@ async function convert(args: Args): Promise<void> {
 
 async function bib2json(filename: string): Promise<Array<BibJsonEntry>> {
     const proc = Deno.run({
-        cmd: ['pandoc', '-t', 'csljson', filename],
+        cmd: ['pandoc-citeproc', '--bib2json', filename],
         stdout: 'piped',
         stderr: 'null',
     });
