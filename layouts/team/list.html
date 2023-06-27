@@ -6,12 +6,43 @@
             <ul class="team__members">
                 {{ range .Params.Members }}
                     <li class="team__member">
-                        <ul class="team__member__info">
+                        <!-- <ul class="team__member__info"> -->
+                        <ul class="social-media-list">
                             <li class="team__member__info__name">{{ .name }}</li>
-                            {{ if .contact }}<li class="team__member__info__link"><a href="{{ .contact }}">{{ .contact }}</a></li>{{ end }}
-                            {{ if .scholar }}<li class="team__member__info__link"><a href="{{ .scholar }}">Google Scholar</a></li>{{ end }}
-                            {{ if .website }}<li class="team__member__info__link"><a href="{{ .website }}">Website</a></li>{{ end }}
-                            {{ if .github }}<li class="team__member__info__link"><a href="{{ .github }}">Github</a></li>{{ end }}
+                            {{ if .contact }}
+                            <li class="team__member__info__link">
+                                <a href="{{ .contact }}">{{ .contact }}</a>
+                            </li>
+                            {{ end }}
+                            <li class="team__member__info__link">
+                                {{ if .website }}
+                                <span>
+                                    <a href="{{ .website }}">
+                                        <svg class="svg-icon">
+                                            <use xlink:href="/images/39alpha-social-icons.svg#website"></use>
+                                        </svg>
+                                    </a>
+                                </span>
+                                {{ end }}
+                                {{ if .scholar }}
+                                <span>
+                                    <a href="https://scholar.google.com/citations?hl=en&oi=ao?user=/{{ .scholar }}">
+                                        <svg class="svg-icon">
+                                            <use xlink:href="/images/39alpha-social-icons.svg#scholar"></use>
+                                        </svg>
+                                    </a>
+                                </span>
+                                {{ end }}
+                                {{ if .github }}
+                                <span>
+                                    <a href="https://github.com/{{ .github }}">
+                                        <svg class="svg-icon">
+                                            <use xlink:href="/images/39alpha-social-icons.svg#github"></use>
+                                        </svg>
+                                    </a>
+                                </span>
+                                {{ end }}
+                            </li>
                         </ul>
                     </li>
                 {{ end }}

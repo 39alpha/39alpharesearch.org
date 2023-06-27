@@ -3,19 +3,19 @@ title: Team 0
 identifier: t0
 members:
     - name: Cole Mathis
-      contact: Cole@39alpharesearch.org
-      scholar: https://scholar.google.com/citations?user=MCCB-1gAAAAJ&hl=en&oi=sra
+      contact: cole@39alpharesearch.org
       website: https://colemathis.github.io
-      github: https://github.com/colemathis
+      scholar: MCCB-1gAAAAJ
+      github: colemathis
     - name: Tucker Ely
-      contact: Tucker@39alpharesearch.org
-      scholar: https://scholar.google.com/citations?user=yqYm8z8AAAAJ&hl=en&oi=ao
-      github: https://github.com/tucker-ely
+      contact: tucker@39alpharesearch.org
+      scholar: yqYm8z8AAAAJ
+      github: tucker-ely
     - name: Douglas G. Moore
-      contact: Doug@39alpharesearch.org
-      scholar: https://scholar.google.com/citations?user=2MUS27QAAAAJ&hl=en&oi=sra
+      contact: doug@39alpharesearch.org
       website: https://dglmoore.com
-      github: https://github.com/dglmoore
+      scholar: 2MUS27QAAAAJ
+      github: dglmoore
 skills: https://observablehq.com/embed/@dglmoore/39a-cloud?cells=chart
 aliases:
     - /team/activities
