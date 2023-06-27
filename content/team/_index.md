@@ -27,4 +27,5 @@ menu:
         weight: 2
 ---
 
-Team 0 is 39Alpha's inagural research team. We met in graduate schol, had similar adictions to debating science, developing code for novel research, and arguing with each other. It worked. 
+Team 0 is 39 Alpha's inaugural research team. We met in graduate school, had similar addictions to
+debating science, developing code for novel research, and arguing with each other. It worked.

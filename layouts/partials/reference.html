@@ -1,12 +1,12 @@
+{{ $num_authors := len .author }}
+{{ $at_most_three_authors := first 3 .author }}
+{{ $num_displayed_authors := len $at_most_three_authors }}
 <li class="bibliography__entry">
-    {{ $num_authors := len .author }}
-    {{ $at_most_three_authors := first 3 .author }}
-    {{ $num_displayed_authors := len $at_most_three_authors }}
-    {{ range $i, $author := $at_most_three_authors }}
-        {{ with $author }}
-            <span class="bibliography__entry__author{{ if .is_member }} bibliography__entry__author--highlight{{ end }}">{{ .family }}, {{ .given }}</span>{{ if or (gt $num_authors 3) (lt $i (sub $num_displayed_authors 1)) }},{{end}}
-        {{ end }}
-    {{ end }}
+    {{- range $i, $author := $at_most_three_authors -}}
+        {{- with $author -}}
+            <span class="bibliography__entry__author{{ if .is_member }} bibliography__entry__author--highlight{{ end }}">{{ .family }}, {{ .given }}</span>{{ if or (gt $num_authors 3) (lt $i (sub $num_displayed_authors 1)) }}, {{end}}
+        {{- end -}}
+    {{- end -}}
     {{ if gt $num_authors 3 }}
         <span class=bibliography__entry__etal>et al.</span>
     {{ end }}

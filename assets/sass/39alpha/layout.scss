@@ -817,25 +817,31 @@
         text-align: justify;
 
         h1 {
-            /* color: $brand-color; */
             font-size: 1.5em;
             text-align: center;
             user-select: none;
-
+            margin-top: 2*$spacing-unit;
+            margin-bottom: $spacing-unit;
         }
 
         &--horizontal {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             text-align: left;
+
+            h1 {
+                text-align: left;
+                margin-top: 0;
+                margin-bottom: $spacing-unit;
+            }
 
             div {
                 flex-grow: 1;
                 flex-shrink: 1;
                 flex-basis: 100%;
                 min-width: content-width;
-                padding-left: 10%;
-                padding-right: 10%;
+                padding-left: $spacing-unit;
+                padding-right: $spacing-unit;
 
                 &:not(:first-child) {
                     border-left: 1px solid $brand-color;
@@ -881,8 +887,6 @@
     &__blurb {
         margin-right: auto;
         margin-left: auto;
-        padding-right: 30px;
-        padding-left: 30px;
         margin-top: 2*$spacing-unit;
 
         @include media-query($on-palm) {
@@ -894,6 +898,20 @@
     &__body {
         &--hidden {
             display: none;
+        }
+
+        &--multicolumn {
+            column-count: 2;
+            column-gap: 3*$spacing-unit;
+            column-rule: 2px solid $brand-color;
+
+            div {
+                break-inside: avoid-column;
+            }
+
+            @include media-query($on-palm) {
+                column-count: 1;
+            }
         }
     }
 }
@@ -946,7 +964,7 @@
 
 .bibliography {
     list-style: none;
-    text-align: justify;
+    text-align: just;
     padding-bottom: 0em;
     margin-left: 0em;
     counter-reset: item;
