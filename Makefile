@@ -1,6 +1,9 @@
 all: prepare
 	hugo
 
+dev: prepare
+	hugo -D
+
 serve: prepare
 	hugo server
 
