@@ -1,15 +1,9 @@
 {{ define "main" }}
 <div class="wrapper wrapper--narrow">
+    {{ partial "breadcrumbs.html" . }}
     <article class="minutes">
         <div class="minutes__content">
             <header class="minutes__header">
-                <a href="..">
-                    <svg width="10" height="10">
-                        <path fill="currentColor" d="M5 9L0 1 h10z" transform="translate(5, 5) rotate(90) translate(-5, -5)"/>
-                    </svg>
-                    <span>All Minutes</span>
-                </a>
-
                 <h1>Meeting Minutes {{ time.Format "2006-01-02 15:04" .Date }}
                     {{ with .Params.location }}
                     @ {{ . }}
@@ -26,17 +20,17 @@
                 {{ .Content }}
             </article>
             <footer class="minutes__footer">
-            {{- if or .Params.adjourned.by .Params.adjourned.at -}}
+                {{- if or .Params.adjourned.by .Params.adjourned.at -}}
                 <p>The meeting was adjourned
                     {{ with .Params.adjourned.at }}
-                        at {{ . }}
+                    at {{ . }}
                     {{ end }}
                     {{ with .Params.adjourned.by }}
-                        by {{ . }}
+                    by {{ . }}
                     {{ end }}
                 </p>
-            {{- end -}}
-            <p>Submitted By: {{ .Params.submitted }}</p>
+                {{- end -}}
+                <p>Submitted By: {{ .Params.submitted }}</p>
             </footer>
         </div>
     </article>

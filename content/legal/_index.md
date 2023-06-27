@@ -1,5 +1,4 @@
 ---
-layout: narrow
 title: "Public Records"
 ---
 
