@@ -827,9 +827,27 @@
         }
     }
 
-    &__list {
+    &__doing {
+        margin-left: 0;
+        padding-left: 3*$spacing-unit;
+
+        h1 {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+            line-height: $base-line-height * $base-font-size * 1.25;
+        }
+    }
+
+    &__associations {
         list-style: none;
         margin-left: 0;
+        padding-left: 2*$spacing-unit;
     }
 
     &__section {
@@ -861,8 +879,6 @@
                 flex-shrink: 1;
                 flex-basis: 100%;
                 min-width: content-width;
-                padding-left: $spacing-unit;
-                padding-right: $spacing-unit;
 
                 &:not(:first-child) {
                     border-left: 1px solid $brand-color;
@@ -895,6 +911,7 @@
 
     &__experience {
         margin-bottom: $spacing-unit/2;
+        padding-left: 2*$spacing-unit;
 
         &__title {
             font-weight: bold;
@@ -923,7 +940,7 @@
 
         &--multicolumn {
             column-count: 2;
-            column-gap: 3*$spacing-unit;
+            column-gap: 2*$spacing-unit;
             column-rule: 2px solid $brand-color;
 
             div {
