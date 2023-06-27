@@ -19,7 +19,7 @@ interface BibJsonEntry {
     id: Number;
     author: Array<Author>;
     title: string;
-    doi: string | undefined;
+    DOI: string | undefined;
     'container-title': string | undefined;
     journal: string | undefined;
     issued: {
@@ -91,36 +91,37 @@ async function bib2json(filename: string): Promise<Array<BibJsonEntry>> {
 }
 
 async function addDOI(entry: BibJsonEntry): Promise<BibJsonEntry> {
-    const title = encodeURI(entry.title);
-    const response = await fetch(`${CROSSREF_URL}?query.title=${title}`);
-    if (response.status === 200) {
-        const body = await response.json();
-        const items = body.message.items[0];
-        for (let crossref of body.message.items) {
-            if (matchReference(entry, crossref)) {
-                if (entry.doi !== '' && entry.doi !== undefined && entry.doi != crossref.DOI) {
-                    console.warn({
-                        id: entry.id,
-                        expected: entry.doi,
-                        found: crossref.DOI,
-                        message: 'DOIs do not match',
-                    });
+    if (entry.DOI === undefined || entry.DOI === '') {
+        const title = encodeURI(entry.title);
+        const response = await fetch(`${CROSSREF_URL}?query.title=${title}`);
+        if (response.status === 200) {
+            const body = await response.json();
+            for (let crossref of body.message.items) {
+                if (matchReference(entry, crossref)) {
+                    if (entry.DOI !== '' && entry.DOI !== undefined && entry.DOI != crossref.DOI) {
+                        console.warn({
+                            id: entry.id,
+                            expected: entry.DOI,
+                            found: crossref.DOI,
+                            message: 'DOIs do not match',
+                        });
+                    }
+                    entry.DOI = crossref.DOI;
+                    break;
                 }
-                entry.doi = crossref.DOI;
-                break;
             }
         }
-    }
 
-    if (entry.doi === '') {
-        delete entry.doi;
-    }
+        if (entry.DOI === '') {
+            delete entry.DOI;
+        }
 
-    if (entry.doi === undefined) {
-        console.warn({
-            id: entry.id,
-            message: 'No DOI found',
-        });
+        if (entry.DOI === undefined) {
+            console.warn({
+                id: entry.id,
+                message: 'No DOI found',
+            });
+        }
     }
 
     return entry;
