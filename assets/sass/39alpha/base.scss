@@ -142,6 +142,10 @@ pre {
         @include wrapper($narrow-content-width);
     }
 
+    &--medium {
+        @include wrapper($medium-content-width);
+    }
+
     &--wide {
         @include wrapper($wide-content-width);
     }
@@ -204,4 +208,10 @@ iframe {
 
 .emphasize {
     color: $brand-color;
+}
+
+.footnotes {
+    ol {
+        padding-top: 0.5 * $spacing-unit;
+    }
 }

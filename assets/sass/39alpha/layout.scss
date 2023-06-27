@@ -81,7 +81,6 @@
     }
 
     .page-link {
-        // color: lighten($brand-color, 15%);
         line-height: $base-line-height;
 
         &:hover {
@@ -1050,7 +1049,7 @@
         font-size: $large-font-size;
         background: $grey-color-light;
         border: 1px solid $grey-color-dark;
-        border-radius: 5px;
+        // border-radius: 5px;
     }
 
     &__details {
