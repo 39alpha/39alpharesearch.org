@@ -601,6 +601,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+
     &__row {
         width: 100%;
         display: flex;
@@ -609,10 +610,12 @@
             margin-left: 0px;
         }
     }
+
     &__field {
         width: 100%;
         margin: $spacing-unit/2;
     }
+
     &__label {
         font-weight: bold;
 
@@ -620,6 +623,7 @@
             font-weight: normal;
         }
     }
+
     &__input {
         width: 100%;
         font-family: $base-font-family;
@@ -636,8 +640,6 @@
 
         &--currency {
             display: flex;
-            background: $text-color;
-            color: #000;
         }
 
         &--borderless {
@@ -649,6 +651,7 @@
             box-shadow: none;
             margin: 0px;
             -moz-appearance: textfield;
+            appearance: textfield;
             &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
                 -webkit-appearance: none;
                    margin: 0;
@@ -658,8 +661,7 @@
             }
         }
     }
-    &__check {
-    }
+
     &__button {
         display: flex;
         border-radius: 5px;
