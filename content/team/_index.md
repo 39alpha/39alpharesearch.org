@@ -1,4 +1,4 @@
----
+r---
 title: Team 0
 identifier: t0
 members:
@@ -27,9 +27,9 @@ menu:
         weight: 2
 ---
 
-Team 0 is 39 Alpha's inaugural research team, born in the ridiculous heat of the Sonoran desert in 2020 where we met while working between Everett Shock's [Group Exploring Organic Process In Geochemistry] and [Sara Walker’s](https://search.asu.edu/profile/1731899) lab exploring novel astrobiology and information related physics research at Arizona State University.
+Welcome! We are Team 0, 39 Alpha's inaugural research team. Born in the ridiculous heat of the Sonoran desert in 2020, we met while working between Everett Shock's [Group Exploring Organic Process In Geochemistry] and [Sara Walker’s](https://search.asu.edu/profile/1731899) lab exploring novel astrobiology and information related physics problems at Arizona State University.
 
-We each had similar addictions to pure science, developing code for novel research ideas, and arguing with each other. We discovered a mutual craving for difficult environmental projects that ignore traditional disciplinary silos. We believe that humanity is at a unique point in its collective life history.  We simultaneously have the power to destroy the environments that sustain us (and we are) while also harboring the intellect and compassion to investigate and comprehend our impact on the Earth and her biosphere.
+Each of us had similar addictions to pure science, developing code for novel research ideas, and arguing with each other. Along the way we also discovered a mutual craving for difficult environmental projects that ignore traditional disciplinary silos. We believe that humanity is at a unique point in its collective life history.  Humans simultaneously have the power to destroy the environments that sustain us (and we are) while also harboring the intellect and compassion to investigate and comprehend our impact on the Earth and her biosphere.
 
 We knew that the diversity of our collective skillset, and our interest in highly interdisciplinary research meant that our chances of getting hired together somewhere were minimal. So we decided to strike it out on our own, under [guiding principles]() that should be common in science but are not.
 
