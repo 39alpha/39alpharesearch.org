@@ -48,7 +48,7 @@ Each of us at Team 0 maintains our public science careers in geochemistry, physi
 Check out our Google Scholar profiles at the top of this page. However, as Team 0, we conduct research
 on original projects necessary for the environment around us&mdash;whether or not they are easy
 to fund and without regard for discipline-specific orthodoxy. We research as a team, publish as a
-team, and make our software and research public as a team. While the scientific community does not taditioanlly conduct research in this way, we bleive they should. We are living the change we want to see in science.
+team, and make our software and research public as a team. While the scientific community does not taditioanlly conduct research in this way, we believe they should. We are living the change we want to see in science.
 
 We are actively working on our [Carbonate State-Space](/projects/carbonate-state-space) project to
 quantify the effect of $\ce{CO2}$-induced acidification on calcifying organisms in the Northern
