@@ -31,7 +31,7 @@ Welcome! We are Team 0, 39 Alpha's inaugural research team. Born in the scorchin
 Sonoran desert in 2020[,](https://www.washingtonpost.com/weather/2020/09/01/phoenix-hottest-summer/)
 we met while working between Everett Shock's [GEOPIG lab](https://search.asu.edu/profile/388445) (Group Exploring Organic Process In
 Geochemistry) and Sara Walker’s [ELife
-lab](http://emergence.asu.edu/) exploring novel astrobiology and related physics problems at Arizona
+lab](http://emergence.asu.edu/) exploring astrobiology and related physics problems at Arizona
 State University.
 
 We share a passion for pure science, developing novel research ideas, building scientific software,
@@ -55,10 +55,10 @@ and we are living the change we want to see in science.
 
 We are actively working on our [Carbonate State-Space](/projects/carbonate-state-space) project to
 quantify the effect of $\ce{CO2}$-induced acidification on calcifying organisms in the Northern
-Pacific Ocean. This project employs **Eleanor**, a novel Python package originally developed by
+Pacific Ocean. This project employs **Eleanor**, a unique Python package developed by
 Team 0 in collaboration with [Brandy Toner](https://tonerlab.cfans.umn.edu/) and NASA’s [Exploring
-Ocean Worlds](https://oceanworlds.whoi.edu/projects/exploring-ocean-worlds-exow/) initiative. 
-Once we complete beta testing, **Eleanor** will be released publically on our [Github](https://github.com/39alpha) profile.
+Ocean Worlds](https://oceanworlds.whoi.edu/projects/exploring-ocean-worlds-exow/) initiative.
+(Once we complete beta testing, **Eleanor** will be released publically on our [Github](https://github.com/39alpha) profile.)
 
 We are also exploring new project ideas related to clean hydrogen generation from geologic sources.
 Check out Tucker Ely’s recent [paper](https://doi.org/10.1029/2022GC010658) on $\ce{H2}$-generation
