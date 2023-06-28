@@ -62,10 +62,10 @@ Ocean Worlds](https://oceanworlds.whoi.edu/projects/exploring-ocean-worlds-exow/
 
 We are also exploring new project ideas related to clean hydrogen generation from geologic sources.
 Check out Tucker Ely’s recent [paper](https://doi.org/10.1029/2022GC010658) on $\ce{H2}$-generation
-in Ultramafic-hosted hydrothermal systems. Hydrogen has the potential to replace hydrocarbons as
-societies dominant energy source. We are interested in discovering new geologic settings and
+in ultramafic-hosted hydrothermal systems. Hydrogen has the potential to replace hydrocarbons as
+society's dominant energy source. We are interested in discovering new geologic settings and
 conditions that might yield large quantities of hydrogen naturally, and exploring which settings
 might be easily harnessed by engineered solutions.
 
-If you are also driven by original environmental research, and want to see, please consider
-[donating](/donate). All donations to 39 Alpha go to Team 0's active research projects.
+If you want to support our envionemtnal research efforts, please consider
+[donating](/donate). All donations to 39 Alpha go to support Team 0's active research projects.
