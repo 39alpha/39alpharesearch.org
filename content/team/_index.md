@@ -35,14 +35,14 @@ lab](http://emergence.asu.edu/) exploring astrobiology and related physics probl
 State University.
 
 We share a passion for pure science, developing novel research ideas, building scientific software,
-and arguing with each other. We also crave the pursue of challenging environmental projects
+and arguing with each other. We also crave the pursuit of challenging environmental projects
 that lie outside traditional disciplinary silos. We believe humanity is at a unique point in
 our collective history: Humans simultaneously have the power to destroy the environment that sustains
 us while also harboring the intellect and compassion to investigate and comprehend our
 impact on the Earth and its biosphere.
 
 The diversity of our collective skill set&mdash;and our interest in exceptionally
-interdisciplinary research&mdash;decreased our chances of getting hired somewhere together to do enviroentmal research.
+interdisciplinary research&mdash;decreased our chances of getting hired somewhere together to do environmental research.
 So we decided to strike it out on our own, under [guiding principles](/) that we believe should be
 common in science (but are not&mdash;yet).
 
@@ -67,5 +67,5 @@ society's dominant energy source. We are interested in discovering new geologic 
 conditions that might yield large quantities of hydrogen naturally, and exploring which settings
 might be easily harnessed by engineered solutions.
 
-If you want to support our envionemtnal research efforts, please consider
+If you want to support our environmental research efforts, please consider
 [donating](/donate). All donations to 39 Alpha go to support Team 0's active research projects.
