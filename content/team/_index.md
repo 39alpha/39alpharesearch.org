@@ -42,9 +42,9 @@ us while also harboring the intellect and compassion to investigate and comprehe
 impact on the Earth and its biosphere.
 
 The diversity of our collective skill set&mdash;and our interest in exceptionally
-interdisciplinary research meant that our chances of getting hired somewhere together were minimal.
+interdisciplinary research&mdash;decreased our chances of getting hired somewhere together to do enviroentmal research.
 So we decided to strike it out on our own, under [guiding principles](/) that we believe should be
-common in science but are not (yet).
+common in science (but are not&mdash;yet).
 
 Each of us at Team 0 maintains our public science careers in geochemistry, physics and astrobiology
 (check out of google scholar pages at the top of this page). However, as Team 0, we conduct research
