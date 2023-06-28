@@ -35,14 +35,14 @@ lab](http://emergence.asu.edu/) exploring novel astrobiology and related physics
 State University.
 
 We share a passion for pure science, developing novel research ideas, building scientific software,
-and arguing with each other. We also have a craving to pursue challenging environmental projects
-that lie outside traditional disciplinary silos. We believe that humanity is at a unique point in
-our collective history: Humans simultaneously have the power to destroy the environment that sustain
-us (and we are) while also harboring the intellect and compassion to investigate and comprehend our
+and arguing with each other. We also crave the pursue of challenging environmental projects
+that lie outside traditional disciplinary silos. We believe humanity is at a unique point in
+our collective history: Humans simultaneously have the power to destroy the environment that sustains
+us while also harboring the intellect and compassion to investigate and comprehend our
 impact on the Earth and its biosphere.
 
-We knew that the diversity of our collective skill-set, and our interest in exceptionally
-interdisciplinary research meant that our chances of getting hired together somewhere were minimal.
+The diversity of our collective skill set–-and our interest in exceptionally
+interdisciplinary research meant that our chances of getting hired somewhere together were minimal.
 So we decided to strike it out on our own, under [guiding principles](/) that we believe should be
 common in science but are not (yet).
 
