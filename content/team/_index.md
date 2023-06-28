@@ -60,7 +60,7 @@ Team 0 in collaboration with [Brandy Toner](https://tonerlab.cfans.umn.edu/) and
 Ocean Worlds](https://oceanworlds.whoi.edu/projects/exploring-ocean-worlds-exow/) initiative.
 (Once we complete beta testing, **Eleanor** will be released publically on our [Github](https://github.com/39alpha) profile.)
 
-We are also exploring new project ideas related to clean hydrogen generation from geologic sources, motivated by 
+We are also exploring new project ideas related to clean hydrogen generation from geologic sources, which is motivated by 
 Tucker Ely’s recent [paper](https://doi.org/10.1029/2022GC010658) on $\ce{H2}$-generation
 in ultramafic-hosted hydrothermal. Hydrogen has the potential to replace hydrocarbons as
 society's dominant energy source. We are interested in discovering new geologic settings and
