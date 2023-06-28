@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="wrapper wrapper--wide">
+    {{ partial "breadcrumbs.html" . }}
+    <div class="activities">
+        {{ partial "team-header.html" . }}
+        <div class="activities__body activities__body--medium">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+{{ end }}

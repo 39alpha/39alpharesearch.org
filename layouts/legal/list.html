@@ -1,9 +1,10 @@
 {{ define "main" }}
 <div class="wrapper wrapper--narrow">
     {{ partial "breadcrumbs.html" . }}
-    <article class="donate">
-        {{ .Content }}
+    <article class="post">
+        <div class="post-content">
+            {{ .Content }}
+        </div>
     </article>
 </div>
 {{ end }}
-

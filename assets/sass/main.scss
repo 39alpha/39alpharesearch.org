@@ -9,8 +9,14 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #fff !default;
-$background-color: #202222 !default;
+// Dark Theme
+// $text-color:       #fff !default;
+// $background-color: #202222 !default;
+
+// Light Theme
+$text-color:       #202222 !default;
+$background-color: #fff !default;
+
 $brand-color:      #ec5c29 !default;
 $message-color:    #339900 !default;
 $warning-color:    #ffcc00 !default;
@@ -24,6 +30,7 @@ $table-text-align: left !default;
 
 // Width of the content area
 $narrow-content-width: 800px !default;
+$medium-content-width: 1200px !default;
 $wide-content-width:   1600px !default;
 
 $on-palm:          600px !default;
@@ -31,17 +38,16 @@ $on-laptop:        800px !default;
 $on-narrow:        1300px !default;
 
 @mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
+    @media screen and (max-width: $device) {
+        @content;
+    }
 }
 
 @mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
+    font-size: $base-font-size * $ratio;
 }
 
 @import
-  "39alpha/base",
-  "39alpha/layout",
-  "39alpha/syntax-highlighting"
-;
+    "39alpha/base",
+    "39alpha/layout",
+    "39alpha/syntax-highlighting";

@@ -3,14 +3,20 @@ layout: donate
 title: Donate
 menu:
     main:
-        weight: 5
+        weight: 4
 ---
+# Donate to 39 Alpha Research
 
-# Donate to 39Alpha Research
+Science costs money, be it for computing resources, publication fees, or conference travel. As an
+nonprofit, completely independent of a university or any other research institution, 39 Alpha is
+constantly looking for financial support in the form of grants, fellowships and most importantly,
+donations.
 
-Support our work to make scientific research more open and productive.
+If you like the work we do, the ideas we have, or the general ethos of 39 Alpha, please consider
+donating in support. Every little bit adds up to make scientific research more open and productive.
 
-We ask that if you wish to donate more than $500, please consider [contacting us directly](contact-us).
+We do ask that if you wish to donate more than $500, please consider [contacting us
+directly](mailto:39alpha@39alpharesearch.org).
 
 <div class="flash hidden">
     <p id="amount-too-low" class="flash__content hidden">

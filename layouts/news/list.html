@@ -1,5 +1,6 @@
 {{ define "main" }}
-<div class="wrapper wrapper--narrow">
+<div class="wrapper wrapper--medium">
+    {{ partial "breadcrumbs.html" . }}
     <article class="post">
         <header class="post-header post-header--visible">
             <h1>News and Ongoing Work</h1>
@@ -24,7 +25,7 @@
                     </div>
                 {{ end }}
             {{ else }}
-                <p>39Alpha Research is tirelessly working on high-quality, comprehensible research, so stay tuned for updates.</p>
+                <p>39 Alpha Research is tirelessly working on high-quality, comprehensible research, so stay tuned for updates.</p>
             {{ end }}
         </div>
     </article>

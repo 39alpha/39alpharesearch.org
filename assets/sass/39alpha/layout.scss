@@ -3,9 +3,7 @@
 
     display: flex;
     flex-direction: column;
-    text-align: center;
-
-    position: relative;
+    justify-content: center;
 }
 
 .site-title {
@@ -15,6 +13,8 @@
     letter-spacing: -1px;
     margin: $spacing-unit 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
 
     &, &:visited {
         color: $grey-color-dark;
@@ -50,14 +50,15 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            justify-content: center;
 
             & > li {
                 display: inline-block;
+                margin-left: 0.5 * $spacing-unit;
+                margin-right: 0.5 * $spacing-unit;
                 a:hover ~ ul {
                     display: block;
-                }
-                &:not(:last-child) {
-                    margin-right: 20px;
                 }
 
                 & > ul {
@@ -80,12 +81,7 @@
     }
 
     .page-link {
-        // color: lighten($brand-color, 15%);
         line-height: $base-line-height;
-
-        &:visited {
-            // color: lighten($brand-color, 15%);
-        }
 
         &:hover {
             color: $brand-color;
@@ -163,6 +159,18 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.breadcrumbs {
+    ol {
+        margin-left: 0;
+
+        li {
+            display: inline;
+            margin: 0;
+            padding: 0;
         }
     }
 }
@@ -277,7 +285,6 @@
 }
 
 .post-header {
-    // display: none;
     margin-bottom: $spacing-unit;
 
     &--visible {
@@ -285,7 +292,7 @@
     }
 
     h1 {
-    	@include relative-font-size(1.5);
+        @include relative-font-size(1.5);
         text-align: center;
     }
 }
@@ -411,7 +418,6 @@
         position: relative;
         min-width: $narrow-content-width / 2;
         width: 50%;
-        padding: 0px 100px;
         margin-top: 50px;
         min-height: 100%;
         text-align: justify;
@@ -440,6 +446,7 @@
 
     &__section--conversational {
         border-right: 1px solid $brand-color;
+        padding: 0px 2*$spacing-unit 0px 0px;
 
         h1 {
             font-weight: normal;
@@ -451,6 +458,7 @@
 
     &__section--technical {
         border-left: 1px solid $brand-color;
+        padding: 0px 0px 0px 2*$spacing-unit;
 
         h1 {
             font-weight: normal;
@@ -464,6 +472,19 @@
     &__notebook-list {
         margin: 0px auto;
         max-width: 60%;
+    }
+
+    &--node {
+        stroke: $text-color;
+        stroke-width: 1px;
+    }
+
+    &--label {
+        font: 12pt "Courier New", monospace;
+    }
+
+    &--hidden {
+        display: none;
     }
 
     @include media-query($on-narrow) {
@@ -559,8 +580,10 @@
     }
 }
 
-.code--hidden {
-    display: none;
+.code {
+    &--hidden {
+        display: none;
+    }
 }
 
 .shout {
@@ -569,29 +592,24 @@
     font-weight: bold;
     font-size: 35px;
     text-align: center;
+
+    &--quiet {
+        font-style: normal;
+    }
+
+    &--inline {
+        font-size: 18pt;
+        display: inline;
+        margin: 0;
+    }
 }
 
-.shout--quiet {
-    font-style: normal;
-}
-
-.axis--label {
-    font-family: "Courier New", monospace;
-    fill: $text-color;
-    font-size: 12pt;
-}
-
-.project--node {
-    stroke: $text-color;
-    stroke-width: 1px;
-}
-
-.project--label {
-    font: 12pt "Courier New", monospace;
-}
-
-.project--hidden {
-    display: none;
+.axis {
+    &--label {
+        font-family: "Courier New", monospace;
+        fill: $text-color;
+        font-size: 12pt;
+    }
 }
 
 .form {
@@ -599,6 +617,7 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+
     &__row {
         width: 100%;
         display: flex;
@@ -607,10 +626,12 @@
             margin-left: 0px;
         }
     }
+
     &__field {
         width: 100%;
         margin: $spacing-unit/2;
     }
+
     &__label {
         font-weight: bold;
 
@@ -618,6 +639,7 @@
             font-weight: normal;
         }
     }
+
     &__input {
         width: 100%;
         font-family: $base-font-family;
@@ -634,8 +656,6 @@
 
         &--currency {
             display: flex;
-            background: $text-color;
-            color: #000;
         }
 
         &--borderless {
@@ -647,6 +667,7 @@
             box-shadow: none;
             margin: 0px;
             -moz-appearance: textfield;
+            appearance: textfield;
             &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
                 -webkit-appearance: none;
                    margin: 0;
@@ -656,8 +677,7 @@
             }
         }
     }
-    &__check {
-    }
+
     &__button {
         display: flex;
         border-radius: 5px;
@@ -683,6 +703,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
     &__solicitation {
         width: 100%;
         flex-wrap: wrap;
@@ -693,9 +714,6 @@
         &--header {
             @include relative-font-size(0.9375);
             margin-top: 0px;
-        }
-
-        &--body {
         }
     }
 
@@ -773,38 +791,63 @@
         text-align: center;
     }
 
-    &__banner {
-    }
-
     &__members {
         list-style: none;
         display: flex;
         justify-content: space-around;
+        @include media-query($on-palm) {
+            flex-direction: column;
+        }
         padding-top: $spacing-unit / 2;
         margin-left: 0;
     }
 
     &__member {
+        @include media-query($on-palm) {
+            padding-top: $spacing-unit/3;
+            padding-bottom: $spacing-unit/3;
+        }
         width: 100%;
         &__info {
             margin-left: 0;
             padding-left: 0;
             padding-right: 0;
             list-style: none;
-            &__name {
-            }
-            &__link {
+            &__item {
                 font-size: 3*$base-font-size/4;
+                margin-top: $spacing-unit/4;
+                margin-bottom: $spacing-unit/4;
+            }
+
+            &__social {
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
     }
 
-    &__list {
-        list-style: none;
+    &__doing {
         margin-left: 0;
+        padding-left: 3*$spacing-unit;
+
+        h1 {
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+            line-height: $base-line-height * $base-font-size * 1.25;
+        }
     }
 
-    &__sections {
+    &__associations {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 2*$spacing-unit;
     }
 
     &__section {
@@ -813,23 +856,54 @@
         text-align: justify;
 
         h1 {
-            /* color: $brand-color; */
             font-size: 1.5em;
             text-align: center;
             user-select: none;
-
+            margin-top: 2*$spacing-unit;
+            margin-bottom: $spacing-unit;
         }
 
-        &--expanded {
+        &--horizontal {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+
             h1 {
-                &:after {
+                text-align: left;
+                margin-top: 0;
+                margin-bottom: $spacing-unit;
+            }
+
+            div {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 100%;
+                min-width: content-width;
+
+                &:not(:first-child) {
+                    border-left: 1px solid $brand-color;
+                }
+
+                &:not(:last-child) {
+                    border-right: 1px solid $brand-color;
                 }
             }
-        }
 
-        &--collapsed {
-            h1 {
-                &:after {
+            @include media-query($on-palm) {
+                flex-direction: column;
+                border: none;
+
+                div {
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    &:not(:first-child) {
+                        border: none;
+                    }
+
+                    &:not(:last-child) {
+                        border: none;
+                    }
                 }
             }
         }
@@ -837,6 +911,7 @@
 
     &__experience {
         margin-bottom: $spacing-unit/2;
+        padding-left: 2*$spacing-unit;
 
         &__title {
             font-weight: bold;
@@ -845,20 +920,36 @@
         &__from, &__to {
             font-style: italic;
         }
+    }
 
-        &__lab {
-        }
+    &__blurb {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 2*$spacing-unit;
 
-        &__department {
-        }
-
-        &__institution {
+        @include media-query($on-palm) {
+            padding-right: 0;
+            padding-left: 0;
         }
     }
 
     &__body {
         &--hidden {
             display: none;
+        }
+
+        &--multicolumn {
+            column-count: 2;
+            column-gap: 2*$spacing-unit;
+            column-rule: 2px solid $brand-color;
+
+            div {
+                break-inside: avoid-column;
+            }
+
+            @include media-query($on-palm) {
+                column-count: 1;
+            }
         }
     }
 }
@@ -873,153 +964,108 @@
         text-align: center;
     }
 
-    &__banner {
-    }
-
-    &__members {
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-        padding-top: $spacing-unit / 2;
-        margin-left: 0;
-    }
-
-    &__member {
-        width: 100%;
-        &__info {
-            margin-left: 0;
-            padding-left: 0;
-            padding-right: 0;
-            list-style: none;
-            &__name {
-            }
-            &__link {
-                font-size: 3*$base-font-size/4;
-            }
-        }
-    }
-
     &__list {
         list-style: none;
         margin-left: 0;
     }
 
-    &__sections {
-    }
-
-    &__section {
+    &__body {
         margin-top: 50px;
         min-height: 100%;
         text-align: justify;
 
         h1 {
-            /* color: $brand-color; */
             font-size: 1.5em;
             text-align: center;
             user-select: none;
-
         }
 
-        &--expanded {
-            h1 {
-                &:after {
-                }
-            }
-        }
-
-        &--collapsed {
-            h1 {
-                &:after {
-                }
-            }
-        }
-    }
-
-    &__experience {
-        margin-bottom: $spacing-unit/2;
-
-        &__title {
-            font-weight: bold;
-        }
-
-        &__from, &__to {
-            font-style: italic;
-        }
-
-        &__lab {
-        }
-
-        &__department {
-        }
-
-        &__institution {
-        }
-    }
-
-    &__body {
-        &--hidden {
-            display: none;
-        }
-    }
-
-    &__content {
         &--narrow {
-            max-width: -webkit-calc(800px - (30px * 2));
-            max-width: calc(800px - (30px * 2));
+            max-width: $narrow-content-width;
             margin-right: auto;
             margin-left: auto;
             padding-right: 30px;
             padding-left: 30px;
         }
-    }
-}
 
-@counter-style thumbs {
-    system: numeric;
-    prefix: "[";
-    suffix: "]";
+        &--medium {
+            max-width: $medium-content-width;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        &--wide {
+            max-width: $wide-content-width;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        img {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: $spacing-unit;
+            margin-bottom: $spacing-unit;
+            display: block;
+
+            @include media-query($on-palm) {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .bibliography {
     list-style: none;
-    text-align: justify;
+    text-align: just;
     padding-bottom: 0em;
     margin-left: 0em;
-    padding-left: $spacing-unit;
-    text-indent: -$spacing-unit;
+    counter-reset: item;
+
     &__entry {
         padding-bottom: 0.5em;
+        margin-left: 2*$spacing-unit;
+
+        &::before {
+            display: inline-block;
+            content: "[" counter(item) "] ";
+            counter-increment: item;
+            width: 2*$spacing-unit;
+            margin-left: -2*$spacing-unit;
+        }
+
         &__author {
             &--highlight {
                 font-weight: bold;
                 font-style: italic;
             }
         }
+
         &__etal {
             content: "et al.";
         }
+
         &__year {
             &:before {
                 content: "(";
             }
+
             &:after {
                 content: ")";
             }
         }
-        &__title {
-        }
+
         &__journal {
             font-style: italic;
         }
+
         &__volume{
             font-weight: bold;
         }
-        &__number{
-        }
-        &__pages {
-        }
-        &__doi {}
-        &__isbn {}
     }
 }
 
@@ -1049,6 +1095,7 @@
     text-align: center;
     width: 0.75 * $narrow-content-width;
     margin: 0 auto;
+
     &__caption {
         text-align: justify;
         font-size: $small-font-size;
@@ -1059,14 +1106,13 @@
 .news {
     &__item {
         padding-left: $spacing-unit;
-        padding-right: 0.5 * $spacing-unit;
-        padding-top: 0.25 * $spacing-unit;
-        padding-bottom: 0.25 * $spacing-unit;
+        padding-right: $spacing-unit;
+        padding-top: $spacing-unit;
+        padding-bottom: 0.5 * $spacing-unit;
         margin-bottom: $spacing-unit;
         font-size: $large-font-size;
-        background: $grey-color-dark;
+        background: $grey-color-light;
         border: 1px solid $grey-color-dark;
-        border-radius: 5px;
     }
 
     &__details {
@@ -1089,10 +1135,10 @@
 }
 
 .minutes {
-	&-list-heading {
-   		@include relative-font-size(1.75);
-	}
-	&-list {
+    &__list-heading {
+           @include relative-font-size(1.75);
+    }
+    &__list {
         margin-left: 0;
         list-style: none;
 
@@ -1101,20 +1147,20 @@
         }
     }
 
-	&-meta {
+    &__meta {
         font-size: $small-font-size;
         color: $grey-color;
     }
 
-    &-link {
+    &__link {
         display: block;
         @include relative-font-size(1.5);
     }
 
-    &-header {
+    &__header {
         margin-bottom: $spacing-unit;
 
-        &--visible {
+        &__visible {
             display: block;
         }
 
@@ -1124,7 +1170,7 @@
         }
     }
 
-    &-title {
+    &__title {
         @include relative-font-size(2);
         letter-spacing: -1px;
         line-height: 1;
@@ -1135,7 +1181,7 @@
         }
     }
 
-    &-content {
+    &__content {
         margin-bottom: $spacing-unit;
 
         h1 {
@@ -1173,15 +1219,57 @@
         }
     }
 
-    &-article {
-    	h1 {
-    		margin-top: 2 * $spacing-unit;
-    	}
+    &__article {
+        h1 {
+            margin-top: 2 * $spacing-unit;
+        }
     }
 
-    &-footer {
-    	border-top: 1px solid $brand-color;
-    	margin-top: 2 * $spacing-unit;
-    	padding-top: $spacing-unit / 2;
+    &__footer {
+        border-top: 1px solid $brand-color;
+        margin-top: 2 * $spacing-unit;
+        padding-top: $spacing-unit / 2;
+    }
+}
+
+.dataset {
+    &__section {
+        border-bottom: 1px solid $grey-color;
+    }
+
+    &__header {
+        a {
+            color: $text-color;
+            &:hover {
+                color: $text-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.version {
+    &__sections {
+        padding: $spacing-unit/2 $spacing-unit;
+        h1 {
+            margin: 0px 0px $spacing-unit/4 0px;
+        }
+    }
+
+    &__section {
+        padding-left: $spacing-unit;
+        h1 {
+            margin: 0px;
+            @include relative-font-size(1.25);
+
+            @include media-query($on-laptop) {
+                @include relative-font-size(1.75);
+            }
+
+        }
+    }
+
+    &__notes {
+        margin-left: $spacing-unit;
     }
 }

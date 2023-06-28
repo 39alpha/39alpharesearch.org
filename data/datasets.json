@@ -1,0 +1,41 @@
+[
+    {
+        "title": "Lopez v. Smith",
+        "description": "When a state prisoner seeks federal habeas relief on the ground that a state court, in adjudicating a claim on the merits, misapplied federal law, a federal court may grant relief only if the state court's decision was \"contrary to, or involved an unreasonable application of, clearly established Federal law, as determined by the Supreme Court of the United States.\" 28 U.S.C §2254(d)(1). We have emphasized, time and again, that the Antiterrorism and Effective Death Penalty Act of 1996 (AEDPA), 110 Stat. 1214, prohibts the federal courts of appeals from relying on their own precendent to conclude that a particular constitutional principle is \"clearly established.\" See, e.g. Marshal v. Rodgers, 569 U.S. _, _ (2013) (per curiam) (slip op. at 6). Because the Ninth Circuit failed to comply with this rule, we reverse its decision granting habeas relief to respondent Marvin Smith.",
+        "versions": [
+            {
+                "date": "2022-11-28",
+                "notes": "When a state prisoner seeks federal habeas relief on the ground that a state court, in adjudicating a claim on the merits, misapplied federal law, a federal court may grant relief only if the state court's decision was \"contrary to, or involved an unreasonable application of, clearly established Federal law, as determined by the Supreme Court of the United States.\" 28 U.S.C §2254(d)(1)",
+                "ipfsHash": "ipfs/Qmb5PTmt8gHuoWPuTmD3FXQ3mYdHA7wC3if2LddwsiFr1F"
+            },
+            {
+                "date": "2022-11-21",
+                "notes": "Initial release.",
+                "ipfsHash": "ipfs/Qmb5PTmt8gHuoWPuTmD3FXQ3mYdHA7wC3if2LddwsiFr1F"
+            }
+
+        ]
+    },
+    {
+        "title": "Lopez v. Smith",
+        "description": "When a state prisoner seeks federal habeas relief on the ground that a state court, in adjudicating a claim on the merits, misapplied federal law, a federal court may grant relief only if the state court's decision was \"contrary to, or involved an unreasonable application of, clearly established Federal law, as determined by the Supreme Court of the United States.\" 28 U.S.C §2254(d)(1). We have emphasized, time and again, that the Antiterrorism and Effective Death Penalty Act of 1996 (AEDPA), 110 Stat. 1214, prohibts the federal courts of appeals from relying on their own precendent to conclude that a particular constitutional principle is \"clearly established.\" See, e.g. Marshal v. Rodgers, 569 U.S. _, _ (2013) (per curiam) (slip op. at 6). Because the Ninth Circuit failed to comply with this rule, we reverse its decision granting habeas relief to respondent Marvin Smith.",
+        "versions": [
+            {
+                "date": "2022-11-28",
+                "notes": "When a state prisoner seeks federal habeas relief on the ground that a state court, in adjudicating a claim on the merits, misapplied federal law, a federal court may grant relief only if the state court's decision was \"contrary to, or involved an unreasonable application of, clearly established Federal law, as determined by the Supreme Court of the United States.\" 28 U.S.C §2254(d)(1)",
+                "ipfsHash": "ipfs/Qmb5PTmt8gHuoWPuTmD3FXQ3mYdHA7wC3if2LddwsiFr1F"
+            }
+        ]
+    },
+    {
+        "title": "Carroll v. Carman",
+        "description": "On July 3, 2009, the Pennsylvania State Police Department recieved a report that a man named Michael Zita had stolen a car and two loaded handguns.",
+        "versions": [
+            {
+                "date": "2022-11-29",
+                "notes": "Initial release.",
+                "ipfsHash": "ipfs/QmZDGNxTF7tQXsiHnG4H2oTCPPqezK5HV5fKaQ5V7ZEGqE"
+            }
+        ]
+    }
+]

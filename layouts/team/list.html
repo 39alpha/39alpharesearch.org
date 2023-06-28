@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div class="wrapper wrapper--wide">
+    {{ partial "breadcrumbs.html" . }}
+    <div class="team">
+        {{ partial "team-header.html" . }}
+        <div class="team__content">
+            <div class="team_sections">
+                {{ if .Content }}
+                <div class="team__section team__blurb">
+                    <div class="team__body">
+                    {{ .Content }}
+                    </div>
+                </div>
+                {{ end }}
+                <div class="team__section team__section--horizontal">
+                    {{ range .Pages.GroupBy "Layout" }}
+                    <div class="team__doing">
+                        <h1>{{ .Key | title }}</h1>
+                        <ul>
+                            {{ range .Pages.ByDate.Reverse }}
+                            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    {{ end }}
+                </div>
+                <div class="team__section">
+                    <h1>Experience</h1>
+                    <div class="team__body team__body--multicolumn">
+                        {{ range .Site.Data.experience }}
+                            {{ partial "experience.html" . }}
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="team__section">
+                    <h1>Professional Associations</h1>
+                    <div class="team__body team__body--multicolumn">
+                        <ul class="team__associations">
+                            {{ range sort .Site.Data.associations }}
+                                <li class="team__item"><a href="{{ .url }}">{{ .name }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+                <div class="team__section">
+                    <h1>Publications</h1>
+                    <div class="team__body team__body--multicolumn">
+                        <ol class="bibliography">
+                            {{ range sort .Site.Data.bibliography  "date.year" "desc" }}
+                                {{ partial "reference.html" . }}
+                            {{ end }}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

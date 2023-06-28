@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="wrapper wrapper--wide">
+    {{ partial "breadcrumbs.html" . }}
+    <div class="project">
+        {{ if .Title }}
+        <header class="project__header">
+            <h1 class="project-title">{{ .Title }}</h1>
+        </header>
+        {{ end }}
+
+        <div class="project__sections">
+            {{ $raw_content := split .Content "<hr />" }}
+            {{ $conversational := index $raw_content 0 }}
+            {{ $technical := index $raw_content 1 }}
+            <article class="project__section project__section--conversational">
+                <h1>Conversational Description</h1>
+                {{ .RenderString $conversational }}
+            </article>
+            <article class="project__section project__section--technical">
+                <h1>Technical Description</h1>
+                {{ .RenderString $technical }}
+            </article>
+        </div>
+    </div>
+</div>
+{{ end }}

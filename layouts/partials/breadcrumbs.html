@@ -1,0 +1,11 @@
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ol>
+        {{ range .Ancestors.Reverse }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        <svg width="10" height="10">
+            <path fill="currentColor" d="M5 9L0 1 h10z" transform="translate(5, 5) rotate(-90) translate(-5, -5)"/>
+        </svg>
+        {{ end }}
+        <li class="active"><a aria-current="page" href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+    </ol>
+</nav>

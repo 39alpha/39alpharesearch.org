@@ -1,5 +1,5 @@
 languageCode: en-us
-title: 39Alpha Research
+title: 39 Alpha Research
 relativeURLS: true
 timeZone: America/Phoenix
 markup:
@@ -13,7 +13,7 @@ markup:
 params:
     github_username: 39alpha
     author:
-        name: 39Alpha Research
+        name: 39 Alpha Research
         email: 39alpha@39alpharesearch.org
         address:
             mailing:
@@ -23,22 +23,28 @@ params:
     logo:
         url: /images/39alpha.png
     ein: 84-3180111
-    legal: /about/legal
+    legal: /legal
     donations:
         values:
             - 25.00
             - 50.00
             - 75.00
             - 100.00
-menu:
-    main:
-        - identifier: projects
-          title: Projects
-          url: /projects
-          parent: "Science Mission"
-          weight: 1
-        - identifier: notebooks
-          title: Notebooks
-          url: /notebooks
-          parent: "Science Mission"
-          weight: 2
+# menu:
+#     main:
+#         - identifier: projects
+#           title: Projects
+#           url: /projects
+#           parent: "Science Mission"
+#           weight: 1
+#         - identifier: notebooks
+#           title: Notebooks
+#           url: /notebooks
+#           parent: "Science Mission"
+#           weight: 2
+#         - identifier: data
+#           title: Datasets
+#           url: /data
+#           parent: "Science Mission"
+#           weight: 3
+#
