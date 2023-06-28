@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Team 0 Explores Hydrogen.
+title: Team 0 Explores Hydrogen
 identifier: t0
 members:
     - name: Cole Mathis
@@ -19,7 +19,6 @@ members:
       github: dglmoore
 aliases:
     - /about/teams/t0/activities/arpa-e-2023-06-29
-# date: 2023-06-29
 ---
 
 At 39 Alpha, we are more than just geochemists, physicists, and software developers. We are a team.
