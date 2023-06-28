@@ -65,4 +65,4 @@ conditions that might yield large quantities of hydrogen naturally, and also exp
 might be easily harnessed by engineered solutions.
 
 If you want to support our environmental research efforts, please consider
-[donating](/donate). All donations to 39 Alpha go to support Team 0's active research projects.
+[donating](/donate). All donations to 39 Alpha support Team 0's active research projects.
