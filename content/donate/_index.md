@@ -16,7 +16,7 @@ If you like the work we do, the ideas we have, or the general ethos of 39 Alpha,
 donating in support. Every little bit adds up to make scientific research more open and productive.
 
 We do ask that if you wish to donate more than $500, please consider [contacting us
-directly](contact-us).
+directly](mailto:39alpha@39alpharesearch.org).
 
 <div class="flash hidden">
     <p id="amount-too-low" class="flash__content hidden">
