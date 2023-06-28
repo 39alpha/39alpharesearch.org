@@ -41,7 +41,7 @@ our collective history: Humans simultaneously have the power to destroy the envi
 us while also harboring the intellect and compassion to investigate and comprehend our
 impact on the Earth and its biosphere.
 
-The diversity of our collective skill set_and our interest in exceptionally
+The diversity of our collective skill set---and our interest in exceptionally
 interdisciplinary research meant that our chances of getting hired somewhere together were minimal.
 So we decided to strike it out on our own, under [guiding principles](/) that we believe should be
 common in science but are not (yet).
