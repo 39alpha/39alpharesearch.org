@@ -31,7 +31,7 @@ Welcome! We are Team 0, 39 Alpha's inaugural research team. Born in the scorchin
 Sonoran desert in 2020[,](https://www.washingtonpost.com/weather/2020/09/01/phoenix-hottest-summer/)
 we met while working between Everett Shock's [GEOPIG lab](https://search.asu.edu/profile/388445) (Group Exploring Organic Process In
 Geochemistry) and Sara Walker’s [ELife
-lab](http://emergence.asu.edu/) exploring astrobiology and related physics problems at Arizona
+lab](http://emergence.asu.edu/), which explores astrobiology and related physics problems at Arizona
 State University.
 
 We share a passion for pure science, developing novel research ideas, building scientific software,
