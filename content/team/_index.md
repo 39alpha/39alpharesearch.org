@@ -33,7 +33,7 @@ we met while working between Everett Shock's [GEOPIG lab](https://asu.elsevierpu
 lab](http://emergence.asu.edu/) (where they study astrobiology and related physics problems).
 
 We share a passion for pure science, developing novel research ideas, building scientific software,
-and arguing with each other. We also crave the pursuit of challenging environmental projects
+and debating with each other. We also crave the pursuit of challenging environmental projects
 that lie outside traditional disciplinary silos. We believe humanity is at a unique point in
 our collective history: Humans simultaneously have the power to destroy the environment that sustains
 us while also harboring the intellect and compassion to investigate and comprehend our
@@ -41,15 +41,14 @@ impact on the Earth and its biosphere.
 
 The diversity of our collective skill set&mdash;and our interest in exceptionally
 interdisciplinary research&mdash;decreased our chances of getting hired somewhere together to do environmental research.
-So we decided to strike it out on our own, under [guiding principles](/) that we believe should be
+So we decided to strike it out on our own under [guiding principles](/) that we believe should be
 common in science (but are not&mdash;yet).
 
 Each of us at Team 0 maintains our public science careers in geochemistry, physics, and astrobiology.
 Check out our Google Scholar profiles at the top of this page. However, as Team 0, we conduct research
-on original projects that are necessary for the environment around us&mdash;whether or not they are easy
-to fund, and without regard for discipline-specific orthodoxy. We research as a team, publish as a
-team, and make our software and research public, as a team. This is how science should be conducted,
-and we are living the change we want to see in science.
+on original projects necessary for the environment around us&mdash;whether or not they are easy
+to fund and without regard for discipline-specific orthodoxy. We research as a team, publish as a
+team, and make our software and research public as a team. Scientists do not taditioanlly conducted research this way, but we bleive they should. We are living the change we want to see in science.
 
 We are actively working on our [Carbonate State-Space](/projects/carbonate-state-space) project to
 quantify the effect of $\ce{CO2}$-induced acidification on calcifying organisms in the Northern
