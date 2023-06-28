@@ -61,7 +61,7 @@ We are also exploring new project ideas related to clean hydrogen generation fro
 Tucker Ely’s recent [paper](https://doi.org/10.1029/2022GC010658) on $\ce{H2}$-generation
 in ultramafic-hosted hydrothermal. Hydrogen has the potential to replace hydrocarbons as
 society's dominant energy source. We are interested in discovering new geologic settings and
-conditions that might yield large quantities of hydrogen naturally, and exploring which settings
+conditions that might yield large quantities of hydrogen naturally, and also exploring which of these settings
 might be easily harnessed by engineered solutions.
 
 If you want to support our environmental research efforts, please consider
