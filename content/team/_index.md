@@ -43,7 +43,7 @@ impact on the Earth and its biosphere.
 The diversity of our collective skill set and our interest in exceptionally interdisciplinary
 research made it unlikely that we would get hired somewhere together to do environmental research,
 so we decided to strike out on our own under [guiding principles](/) that we believe should be
-common in science (but are not -- yet). We research as a team, publish as a team, and make our software and research public as a team. While the scientific community does not traditionally conduct research in this way, we believe they should. We are living the change we want to see in science.
+common in science (but are not --- yet). We research as a team, publish as a team, and make our software and research public as a team. While the scientific community does not traditionally conduct research in this way, we believe they should. We are living the change we want to see in science.
 
 Each of us at Team 0 maintains our public science careers in geochemistry, physics, and
 astrobiology. However, as Team 0, we conduct research on original projects vital to the environment. 
