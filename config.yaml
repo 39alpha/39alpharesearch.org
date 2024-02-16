@@ -2,6 +2,9 @@ languageCode: en-us
 title: 39 Alpha Research
 relativeURLS: true
 timeZone: America/Phoenix
+disableKinds:
+    - taxonomy
+    - term
 markup:
     goldmark:
         parser:
