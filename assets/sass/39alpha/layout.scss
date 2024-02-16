@@ -1127,6 +1127,14 @@
         font-weight: bold;
     }
 
+    &__flash {
+        text-align: center;
+        margin-bottom: $spacing-unit;
+        img {
+            max-width: 100%;
+        }
+    }
+
     &__body {
         section ol {
             margin-top: $spacing-unit / 2;

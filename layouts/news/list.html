@@ -10,6 +10,15 @@
             {{ if .Pages.ByDate.Reverse }}
                 {{ range .Pages.ByDate.Reverse }}
                     <div class="news__item">
+                        {{ if .Params.Flash }}
+                        <div class="news__flash">
+                            {{ if hasPrefix .Params.Flash.Src "/" }}
+                            <img src="{{ .Params.Flash.Src }}" alt="{{ .Params.Flash.Alt }}" />
+                            {{ else }}
+                            <img src="/news/images/{{ .Params.Flash.Src }}" alt="{{ .Params.Flash.Alt }}" />
+                            {{ end }}
+                        </div>
+                        {{ end }}
                         <div class="news__body">
                             {{ .Content }}
                             <p class="news__details">
