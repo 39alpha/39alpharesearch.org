@@ -5,6 +5,9 @@ timeZone: America/Phoenix
 disableKinds:
     - taxonomy
     - term
+outputs:
+    home:
+        - html
 markup:
     goldmark:
         parser:
