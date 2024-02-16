@@ -15,5 +15,4 @@ prepare: convert
 
 convert:
 	bin/biblio.ts assets/bib/bibliography.bib -m assets/bib/members.json -o data/bibliography.json
-	go run bin/nbconvert.go
-
+	# go run bin/nbconvert.go
