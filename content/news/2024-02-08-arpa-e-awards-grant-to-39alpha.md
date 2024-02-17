@@ -1,10 +1,10 @@
 ---
-title: "ARPA-E Awards Grant to 39 Alpha"
-date: "2024-02-08T15:00:00Z"
+title: ARPA-E Awards Grant to 39 Alpha
+date: 2024-02-08T15:00:00Z
 team: t0
 flash:
-    src: "arpa-e-press-release-20240208.webp"
-    alt: 'Snapshot of "U.S. Department of Energy Announces $20 Million to 16 Projects Spearheading Exploration of Geologic Hydrogen"'
+    src: arpa-e-press-release-20240208.webp
+    alt: Snapshot of "U.S. Department of Energy Announces $20 Million to 16 Projects Spearheading Exploration of Geologic Hydrogen"
 ---
 39 Alpha Research is pleased to announce that we have been awarded a grant by the Department of Energy’s [Advanced Research Projects Agency-Energy](https://arpa-e.energy.gov/) (APRA-E) program to explore the [stimulated production of geologic hydrogen](https://arpa-e.energy.gov/news-and-media/press-releases/us-department-energy-announces-20-million-16-projects-spearheading).
 
