@@ -1,5 +1,6 @@
 languageCode: en-us
 title: 39 Alpha Research
+baseURL: https://39alpharesearch.org
 relativeURLS: true
 timeZone: America/Phoenix
 disableKinds:
