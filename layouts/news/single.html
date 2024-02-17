@@ -1,23 +1,35 @@
 {{ define "main" }}
-<div class="wrapper wrapper--wide">
-    <div class="project">
-        <header class="project__header">
-            <h1 class="project-title">{{ .Title }}</h1>
+<div class="wrapper wrapper--medium">
+    {{ partial "breadcrumbs.html" . }}
+    <div class="post">
+        <header class="post__header">
+            <h1 class="post__title">{{ .Title }}</h1>
         </header>
 
-        <div class="project__sections">
-            {{ $raw_content := split .Content "<hr />" }}
-            {{ $conversational := index $raw_content 0 }}
-            {{ $technical := index $raw_content 1 }}
-            <article class="project__section project__section--conversational">
-                <h1>Conversational Description</h1>
-                {{ .RenderString $conversational }}
-            </article>
-            <article class="project__section project__section--technical">
-                <h1>Technical Description</h1>
-                {{ .RenderString $technical }}
-            </article>
-        </div>
+        <article class="post__content">
+            <div class="news__item">
+                <p class="news__details">
+                    {{ if .Params.Team }}
+                        {{ with .Site.GetPage "team" }}
+                            <span class="news__team"><a href="{{ .RelPermalink }}">{{ .Title }}</a></span> &mdash;
+                        {{ end }}
+                    {{ end }}
+                    <time class="news__datetime">{{ time.Format "2006-01-02 15:04:05 MST" .Date }}</time>
+                </p>
+                {{ if .Params.Flash }}
+                <div class="news__flash">
+                    {{ if hasPrefix .Params.Flash.Src "/" }}
+                    <img src="{{ .Params.Flash.Src }}" alt="{{ .Params.Flash.Alt }}" />
+                    {{ else }}
+                    <img src="/news/images/{{ .Params.Flash.Src }}" alt="{{ .Params.Flash.Alt }}" />
+                    {{ end }}
+                </div>
+                {{ end }}
+                <div class="news__body">
+                    {{ .Content }}
+                </div>
+            </div>
+        </article>
     </div>
 </div>
 {{ end }}

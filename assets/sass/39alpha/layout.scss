@@ -1125,8 +1125,13 @@
         }
 
         h1 {
-            @include relative-font-size(1.5);
-            text-align: center;
+            text-align: left;
+        }
+
+        &--tile {
+            h1 {
+                text-align: center;
+            }
         }
     }
 
@@ -1190,20 +1195,28 @@
     }
 
     &__item {
-        padding-left: $spacing-unit;
-        padding-right: $spacing-unit;
-        padding-top: $spacing-unit;
-        padding-bottom: 0.5 * $spacing-unit;
-        margin-bottom: $spacing-unit;
-        font-size: $large-font-size;
-        background: $grey-color-light;
-        border: 1px solid $grey-color-dark;
+        &--tile {
+            padding-left: $spacing-unit;
+            padding-right: $spacing-unit;
+            padding-top: $spacing-unit;
+            padding-bottom: 0.5 * $spacing-unit;
+            margin-bottom: $spacing-unit;
+            font-size: $large-font-size;
+            background: $grey-color-light;
+            border: 1px solid $grey-color-dark;
+        }
     }
 
     &__details {
-        margin-top: 0.25 * $spacing-unit;
-        margin-left: $spacing-unit;
-        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: $spacing-unit;
+
+        &--tile {
+            margin-top: 0.25 * $spacing-unit;
+            margin-left: $spacing-unit;
+            margin-bottom: 0;
+        }
     }
 
     &__datetime {
@@ -1215,8 +1228,9 @@
     &__flash {
         text-align: center;
         margin-bottom: $spacing-unit;
+
         img {
-            max-width: 100%;
+            width: 100%;
         }
     }
 
