@@ -787,8 +787,20 @@
         text-align: center;
     }
 
+    &__titlebar {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
     &__title {
         text-align: center;
+    }
+
+    &__links {
+        position: absolute;
+        bottom: 20%;
+        right: 0;
     }
 
     &__members {
