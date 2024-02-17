@@ -28,6 +28,7 @@
         <div class="team__title">
             <h1>{{ .Title }}</h1>
         </div>
+        {{ if .Params.ShowRss }}
         <div class="team__links">
             <a href="index.xml" title="Team RSS">
                 <svg class="svg-icon" alt="RSS Icon">
@@ -35,6 +36,7 @@
                 </svg>rss
             </a>
         </div>
+        {{ end }}
     </div>
     {{ end }}
 </header>
