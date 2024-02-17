@@ -17,6 +17,9 @@
 {{ $style := resources.Get "/sass/main.scss" | resources.ToCSS $options }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+{{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
 <script type="text/javascript" id="d3js" src="https://d3js.org/d3.v5.min.js"></script>
 <script>
     MathJax = {
