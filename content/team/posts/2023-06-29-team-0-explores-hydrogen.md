@@ -2,6 +2,7 @@
 layout: posts
 title: Team 0 Explores Hydrogen
 identifier: t0
+date: 2023-06-29T19:00:00Z
 members:
     - name: Cole Mathis
       email: cole@39alpharesearch.org
