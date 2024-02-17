@@ -1,12 +1,19 @@
 {{ define "main" }}
 <div class="wrapper wrapper--medium">
     {{ partial "breadcrumbs.html" . }}
-    <article class="post">
-        <header class="post-header post-header--visible">
+    <article class="news">
+        <header class="news__header news__header--visible news__header--relative">
             <h1>News and Ongoing Work</h1>
+            <div class="news__links">
+                <a href="index.xml" title="Team RSS">
+                    <svg class="svg-icon" alt="RSS Icon">
+                        <use xlink:href="/images/39alpha-social-icons.svg#rss"></use>
+                    </svg>rss
+                </a>
+            </div>
         </header>
 
-        <div class="post-content">
+        <div class="news__content">
             {{ if .Pages.ByDate.Reverse }}
                 {{ range .Pages.ByDate.Reverse }}
                     <div class="news__item">
@@ -28,7 +35,7 @@
                                         <span class="news__team"><a href="{{ .RelPermalink }}">{{ .Title }}</a></span> &mdash;
                                     {{ end }}
                                 {{ end }}
-                                <time class="news__datetime">{{ .Date.Format "2006-01-02T15:04:05Z" }}</time>
+                                <time class="news__datetime">{{ time.Format "2006-01-02 15:04:05 MST" .Date }}</time>
                             </p>
                         </div>
                     </div>
