@@ -1,5 +1,6 @@
 ---
-date: "2022-08-05T20:59:36Z"
+title: Exploring the Carbonate State Space
+date: 2022-08-05T20:59:36Z
 team: t0
 ---
 39 Alpha's Team 0 is currently working on the [Carbonate State

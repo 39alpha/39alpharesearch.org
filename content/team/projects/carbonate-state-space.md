@@ -7,7 +7,7 @@ description: Quantifying the projected changes in ocean conditions as a result o
 applicability: 5
 risk: 5
 reward: 5
-date: 2021-03-28
+date: 2021-03-28T19:00:00Z
 aliases:
     - /projects/carbonate-state-space
 ---

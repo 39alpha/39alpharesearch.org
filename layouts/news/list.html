@@ -1,25 +1,40 @@
 {{ define "main" }}
 <div class="wrapper wrapper--medium">
     {{ partial "breadcrumbs.html" . }}
-    <article class="post">
-        <header class="post-header post-header--visible">
+    <div class="news">
+        <header class="news__header news__header--visible news__header--tile">
             <h1>News and Ongoing Work</h1>
+            <div class="news__links">
+                <a href="index.xml" title="Team RSS">
+                    <svg class="svg-icon" alt="RSS Icon">
+                        <use xlink:href="/images/39alpha-social-icons.svg#rss"></use>
+                    </svg>rss
+                </a>
+            </div>
         </header>
 
-        <div class="post-content">
+        <div class="news__content">
             {{ if .Pages.ByDate.Reverse }}
                 {{ range .Pages.ByDate.Reverse }}
-                    <div class="news__item">
+                    <div class="news__item news__item--tile">
+                        {{ if .Params.Flash }}
+                        <div class="news__flash news__flash--tile">
+                            {{ if hasPrefix .Params.Flash.Src "/" }}
+                            <img src="{{ .Params.Flash.Src }}" alt="{{ .Params.Flash.Alt }}" />
+                            {{ else }}
+                            <img src="/news/images/{{ .Params.Flash.Src }}" alt="{{ .Params.Flash.Alt }}" />
+                            {{ end }}
+                        </div>
+                        {{ end }}
                         <div class="news__body">
                             {{ .Content }}
-                            <p class="news__details">
+                            <p class="news__details news__details--tile">
                                 {{ if .Params.Team }}
-                                    {{ $path := path.Join "/about/teams" .Params.Team }}
-                                    {{ with .Site.GetPage $path }}
+                                    {{ with .Site.GetPage "team" }}
                                         <span class="news__team"><a href="{{ .RelPermalink }}">{{ .Title }}</a></span> &mdash;
                                     {{ end }}
                                 {{ end }}
-                                <time class="news__datetime">{{ .Date.Format "2006-01-02T15:04:05Z" }}</time>
+                                <time class="news__datetime">{{ time.Format "2006-01-02 15:04:05 MST" .Date }}</time>
                             </p>
                         </div>
                     </div>
@@ -28,7 +43,7 @@
                 <p>39 Alpha Research is tirelessly working on high-quality, comprehensible research, so stay tuned for updates.</p>
             {{ end }}
         </div>
-    </article>
+    </div>
 </div>
 {{ end }}
 

@@ -26,6 +26,7 @@ menu:
     main:
         title: "Our Team"
         weight: 2
+showRss: true
 ---
 Welcome! We are Team 0, 39 Alpha's inaugural research team. Born in the scorching heat of the
 Sonoran desert in 2020[,](https://www.washingtonpost.com/weather/2020/09/01/phoenix-hottest-summer/)
