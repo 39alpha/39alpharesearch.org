@@ -1,2 +1,1 @@
 # 39 Alpha Research
-
