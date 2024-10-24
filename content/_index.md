@@ -7,3 +7,5 @@ menu:
 ---
 
 The page is gone...
+
+$E = mc^2$
