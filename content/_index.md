@@ -1,4 +1,4 @@
----
+scin---
 layout: single
 title: Home
 menu:
@@ -6,6 +6,4 @@ menu:
         weight: 1
 ---
 
-The page is gone...
-
-$E = mc^2$
+**Independent Research on the Scientific Fronteir**
