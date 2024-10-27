@@ -1,4 +1,4 @@
-scin---
+---
 layout: single
 title: Home
 menu:
@@ -6,4 +6,4 @@ menu:
         weight: 1
 ---
 
-**Independent Research on the Scientific Fronteir**
+**Independent Research on the Scientific Frontier**
