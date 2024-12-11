@@ -8,7 +8,7 @@ menu:
 
 **Independent Research on the Scientific Frontier**
 
-Small research teams\n
-Exploring the scientific frontier\n
-For Earth, humanity, and the biosphere.\n
+Small research teams<br>
+Exploring the scientific frontier<br>
+For Earth, humanity, and the biosphere.<br>
 
