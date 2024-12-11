@@ -5,11 +5,8 @@ menu:
     main:
         weight: 1
 ---
-<span class="shout shout--inline">39 Alpha is a nonprofit, scientific research organization</span>
-envisioned and founded by doctors of physics, information science, and geochemistry.
+<span class="shout shout--inline">Small research teams</span>
+<span class="shout shout--inline">Exploring the scientific frontier,</span>
+<span class="shout shout--inline">For Earth, humanity, and the biosphere.</span>
 
 
-
-Small research teams,
-Exploring the scientific frontier,
-For Earth, humanity, and the biosphere.
