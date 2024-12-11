@@ -6,11 +6,8 @@ menu:
         weight: 1
 ---
 
-div {
-  display: flex;
-  justify-content: space-around;
-}
+<center>
 Small research teams<br>
 Exploring the scientific frontier<br>
 For Earth, humanity, and the biosphere.<br>
-
+</center>
