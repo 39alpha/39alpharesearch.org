@@ -33,7 +33,7 @@ Sonoran desert in 2020[,](https://www.washingtonpost.com/weather/2020/09/01/phoe
 we met while working between Everett Shock's
 [GEOPIG lab](https://asu.elsevierpure.com/en/equipments/sese-group-exploring-organic-processes-in-geochemistry-geopig-bio)
 (a group that explores organic processes in geochemistry) and Sara Walker’s
-[ELife lab](http://emergence.asu.edu/) (where they study astrobiology and related physics problems).
+[ELife lab](http://emergence.asu.edu/) (where they study astrobiology and related physics problems). hello. 
 
 We share a passion for pure science, developing novel research ideas, and building scientific software. We also crave the pursuit of challenging environmental projects
 that lie outside traditional disciplinary silos. We believe humanity is at a unique point in
