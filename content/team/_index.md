@@ -38,7 +38,7 @@ we met while working between Everett Shock's
 We share a passion for pure science, developing novel research ideas, and building scientific software. We also crave the pursuit of challenging environmental projects
 that lie outside traditional disciplinary silos. We believe humanity is at a unique point in
 our collective history. We have the power to destroy the environment that sustains
-us while similtaneously harboring the intellect and compassion to investigate (and possibly mitigate) our
+us while simultaneously harboring the intellect and compassion to investigate (and possibly mitigate) our
 impact on the Earth and its biosphere. 
 
 The diversity of our collective skill set and our interest in exceptionally interdisciplinary
