@@ -17,6 +17,10 @@ markup:
             unsafe: true
     highlight:
         noClasses: false
+build:
+  cachebusters:
+  - source: layouts/.*
+    target: css
 params:
     github_username: 39alpha
     author:
@@ -37,11 +41,12 @@ params:
             - 50.00
             - 75.00
             - 100.00
-# menu:
-#     main:
-#         - identifier: projects
-#           title: Projects
-#           url: /projects
+menu:
+    main:
+        - identifier: projects
+          title: Projects
+          url: /team/projects
+          weight: 3
 #           parent: "Science Mission"
 #           weight: 1
 #         - identifier: notebooks

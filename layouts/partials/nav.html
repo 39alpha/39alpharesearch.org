@@ -13,7 +13,7 @@
                     {{ end }}
                 </ul>
             </li>
-        {{ else }}
+        {{ else if not (eq $currentPage.Title .Title) }}
             <li>
                 <a class="page-link" href="{{ .URL }}">{{ .Title }}</a>
             </li>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+  {{- partial "head.html" . -}}
+  {{ with resources.Get "css/default.css" }}
+  {{ $opts := dict "minify" true }}
+  {{ with . | css.TailwindCSS $opts }}
+  {{ if hugo.IsDevelopment }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ else }}
+  {{ with . | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  {{ end }}
+  {{ end }}
+  {{ end }}
+  {{ end }}
+</head>
+
+<body class="min-h-screen flex flex-col lg:justify-between">
+  <header class="flex flex-col justify-center font-['39Alpha'] mb-[2vh] lg:mt-[2vh]">
+    <h1 class="text-center my-[1vh]"><span
+        class="text-[#ec5c29] text-[8vw] lg:text-[5vw] py-[1vh] pr-[1vw] border-r-2 border-black">39A</span><span
+        class="text-[8vw] lg:text-[5vw] py-[1vh] pl-[1vw] border-l-2 border-black">Research</span>
+    </h1>
+
+    <h2 class="text-center text-[2vw] lg:text-[1vw] mb-[2vh] lg:mb-[5vh] text-stone-600">Expanding the Scientific Frontier</h2>
+
+    <nav>
+      <ul class="flex justify-evenly text-[2.5vw] lg:text-[1vw] text-stone-700">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        {{ if not (eq $currentPage.Title .Title) }}
+        <li>
+          <a class="hover:no-underline hover:text-[#ec5c29]" href="{{ .URL }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+  </header>
+
+  <main class="flex justify-center my-[2vh]">
+    <div class="flex justify-center w-4/5 max-w-max max-h-max">
+      <a href="https://www.eventbrite.com/e/beer-with-scientists-tickets-1037021367827?aff=oddtdtcreator">
+        <picture>
+          <source srcset="/images/bws-wide-banner.webp" media="(orientation: landscape)"/>
+          <img class="border-2 border-black" src="/images/bws-narrow-banner.webp" alt="" />
+        </picture>
+      </a>
+    </div>
+  </main>
+
+  <footer class="mt-[2vh] lg:mb-[2vh]">
+    <ul class="flex justify-evenly inline text-stone-600 text-[1.75vw] lg:text-[0.75vw]">
+      <li>&#169; 2019-{{- now.Format "2006" -}}</li>
+      <li>39 Alpha Research</li>
+      <li>A 501(c)(3) Organization</li>
+      <li>All Rights Reserved</li>
+    </ul>
+  </footer>
+</body>
+
+</html>
