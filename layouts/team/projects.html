@@ -13,13 +13,13 @@
             {{ $conversational := index $raw_content 0 }}
             {{ $technical := index $raw_content 1 }}
             <article class="project__section project__section--conversational">
-                <h1>Conversational Description</h1>
                 {{ .RenderString $conversational }}
             </article>
-            <article class="project__section project__section--technical">
-                <h1>Technical Description</h1>
+            {{ if not (eq $technical "") }}
+            <article class="project__section project__section--technical hidden">
                 {{ .RenderString $technical }}
             </article>
+            {{ end }}
         </div>
     </div>
 </div>

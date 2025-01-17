@@ -434,10 +434,11 @@
 
   &__sections {
     display: flex;
+    justify-content: center;
   }
 
   &__section {
-    position: relative;
+    /* position: relative; */
     min-width: $narrow-content-width / 2;
     width: 50%;
     margin-top: 50px;
@@ -467,7 +468,7 @@
   }
 
   &__section--conversational {
-    border-right: 1px solid $brand-color;
+    /* border-right: 1px solid $brand-color; */
     padding: 0px 2*$spacing-unit 0px 0px;
 
     h1 {
@@ -479,6 +480,7 @@
   }
 
   &__section--technical {
+    display: none;
     border-left: 1px solid $brand-color;
     padding: 0px 0px 0px 2*$spacing-unit;
 
