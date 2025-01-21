@@ -7,7 +7,7 @@ menu:
 ---
 # Donate to 39 Alpha Research
 
-Science costs money, be it for computing resources, publication fees, or conference travel. As an
+Science costs money, be it for computing resources, publication fees, or conference travel. As a
 nonprofit, completely independent of a university or any other research institution, 39 Alpha is
 constantly looking for financial support in the form of grants, fellowships and most importantly,
 donations.
