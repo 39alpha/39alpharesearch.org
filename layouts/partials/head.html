@@ -44,5 +44,5 @@
 <script type="text/javascript" id="39Alpha" src="/js/39alpha.js"></script>
 <script type="text/javascript" id="39Alpha-timezone" src="/js/timezone.js" defer></script>
 {{- if and hugo.IsProduction .Site.Params.google_analytics }}
-{{- partial "google-analytics.html" -}}
-{{- end }}
+{{- partial "google-analytics.html" . -}}
+{{- end -}}
