@@ -23,6 +23,7 @@ build:
     target: css
 params:
     github_username: 39alpha
+    google_analytics: G-15QD62F16D
     author:
         name: 39 Alpha Research
         email: 39alpha@39alpharesearch.org
